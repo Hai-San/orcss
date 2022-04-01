@@ -1,0 +1,43 @@
+{
+    "[css]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.stylelint": true
+        },
+        "editor.formatOnSave": false
+    },
+    "[javascript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        }
+    },
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": false,
+        "source.fixAll.eslint": false
+    },
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.guides.bracketPairs": true,
+    "editor.occurrencesHighlight": false,
+    "editor.snippetSuggestions": "top",
+    "editor.wordWrap": "on",
+    "emmet.showSuggestionsAsSnippets": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.onIgnoredFiles": "warn",
+    "eslint.run": "onSave",
+    "files.eol": "\r\n",
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "stylelint.snippet": [],
+    "stylelint.validate": [
+        "css",
+        "less",
+        "postcss",
+        "sass",
+        "scss",
+        "vue"
+    ]
+}
