@@ -1,5 +1,7 @@
 # Estruturação
 
+## Sobre
+
 O modelo de estrutura de pastas e arquivos utilizado no ORCSS tem como principal objetivo a escalabilidade. Os seguintes pontos são o que fazem essa estrutura ser eficiente.
 
 * **Arquivos separados por função:** Cada arquivo CSS tem apenas um função. Dessa forma é mais fácil entender o que cada arquivo representa apenas pelo seu nome e localização dentro das pastas.
@@ -18,18 +20,19 @@ O modelo de estrutura de pastas e arquivos utilizado no ORCSS tem como principal
 
 📂styles\
  ┣ 📂[tokens](/guide/structuring/tokens.md)\
- ┃ ┣ 📂brands\
+ ┃ ┣ 📂[brands](/guide/structuring/tokens#📂-brands)\
  ┃ ┃ ┣ 📂default\
  ┃ ┃ ┃ ┣ 📜border.scss\
  ┃ ┃ ┃ ┣ 📜fonts.scss\
  ┃ ┃ ┃ ┗ 📜spacing.scss\
- ┃ ┃ ┃ ┣ 📂components\
- ┃ ┃ ┃ ┣ 📂themes\
+ ┃ ┃ ┃ ┣ 📁components\
+ ┃ ┃ ┃ ┣ 📂[themes](/guide/structuring/tokens#📂-themes)\
  ┃ ┃ ┃ ┃ ┣ 📂default\
  ┃ ┃ ┃ ┃ ┃ ┣ 📜colors.scss\
  ┃ ┃ ┃ ┃ ┃ ┣ 📜colors_dark.scss\
  ┃ ┃ ┃ ┃ ┃ ┗ 📜colors_light.scss\
- ┃ ┣ 📂global\
+ ┃ ┣ 📂[components](/guide/structuring/tokens#📂-components)\
+ ┃ ┣ 📂[global](/guide/structuring/tokens#📂-global)\
  ┣ 📂[tools](/guide/structuring/tools.md)\
  ┣ 📂[utils](/guide/structuring/utils.md)\
  ┣ 📂[global](/guide/structuring/global.md)\

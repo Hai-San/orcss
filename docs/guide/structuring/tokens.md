@@ -1,4 +1,4 @@
-# 📂 Tokens
+# Tokens
 
 Pasta utilizada para organização dos design tokens e categoriza-los da forma mais prática possível.
 
@@ -18,7 +18,7 @@ Pasta utilizada para organização dos design tokens e categoriza-los da forma m
         - 📄 `fonts.scss` : Tokens relacionados as fontes (size, weight, family, line-height)
         - 📄 `spacing.scss` : Tokens relacionados a qualquer tipo de espaçamento (margin, padding, gap)
 
-        * #### 📂 Components
+        * #### 📁 Components
 
             Aqui ficam os tokens de componentes que são influenciados pela mudança de marca. Caso nenhum token de componente seja modificado de acordo com a marca, esta pasta não será necessária.
 
