@@ -5,7 +5,8 @@ module.exports = {
     description: 'ORCSS é um guia para deixar o CSS simples e escalável',
     themeConfig: {
         nav: [
-            { text: 'Documentação', link: '/guide/', activeMatch: '^/guide/' }
+            { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' },
+            { text: 'Exemplos', link: '/examples/', activeMatch: '^/examples/' }
         ],
         sidebar: {
             '/guide/': getGuideSidebar()
