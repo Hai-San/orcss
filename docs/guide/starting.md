@@ -9,7 +9,3 @@ Não precisa ficar preocupado se você nunca usou SASS, vou usar da forma mais s
 ## StyleLint
 
 O StyleLint é um Linter CSS essencial para manter o CSS organizado e aplicar correções de forma automática. Dessa forma otimizamos o fluxo de trabalho e não teremos problemas com cada desenvolvedor escrevendo o CSS de um jeito diferente.
-
-## Observação
-
-Quero lembrar que isso não é uma regra absoluta. Este guia é apenas um conjunto de ideias que eu considero ideal e tudo pode mudar de acordo com a evolução das tecnologias ou até minha forma de pensar. Use este guia como uma base que você pode utilizar exatamente como esta escrito ou adaptar de acordo com a estrutura do projeto que você esta trabalhando.

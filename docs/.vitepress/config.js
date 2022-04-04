@@ -26,19 +26,20 @@ function getGuideSidebar() {
         {
             text: 'Categorização',
             children: [
-                { text: 'Descrição', link: '/guide/frontmatter' }
+                { text: 'Categorização', link: '/guide/categorization/' }
             ]
         },
         {
             text: 'Estruturação',
             children: [
-                { text: 'Descrição', link: '/guide/frontmatter' }
+                { text: 'Estruturação', link: '/guide/structuring/' },
+                { text: 'Tokens', link: '/guide/structuring/tokens' }
             ]
         },
         {
             text: 'Escrita',
             children: [
-                { text: 'Descrição', link: '/guide/frontmatter' }
+                { text: 'Escrita', link: '/guide/writing/' }
             ]
         }
     ];
