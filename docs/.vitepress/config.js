@@ -33,7 +33,8 @@ function getGuideSidebar() {
             text: 'Estruturação',
             children: [
                 { text: 'Estruturação', link: '/guide/structuring/' },
-                { text: 'Tokens', link: '/guide/structuring/tokens' }
+                { text: 'Tokens', link: '/guide/structuring/tokens' },
+                { text: 'Tools', link: '/guide/structuring/tools' }
             ]
         },
         {
