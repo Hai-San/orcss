@@ -1,9 +1,7 @@
 # Tokens
-
 Pasta utilizada para organização dos design tokens e categoriza-los da forma mais prática possível.
 
 #### A estrutura da pasta de tokens é pensada para suportar os seguintes casos:
-
 - Os tokens podem vir de plataformas externas como style dictionary
 - Os tokens podem ser utilizados por mais de uma marca ou projeto com estilos exclusivos
 - Um mesmo projeto pode ter vários temas
