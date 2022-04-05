@@ -1,5 +1,5 @@
 module.exports = {
-    base: '/orcss/',
+    base: '/',
     lang: 'pt-BR',
     title: 'ORCSS - O guia de CSS',
     description: 'ORCSS é um guia para deixar o CSS simples e escalável',
