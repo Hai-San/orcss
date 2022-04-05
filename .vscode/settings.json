@@ -22,6 +22,10 @@
     "editor.guides.bracketPairs": true,
     "editor.occurrencesHighlight": false,
     "editor.snippetSuggestions": "top",
+    "editor.rulers": [
+        120,
+        140
+    ],
     "editor.wordWrap": "on",
     "emmet.showSuggestionsAsSnippets": true,
     "eslint.alwaysShowStatus": true,
@@ -34,9 +38,6 @@
     "stylelint.snippet": [],
     "stylelint.validate": [
         "css",
-        "less",
-        "postcss",
-        "sass",
         "scss",
         "vue"
     ]
