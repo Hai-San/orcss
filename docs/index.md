@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /logo.svg
-actionText: Guia
+actionText: Guia (Em progresso)
 actionLink: /guide/
 
 features:
