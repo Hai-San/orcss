@@ -6,7 +6,10 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' },
-            { text: 'Exemplos', link: '/examples/', activeMatch: '^/examples/' }
+            {
+                text: 'GitHub',
+                link: 'https://github.com/Hai-San/orcss'
+            }
         ],
         sidebar: {
             '/guide/': getGuideSidebar()
@@ -42,6 +45,12 @@ function getGuideSidebar() {
             text: 'Escrita',
             children: [
                 { text: 'Escrita', link: '/guide/writing/' }
+            ]
+        },
+        {
+            text: 'Exemplos',
+            children: [
+                { text: 'Stylelint', link: '/guide/examples/stylelint/' }
             ]
         }
     ];
