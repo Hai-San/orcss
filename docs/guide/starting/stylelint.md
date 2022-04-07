@@ -1,10 +1,25 @@
-# Configurações do Stylelint no VSCode
+# Stylelint
+O StyleLint é um Linter CSS essencial para manter o CSS organizado e aplicar correções de forma automática. Dessa forma otimizamos o fluxo de trabalho e não teremos problemas com cada desenvolvedor escrevendo o CSS de um jeito diferente.
 
+[Documentação oficial](https://stylelint.io/)\
+[Integração com editores](https://stylelint.io/user-guide/integrations/editor)
+
+## Extensões
+
+* Extensões necessários para deixar o stylelint mais completo
+  - [stylelint-scss](#stylelint-scss)
+  - [stylelint-order](#stylelint-order)
+
+* Para integração com Frameworks você vai precisar de algumas extensões extras. Esses plugins vão permitir o linter trabalhar dentro de arquivos que não possuem apenas css.
+  - [postcss-scss](https://github.com/postcss/postcss-scss#readme)
+  - [postcss-safe-parser](https://github.com/postcss/postcss-safe-parser#readme)
+  - [postcss-html](https://github.com/ota-meshi/postcss-html#readme)
+
+## VSCode
 [Extensão Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 
-
-## Configuração no VSCode
 ```json
+// settings.json
 {
 	"[css]": {
         "editor.codeActionsOnSave": {
@@ -18,51 +33,47 @@
     },
 
 	/*
-	* Caso seja um framework você também deve aplicar a mesma configuração para a extensão de arquivo do framework.
-	*/
-	"[vue]": { // Extensão do arquivo
-        "editor.codeActionsOnSave": {
-            "source.fixAll.stylelint": true,
-        },
-    },
-
-	/*
 	* Adicionamos todas as extensões que o Stylelint deve validar 
 	*/
 	"stylelint.validate": [
 		"css",
 		"scss",
-		"vue"
 	]
 }
 ```
 
-## .stylelintrc.js
+## Configuração Stylelint
+A maioria das regras aplicadas aqui foram sendo adicionadas com o tempo e foram úteis para o meu trabalho. Você pode modificar ou remover de acordo com o que achar ideal para o seu projeto.
+
+::: tip
+Algumas regras são muito importantes para deixar o CSS organizado de uma forma clara e seria ideal mantê-las em qualquer projeto. Essas regras são:
+- Regras de espaçamento
+- Regras de ordenação
+- Regras de aninhamento
+:::
+
+#### Extensões
 ```javascript
+//.stylelintrc.js
 module.exports = {
     plugins: [ 'stylelint-order', 'stylelint-scss' ],
-    overrides: [
-        {
-            files: [ '*.vue', '**/*.vue' ],
-            customSyntax: require('postcss-html')({
-                css: 'postcss-safe-parser',
-                scss: require('postcss-scss')
-            }),
-        }
-    ],
-    rules: {
-        "scss/at-rule-no-unknown": true,
-        'scss/at-extend-no-missing-placeholder': true,
-        'scss/at-function-parentheses-space-before': 'always',
-        'scss/at-mixin-parentheses-space-before': 'always',
-        'scss/at-else-if-parentheses-space-before': 'always',
-        'scss/at-else-closing-brace-space-after': 'always-intermediate',
-        'scss/at-if-closing-brace-space-after': 'always-intermediate',
-        'scss/dollar-variable-colon-space-after': 'always',
-        'scss/double-slash-comment-whitespace-inside': 'always',
-        'scss/operator-no-unspaced': true,
-        'scss/declaration-nested-properties': 'never',
-        'scss/selector-nest-combinators': 'always',
+	rules: {
+		// Aqui inserimos todas as regras que o stylelint deve aplicar no CSS
+	}
+};
+```
+
+#### Regras nativas
+Algumas regras nativas que o stylelint oferece.
+
+[Lista completa](https://stylelint.io/user-guide/rules/list)
+
+Regras utilizadas por padrão no ORCSS:
+```javascript
+//.stylelintrc.js
+module.exports = {
+	//...
+	rules: {
         'function-name-case': [
             'lower',
             {
@@ -85,8 +96,53 @@ module.exports = {
             },
         ],
         'max-empty-lines': 1,
-        indentation: 'tab',
-        'order/order': [
+        indentation: 'tab'
+    },
+}
+```
+
+#### Stylelint SCSS
+O stylint-scss otimiza o stylelint para a aplicação de regras exclusivas do SCSS
+
+- [Github stylelint-scss](https://github.com/stylelint-scss/stylelint-scss#readme)
+- [Lista de regras](https://github.com/stylelint-scss/stylelint-scss#list-of-rules)
+
+Regras utilizadas por padrão no ORCSS:
+```javascript
+//.stylelintrc.js
+module.exports = {
+	//...
+	rules: {
+        "scss/at-rule-no-unknown": true,
+        'scss/at-extend-no-missing-placeholder': true,
+        'scss/at-function-parentheses-space-before': 'always',
+        'scss/at-mixin-parentheses-space-before': 'always',
+        'scss/at-else-if-parentheses-space-before': 'always',
+        'scss/at-else-closing-brace-space-after': 'always-intermediate',
+        'scss/at-if-closing-brace-space-after': 'always-intermediate',
+        'scss/dollar-variable-colon-space-after': 'always',
+        'scss/double-slash-comment-whitespace-inside': 'always',
+        'scss/operator-no-unspaced': true,
+        'scss/declaration-nested-properties': 'never',
+        'scss/selector-nest-combinators': 'always',
+    },
+}
+```
+
+#### Stylelint Order
+Aqui utilizamos a extensão stylelint-order. Ele aplica regras que influenciam na ordenação das propriedades do CSS. Essas regras são ótimas para deixar o CSS mais padronizado e simples de entender.
+
+- [Github stylelint-order](https://github.com/hudochenkov/stylelint-order#readme)
+- [Todas as regras de ordenação](https://github.com/hudochenkov/stylelint-order/blob/master/rules/order/README.md)
+- [Todas as regras de ordenação de propriedades](https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-order/README.md)
+
+Regras utilizadas por padrão no ORCSS. (Sim é bem longo, porém não tem muito segredo)
+```javascript
+//.stylelintrc.js
+module.exports = {
+	rules: {
+		//...
+		'order/order': [
             'custom-properties',
             'dollar-variables',
             'at-rules',
@@ -333,7 +389,41 @@ module.exports = {
                 emptyLineBeforeUnspecified: 'always',
             },
         ],
+	}
+}
+```
+
+## Vue.js
+Configurações especificas que devem ser feitas quando queremos utilizar stylelint com Vue.js
+
+### VSCode
+```json
+// settings.json
+{
+	"[vue]": { // Extensão do arquivo
+        "editor.codeActionsOnSave": {
+            "source.fixAll.stylelint": true,
+        },
     },
+	"stylelint.validate": [
+		"vue"
+	]
+}
+```
+
+## Configuração no Stylelint
+```javascript
+// .stylelintrc.js
+module.exports = {
+    overrides: [
+        {
+            files: [ '*.vue', '**/*.vue' ],
+            customSyntax: require('postcss-html')({
+                css: 'postcss-safe-parser',
+                scss: require('postcss-scss')
+            }),
+        }
+    ]
 };
 
 ```

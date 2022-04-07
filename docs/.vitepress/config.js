@@ -23,7 +23,15 @@ function getGuideSidebar() {
             text: 'Introdução',
             children: [
                 { text: 'Sobre o ORCSS', link: '/guide/' },
-                { text: 'Iniciando', link: '/guide/starting' }
+                {
+                    text: 'Iniciando',
+                    link: '/guide/starting/',
+                    children: [
+                        { text: 'Ferramentas', link: '/guide/starting/' },
+                        { text: 'SASS', link: '/guide/starting/sass' },
+                        { text: 'StyleLint', link: '/guide/starting/stylelint' }
+                    ]
+                }
             ]
         },
         {
@@ -45,12 +53,6 @@ function getGuideSidebar() {
             text: 'Escrita',
             children: [
                 { text: 'Escrita', link: '/guide/writing/' }
-            ]
-        },
-        {
-            text: 'Exemplos',
-            children: [
-                { text: 'Stylelint', link: '/guide/examples/stylelint/' }
             ]
         }
     ];
