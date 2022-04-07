@@ -10,11 +10,6 @@ O StyleLint é um Linter CSS essencial para manter o CSS organizado e aplicar co
   - [stylelint-scss](#stylelint-scss)
   - [stylelint-order](#stylelint-order)
 
-* Para integração com Frameworks você vai precisar de algumas extensões extras. Esses plugins vão permitir o linter trabalhar dentro de arquivos que não possuem apenas css.
-  - [postcss-scss](https://github.com/postcss/postcss-scss#readme)
-  - [postcss-safe-parser](https://github.com/postcss/postcss-safe-parser#readme)
-  - [postcss-html](https://github.com/ota-meshi/postcss-html#readme)
-
 ## VSCode
 [Extensão Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 
@@ -393,10 +388,17 @@ module.exports = {
 }
 ```
 
-## Vue.js
+## Frameworks JS
+
+* Para integração com Frameworks você vai precisar de algumas extensões extras. Esses plugins vão permitir o linter trabalhar dentro de arquivos que não possuem apenas css.
+  - [postcss-scss](https://github.com/postcss/postcss-scss#readme)
+  - [postcss-safe-parser](https://github.com/postcss/postcss-safe-parser#readme)
+  - [postcss-html](https://github.com/ota-meshi/postcss-html#readme)
+
+#### Vue.js
 Configurações especificas que devem ser feitas quando queremos utilizar stylelint com Vue.js
 
-### VSCode
+##### VSCode
 ```json
 // settings.json
 {
@@ -411,10 +413,13 @@ Configurações especificas que devem ser feitas quando queremos utilizar stylel
 }
 ```
 
-## Configuração no Stylelint
+#### Configuração no Stylelint
 ```javascript
 // .stylelintrc.js
 module.exports = {
+	plugins: [
+		//...
+	],
     overrides: [
         {
             files: [ '*.vue', '**/*.vue' ],
@@ -423,7 +428,10 @@ module.exports = {
                 scss: require('postcss-scss')
             }),
         }
-    ]
+    ],
+	rules: {
+		//...
+	}
 };
 
 ```
