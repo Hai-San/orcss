@@ -45,7 +45,7 @@ O StyleLint é um Linter CSS essencial para manter o CSS organizado e aplicar co
 ## Configuração Stylelint
 A maioria das regras aplicadas aqui foram sendo adicionadas com o tempo e foram úteis para o meu trabalho. Você pode modificar ou remover de acordo com o que achar ideal para o seu projeto.
 
-::: tip
+::: tip Observação
 Algumas regras são muito importantes para deixar o CSS organizado de uma forma clara e seria ideal mantê-las em qualquer projeto. Essas regras são:
 - Regras de espaçamento
 - Regras de ordenação
