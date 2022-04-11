@@ -2,48 +2,45 @@
 	"[css]": {
 		"editor.codeActionsOnSave": {
 			"source.fixAll.stylelint": true
-		},
-		"editor.formatOnSave": false
+		}
+	},
+	"[scss]": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll.stylelint": true
+		}
 	},
 	"[javascript]": {
 		"editor.codeActionsOnSave": {
 			"source.fixAll.eslint": true
 		}
 	},
-	"editor.acceptSuggestionOnCommitCharacter": true,
-	"editor.bracketPairColorization.enabled": true,
-	"editor.codeActionsOnSave": {
-		"source.fixAll": false,
-		"source.fixAll.eslint": false
+	"[vue]": {
+		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.stylelint": true,
+			"source.fixAll.eslint": true
+		},
+		"editor.defaultFormatter": "johnsoncodehk.volar"
 	},
-	"editor.detectIndentation": false,
-	"editor.formatOnSave": true,
-	"editor.formatOnType": true,
-	"editor.guides.bracketPairs": true,
-	"editor.occurrencesHighlight": false,
-	"editor.snippetSuggestions": "top",
-	"editor.rulers": [
-		120,
-		140
-	],
-	"editor.wordWrap": "on",
-	"emmet.showSuggestionsAsSnippets": true,
-	"eslint.alwaysShowStatus": true,
-	"eslint.format.enable": true,
-	"eslint.lintTask.enable": true,
-	"eslint.onIgnoredFiles": "warn",
-	"eslint.run": "onSave",
-	"files.eol": "\r\n",
-	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-	"stylelint.snippet": [],
 	"stylelint.validate": [
 		"css",
 		"scss",
 		"vue"
 	],
-	"[markdown]": {
-		"files.trimTrailingWhitespace": false,
-	},
-	"editor.tabCompletion": "on",
-	"markdown.suggest.paths.enabled": true
+	"editor.formatOnSave": true,
+	"editor.formatOnType": true,
+	"editor.snippetSuggestions": "top",
+	"editor.rulers": [
+		120,
+		140
+	],
+	"eslint.alwaysShowStatus": true,
+	"eslint.format.enable": true,
+	"eslint.lintTask.enable": true,
+	"eslint.onIgnoredFiles": "warn",
+	"eslint.run": "onSave",
+	"eslint.validate": [
+		"vue"
+	],
+	"files.eol": "\r\n",
 }

@@ -2,6 +2,7 @@
 	"recommendations": [
 		"dbaeumer.vscode-eslint",
 		"yzhang.markdown-all-in-one",
-		"EditorConfig.EditorConfig"
+		"editorconfig.editorconfig",
+		"johnsoncodehk.volar"
 	]
 }
