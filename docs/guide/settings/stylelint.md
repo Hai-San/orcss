@@ -1,14 +1,4 @@
-# Stylelint
-O StyleLint é um Linter CSS essencial para manter o CSS organizado e aplicar correções de forma automática. Dessa forma otimizamos o fluxo de trabalho e não teremos problemas com cada desenvolvedor escrevendo o CSS de um jeito diferente.
-
-[Documentação oficial](https://stylelint.io/)\
-[Integração com editores](https://stylelint.io/user-guide/integrations/editor)
-
-## Extensões
-
-* Extensões necessários para deixar o stylelint mais completo
-  - [stylelint-scss](#stylelint-scss)
-  - [stylelint-order](#stylelint-order)
+# Configuração do Stylelint
 
 ## VSCode
 [Extensão Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
@@ -37,7 +27,7 @@ O StyleLint é um Linter CSS essencial para manter o CSS organizado e aplicar co
 }
 ```
 
-## Configuração Stylelint
+## .stylelintrc
 A maioria das regras aplicadas aqui foram sendo adicionadas com o tempo e foram úteis para o meu trabalho. Você pode modificar ou remover de acordo com o que achar ideal para o seu projeto.
 
 ::: tip Observação
@@ -386,52 +376,4 @@ module.exports = {
         ],
 	}
 }
-```
-
-## Frameworks JS
-
-* Para integração com Frameworks você vai precisar de algumas extensões extras. Esses plugins vão permitir o linter trabalhar dentro de arquivos que não possuem apenas css.
-  - [postcss-scss](https://github.com/postcss/postcss-scss#readme)
-  - [postcss-safe-parser](https://github.com/postcss/postcss-safe-parser#readme)
-  - [postcss-html](https://github.com/ota-meshi/postcss-html#readme)
-
-#### Vue.js
-Configurações especificas que devem ser feitas quando queremos utilizar stylelint com Vue.js
-
-##### VSCode
-```json
-// settings.json
-{
-	"[vue]": { // Extensão do arquivo
-        "editor.codeActionsOnSave": {
-            "source.fixAll.stylelint": true,
-        },
-    },
-	"stylelint.validate": [
-		"vue"
-	]
-}
-```
-
-#### Configuração no Stylelint
-```javascript
-// .stylelintrc.js
-module.exports = {
-	plugins: [
-		//...
-	],
-    overrides: [
-        {
-            files: [ '*.vue', '**/*.vue' ],
-            customSyntax: require('postcss-html')({
-                css: 'postcss-safe-parser',
-                scss: require('postcss-scss')
-            }),
-        }
-    ],
-	rules: {
-		//...
-	}
-};
-
 ```

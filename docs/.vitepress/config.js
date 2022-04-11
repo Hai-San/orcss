@@ -25,12 +25,7 @@ function getGuideSidebar() {
                 { text: 'Sobre o ORCSS', link: '/guide/' },
                 {
                     text: 'Iniciando',
-                    link: '/guide/starting/',
-                    children: [
-                        { text: 'Ferramentas', link: '/guide/starting/' },
-                        { text: 'SASS', link: '/guide/starting/sass' },
-                        { text: 'StyleLint', link: '/guide/starting/stylelint' }
-                    ]
+                    link: '/guide/starting/'
                 }
             ]
         },
@@ -53,6 +48,14 @@ function getGuideSidebar() {
             text: 'Escrita',
             children: [
                 { text: 'Escrita', link: '/guide/writing/' }
+            ]
+        },
+        {
+            text: 'Configurações',
+            link: '/guide/settings/',
+            children: [
+                { text: 'Stylelint', link: '/guide/settings/stylelint' },
+                { text: 'Stylelint Vue.js', link: '/guide/settings/stylelint-vue' }
             ]
         }
     ];
