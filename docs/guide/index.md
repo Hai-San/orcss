@@ -1,7 +1,3 @@
----
-editLink: true
----
-
 # Sobre ( DOCUMENTAÇÃO EM PROGRESSO )
 ORCSS (Organization Rules for CSS - Regras de organização para CSS) é um guia de nomenclatura e organização do CSS que agrupa algumas "regras" que eu considero como ideais para um CSS de qualidade.
 
@@ -13,8 +9,8 @@ O objetivo deste guia é mostrar como podemos organizar o CSS de uma forma simpl
 
 O principal ponto é manter todas as regras de estilo dentro do CSS e envolver o HTML o mínimo possível. E para isso, dentro do ORCSS existem três padrões:
 
-- **Escrita** (Nomenclatura e organização do código CSS).
-- **Categorização** (Como organizar a estrutura do HTML)
-- **Estruturação** (Organização de pastas e arquivos)
+- [Escrita](writing/index.md)
+- [Categorização](categorization/index.md)
+- [Estruturação](structuring/index.md)
 
 Esses padrões podem ser utilizados de forma independente ou em conjunto, isso dependerá muito do projeto no qual for trabalhar.

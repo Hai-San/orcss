@@ -9,16 +9,11 @@ module.exports = {
         repo: 'Hai-San/orcss',
         docsDir: 'docs',
         docsBranch: 'main',
-        docsBranch: 'main',
         editLinks: true,
         editLinkText: 'Edite essa página no GitHub',
         lastUpdated: 'Última atualização',
         nav: [
-            { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' },
-            {
-                text: 'GitHub',
-                link: 'https://github.com/Hai-San/orcss'
-            }
+            { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' }
         ],
         sidebar: {
             '/guide/': getGuideSidebar()
