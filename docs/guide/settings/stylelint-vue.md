@@ -40,7 +40,7 @@ module.exports = {
             files: [ '*.vue', '**/*.vue' ],
             customSyntax: require('postcss-html')({
                 css: 'postcss-safe-parser',
-                scss: require('postcss-scss')
+                scss: 'postcss-scss'
             }),
         }
     ],

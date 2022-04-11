@@ -1,11 +1,16 @@
 # Configuração do Stylelint
 
 ## VSCode
-[Extensão Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+1. Primeiro baixe a [Extensão do Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+2. Em seguida, configurações do workspace (`.vscode/settings.json`) é necessário adicionar as seguintes configurações:
 
 ```json
 // settings.json
 {
+	/*
+	* Aplica as configurações do stylelint ao salvar.
+	* As configurações são exclusivas para cada extensão de arquivo
+	*/
 	"[css]": {
         "editor.codeActionsOnSave": {
             "source.fixAll.stylelint": true
@@ -18,7 +23,7 @@
     },
 
 	/*
-	* Adicionamos todas as extensões que o Stylelint deve validar 
+	* Adicionamos todas as extensões de arquivo que o Stylelint deve validar 
 	*/
 	"stylelint.validate": [
 		"css",
@@ -28,10 +33,12 @@
 ```
 
 ## .stylelintrc
-A maioria das regras aplicadas aqui foram sendo adicionadas com o tempo e foram úteis para o meu trabalho. Você pode modificar ou remover de acordo com o que achar ideal para o seu projeto.
+Crie o arquivo `.stylelintrc.js` na raiz do projeto e insira as configurações a seguir.
 
 ::: tip Observação
-Algumas regras são muito importantes para deixar o CSS organizado de uma forma clara e seria ideal mantê-las em qualquer projeto. Essas regras são:
+Muitas regras indicadas aqui foram adicionadas na medida que meus projetos foram evoluindo e não são necessariamente obrigatórias. Você pode modificar ou remover de acordo com o que achar ideal para seu projeto. 
+
+Entre todas as regras existem algumas que são importantes para manter o CSS claro e organizado. Dito isso, tente manter essas regras ativas em seu projeto.
 - Regras de espaçamento
 - Regras de ordenação
 - Regras de aninhamento
@@ -74,7 +81,7 @@ module.exports = {
 ```
 
 ## Plugins
-Também é possível utilizar alguns plugin para deixar o stylelint muito mais completo.
+Também é possível utilizar alguns plugins para deixar o stylelint muito mais completo.
 
 ### stylelint-order
 Esse plugin aplica regras que influenciam na ordenação das propriedades do CSS. Essas regras são ótimas para deixar o CSS mais padronizado e simples de entender.
