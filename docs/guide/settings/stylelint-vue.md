@@ -50,3 +50,9 @@ module.exports = {
 };
 
 ```
+
+## Outros frameworks
+
+:::tip
+As configurações para outros frameworks são muito semelhantes senão iguais, normalmente mudando apenas as extensões dos arquivos nas configurações.
+:::

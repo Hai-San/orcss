@@ -47,7 +47,7 @@ Entre todas as regras existem algumas que são importantes para manter o CSS cla
 ### Regras padrões
 O stylelint oferece uma lista de regras muito completa e você pode conferir todas elas [aqui](https://stylelint.io/user-guide/rules/list).
 
-Por padrão no ORCSS são utilizadas as seguintes regras:
+No ORCSS por padrão são utilizadas as seguintes regras:
 ```javascript
 //.stylelintrc.js
 module.exports = {
@@ -90,7 +90,7 @@ Esse plugin aplica regras que influenciam na ordenação das propriedades do CSS
 - [Todas as regras de ordenação](https://github.com/hudochenkov/stylelint-order/blob/master/rules/order/README.md)
 - [Todas as regras de ordenação de propriedades](https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-order/README.md)
 
-Por padrão no ORCSS são utilizadas as seguintes regras:
+No ORCSS por padrão são utilizadas as seguintes regras:
 ```javascript
 //.stylelintrc.js
 module.exports = {
@@ -354,7 +354,9 @@ Esse plugin otimiza o stylelint para a aplicação de regras exclusivas do SCSS
 - [Github stylelint-scss](https://github.com/stylelint-scss/stylelint-scss#readme)
 - [Lista de regras](https://github.com/stylelint-scss/stylelint-scss#list-of-rules)
 
-Por padrão no ORCSS são utilizadas as seguintes regras:
+Não esqueça de instalar o SASS `npm i -D sass` como dependência de desenvolvimento no projeto.
+
+No ORCSS por padrão são utilizadas as seguintes regras:
 ```javascript
 //.stylelintrc.js
 module.exports = {
