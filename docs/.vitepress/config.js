@@ -54,6 +54,7 @@ function getGuideSidebar() {
             text: 'Configurações',
             link: '/guide/settings/',
             children: [
+                { text: 'VSCode', link: '/guide/settings/vscode' },
                 { text: 'Stylelint', link: '/guide/settings/stylelint' },
                 { text: 'Stylelint Vue.js', link: '/guide/settings/stylelint-vue' }
             ]
