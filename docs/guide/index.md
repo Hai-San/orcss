@@ -1,3 +1,7 @@
+---
+editLink: true
+---
+
 # Sobre ( DOCUMENTAÇÃO EM PROGRESSO )
 ORCSS (Organization Rules for CSS - Regras de organização para CSS) é um guia de nomenclatura e organização do CSS que agrupa algumas "regras" que eu considero como ideais para um CSS de qualidade.
 

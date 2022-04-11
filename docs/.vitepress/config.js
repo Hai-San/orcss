@@ -2,8 +2,17 @@ module.exports = {
     base: '/',
     lang: 'pt-BR',
     title: 'ORCSS - O guia de CSS',
-    description: 'ORCSS é um guia para deixar o CSS simples e escalável',
+    description: 'ORCSS é um guia para deixar o CSS simples e escalável',	
+    lastUpdated: true,
+	
     themeConfig: {
+        repo: 'Hai-San/orcss',
+        docsDir: 'docs',
+        docsBranch: 'main',
+        docsBranch: 'main',
+        editLinks: true,
+        editLinkText: 'Edite essa página no GitHub',
+        lastUpdated: 'Última atualização',
         nav: [
             { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' },
             {
@@ -30,6 +39,12 @@ function getGuideSidebar() {
             ]
         },
         {
+            text: 'Escrita',
+            children: [
+                { text: 'Escrita', link: '/guide/writing/' }
+            ]
+        },
+        {
             text: 'Categorização',
             children: [
                 { text: 'Categorização', link: '/guide/categorization/' }
@@ -42,12 +57,6 @@ function getGuideSidebar() {
                 { text: 'Tokens', link: '/guide/structuring/tokens' },
                 { text: 'Tools', link: '/guide/structuring/tools' },
                 { text: 'Utils', link: '/guide/structuring/utils' }
-            ]
-        },
-        {
-            text: 'Escrita',
-            children: [
-                { text: 'Escrita', link: '/guide/writing/' }
             ]
         },
         {
