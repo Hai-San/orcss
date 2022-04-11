@@ -6,7 +6,10 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' },
-            { text: 'Exemplos', link: '/examples/', activeMatch: '^/examples/' }
+            {
+                text: 'GitHub',
+                link: 'https://github.com/Hai-San/orcss'
+            }
         ],
         sidebar: {
             '/guide/': getGuideSidebar()
@@ -20,7 +23,10 @@ function getGuideSidebar() {
             text: 'Introdução',
             children: [
                 { text: 'Sobre o ORCSS', link: '/guide/' },
-                { text: 'Iniciando', link: '/guide/starting' }
+                {
+                    text: 'Iniciando',
+                    link: '/guide/starting/'
+                }
             ]
         },
         {
@@ -32,7 +38,7 @@ function getGuideSidebar() {
         {
             text: 'Estruturação',
             children: [
-                { text: 'Estruturação', link: '/guide/structuring/' },
+                { text: 'Introdução', link: '/guide/structuring/' },
                 { text: 'Tokens', link: '/guide/structuring/tokens' },
                 { text: 'Tools', link: '/guide/structuring/tools' },
                 { text: 'Utils', link: '/guide/structuring/utils' }
@@ -42,6 +48,15 @@ function getGuideSidebar() {
             text: 'Escrita',
             children: [
                 { text: 'Escrita', link: '/guide/writing/' }
+            ]
+        },
+        {
+            text: 'Configurações',
+            link: '/guide/settings/',
+            children: [
+                { text: 'VSCode', link: '/guide/settings/vscode' },
+                { text: 'Stylelint', link: '/guide/settings/stylelint' },
+                { text: 'Stylelint Vue.js', link: '/guide/settings/stylelint-vue' }
             ]
         }
     ];

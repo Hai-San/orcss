@@ -1,6 +1,8 @@
 {
-    "recommendations": [
-        "dbaeumer.vscode-eslint",
-        "yzhang.markdown-all-in-one"
-    ]
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"yzhang.markdown-all-in-one",
+		"editorconfig.editorconfig",
+		"johnsoncodehk.volar"
+	]
 }
