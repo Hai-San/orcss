@@ -2,7 +2,7 @@
 Configurações especificas que devem ser feitas quando queremos utilizar stylelint com Vue.js
 
 :::warning Atenção
-Antes de seguir com este guia tenha certeza de ter aplicado as configurações padrões do styelint [aqui](stylelint.md)
+Antes de seguir com este guia tenha certeza de ter aplicado as configurações padrões do styelint. [Olhe aqui](stylelint.md)
 :::
 
 ## VSCode

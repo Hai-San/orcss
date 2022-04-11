@@ -37,23 +37,10 @@ Algumas regras são muito importantes para deixar o CSS organizado de uma forma 
 - Regras de aninhamento
 :::
 
-#### Extensões
-```javascript
-//.stylelintrc.js
-module.exports = {
-    plugins: [ 'stylelint-order', 'stylelint-scss' ],
-	rules: {
-		// Aqui inserimos todas as regras que o stylelint deve aplicar no CSS
-	}
-};
-```
+### Regras padrões
+O stylelint oferece uma lista de regras muito completa e você pode conferir todas elas [aqui](https://stylelint.io/user-guide/rules/list).
 
-#### Regras nativas
-Algumas regras nativas que o stylelint oferece.
-
-[Lista completa](https://stylelint.io/user-guide/rules/list)
-
-Regras utilizadas por padrão no ORCSS:
+Por padrão no ORCSS são utilizadas as seguintes regras:
 ```javascript
 //.stylelintrc.js
 module.exports = {
@@ -86,45 +73,21 @@ module.exports = {
 }
 ```
 
-#### Stylelint SCSS
-O stylint-scss otimiza o stylelint para a aplicação de regras exclusivas do SCSS
+## Plugins
+Também é possível utilizar alguns plugin para deixar o stylelint muito mais completo.
 
-- [Github stylelint-scss](https://github.com/stylelint-scss/stylelint-scss#readme)
-- [Lista de regras](https://github.com/stylelint-scss/stylelint-scss#list-of-rules)
-
-Regras utilizadas por padrão no ORCSS:
-```javascript
-//.stylelintrc.js
-module.exports = {
-	//...
-	rules: {
-        "scss/at-rule-no-unknown": true,
-        'scss/at-extend-no-missing-placeholder': true,
-        'scss/at-function-parentheses-space-before': 'always',
-        'scss/at-mixin-parentheses-space-before': 'always',
-        'scss/at-else-if-parentheses-space-before': 'always',
-        'scss/at-else-closing-brace-space-after': 'always-intermediate',
-        'scss/at-if-closing-brace-space-after': 'always-intermediate',
-        'scss/dollar-variable-colon-space-after': 'always',
-        'scss/double-slash-comment-whitespace-inside': 'always',
-        'scss/operator-no-unspaced': true,
-        'scss/declaration-nested-properties': 'never',
-        'scss/selector-nest-combinators': 'always',
-    },
-}
-```
-
-#### Stylelint Order
-Aqui utilizamos a extensão stylelint-order. Ele aplica regras que influenciam na ordenação das propriedades do CSS. Essas regras são ótimas para deixar o CSS mais padronizado e simples de entender.
+### stylelint-order
+Esse plugin aplica regras que influenciam na ordenação das propriedades do CSS. Essas regras são ótimas para deixar o CSS mais padronizado e simples de entender.
 
 - [Github stylelint-order](https://github.com/hudochenkov/stylelint-order#readme)
 - [Todas as regras de ordenação](https://github.com/hudochenkov/stylelint-order/blob/master/rules/order/README.md)
 - [Todas as regras de ordenação de propriedades](https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-order/README.md)
 
-Regras utilizadas por padrão no ORCSS. (Sim é bem longo, porém não tem muito segredo)
+Por padrão no ORCSS são utilizadas as seguintes regras:
 ```javascript
 //.stylelintrc.js
 module.exports = {
+	plugins: [ 'stylelint-order' ],
 	rules: {
 		//...
 		'order/order': [
@@ -377,3 +340,32 @@ module.exports = {
 	}
 }
 ```
+
+### stylelint-scss
+Esse plugin otimiza o stylelint para a aplicação de regras exclusivas do SCSS
+
+- [Github stylelint-scss](https://github.com/stylelint-scss/stylelint-scss#readme)
+- [Lista de regras](https://github.com/stylelint-scss/stylelint-scss#list-of-rules)
+
+Por padrão no ORCSS são utilizadas as seguintes regras:
+```javascript
+//.stylelintrc.js
+module.exports = {
+	plugins: ['stylelint-scss' ]
+	rules: {
+        "scss/at-rule-no-unknown": true,
+        'scss/at-extend-no-missing-placeholder': true,
+        'scss/at-function-parentheses-space-before': 'always',
+        'scss/at-mixin-parentheses-space-before': 'always',
+        'scss/at-else-if-parentheses-space-before': 'always',
+        'scss/at-else-closing-brace-space-after': 'always-intermediate',
+        'scss/at-if-closing-brace-space-after': 'always-intermediate',
+        'scss/dollar-variable-colon-space-after': 'always',
+        'scss/double-slash-comment-whitespace-inside': 'always',
+        'scss/operator-no-unspaced': true,
+        'scss/declaration-nested-properties': 'never',
+        'scss/selector-nest-combinators': 'always',
+    },
+}
+```
+
