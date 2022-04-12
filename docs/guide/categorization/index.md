@@ -49,9 +49,9 @@ Características:
 
 ## Blocos
 - São utilizados para agrupar quaisquer outros elementos dentro de um componente ou página
-- Sempre herdam o nome de outro elemento (página, componente ou bloco pai)
-    
-    Se dividem em duas subcategorias:
+- Sempre herdam o nome de outro elemento (página, componente ou bloco pai)    
+
+	Se dividem em duas subcategorias:
     
     ### Blocos hereditários    
     - Um bloco sempre será hereditário quando **pelo menos 1** elemento filho herdar o nome do bloco
@@ -75,7 +75,7 @@ Características:
 	```
 
 ## Unidades
-- É um elemento que **NÃO** possui outros elementos dentro
+- São elementos que **NÃO** possuem outros elementos dentro
 - Sempre herda o nome de outro elemento (página, componente ou bloco pai)
 - Pode virar um bloco a partir do momento que houverem outros elementos dentro
 - Normalmente vai conter algum tipo de media ou texto

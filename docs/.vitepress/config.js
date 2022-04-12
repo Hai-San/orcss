@@ -34,15 +34,15 @@ function getGuideSidebar() {
             ]
         },
         {
-            text: 'Escrita',
-            children: [
-                { text: 'Escrita', link: '/guide/writing/' }
-            ]
-        },
-        {
             text: 'Categorização',
             children: [
                 { text: 'Categorização', link: '/guide/categorization/' }
+            ]
+        },
+        {
+            text: 'Escrita',
+            children: [
+                { text: 'Escrita', link: '/guide/writing/' }
             ]
         },
         {
