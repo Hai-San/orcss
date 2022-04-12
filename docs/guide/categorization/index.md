@@ -152,3 +152,13 @@ Exemplo de uma estrutura HTML com todas as categorias
 
 </body>
 ```
+
+## Classes Javascript
+* Utilize o prefixo `js_` em classes de elementos que são manipulados no javascript.
+  * Esse tipo de classe não envolve alteração de estilos do elemento pelo javascript. São classes utilizadas para manipulação da DOM (loops, inserts, remove etc...)
+  * Classes com o prefixo `js_` são utilizadas apenas no javascript, não aplique estilos utilizando esse tipo de classe.
+  * Classes com prefixo `js_` são seguidas pelo nome da classe do elemento
+	```html
+	<li class="blogCard js_blogCard">
+	</li>
+	```
