@@ -86,7 +86,7 @@ Características:
 <p class="featuredPosts_card_description">featured post card description</p>
 ```
 
-Exemplo de uma estrutura HTML com todas as categorias
+## Exemplo completo
 
 ```html
 <!-- página -->
