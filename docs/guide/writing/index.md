@@ -145,4 +145,15 @@ Apesar do aninhamento ser muito bom, cuidado para não tornar isso um grande pro
 }
 ```
 
+## Classes Javascript
+Classes javascript são classes que utilizam o prefixo `js-` seguido do nome da classe: `js-blogCard` `js-card`
+
+* Esse tipo de classe não envolve alteração de estilos do elemento pelo javascript. São classes utilizadas para manipulação da DOM (loops, inserts, remove etc...)
+* Classes com o prefixo `js-` são utilizadas apenas no javascript, não aplique estilos utilizando esse tipo de classe.
+  
+```html
+<li class="blogCard js-blogCard">
+</li>
+```
+
 

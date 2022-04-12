@@ -1,67 +1,102 @@
 # Categorização
-
-Antes de mostrar como estruturar as classes no CSS é importante aprender como categorizar os elementos no HTML. 
+Antes de saber como escrever o nome das classes e seus prefixos, é importante aprender como categorizar os elementos no HTML. 
 Essa categorização torna muito mais simples visualizar como vamos estruturar o CSS e nomear as classes.
 
-**OBS:** Quando falamos sobre **elementos** estamos nos referindo aos elementos do HTML (tags) que são divididos em algumas categorias:
+Essa categorização é formada pelos seguintes itens:
 
-## Página
+## Páginas
+Elementos de página são formados apenas por um elemento principal que engloba todo HTML de uma página.
 
-- A tag `Body` sempre vai ser utilizada como o container principal de uma página
-- Cada página do site tem uma classe única inserida no `body` ou no elemento container da página
-- Blocos ou unidades que não fazem parte de nenhum componente, herdam o nome da página.
-- Sempre é seguindo da palavra `**page`** (pageHome, pageBlog)
+Esse elemento é formado pelas seguintes características:
+- Possui uma classe única formada pelo prefixo `page` seguido pelo nome da página: `pageHome` `pageBlog` `pagePostBlog`
+- Elementos que não fazem parte de nenhum componente especifico, herdam o nome da página.
+
+```html
+<body class="pageHome">
+    <main class="pageHome_main">
+		<h1 class="pageHome_title">Page title</h1>
+    </main>
+
+	<aside class="pageHome_aside">
+		<h2 class="pageHome_aside_title"></h2>
+		<p class="pageHome_aside_description"></p>
+	</aside>
+</body>
+```
 
 ## Componentes
+Componentes são blocos de código HTML que podem ser reutilizados em várias páginas do projeto
 
-- Todos os elementos de um componente herdam seu nome
-- Nunca herdam o nome de outro elemento
+Características:
+- São utilizados em várias páginas do projeto
+- Possuem um nome de classe único
+- Todos os elementos dentro de um componente herdam seu nome
+- Possuem um CSS exclusivo
+
+```html
+<section class="featuredPosts">
+	<div class="featuredPosts_container">
+		<div class="featuredPosts_header">
+			<h1 class="featuredPosts_title">featured posts</h1>
+			<p class="featuredPosts_description">featured posts description</p>
+		</div>
+
+		<ul class="featuredPosts_list">
+		</ul>
+	</div>
+</section>
+```
+
+## Blocos
+- São utilizados para agrupar quaisquer outros elementos dentro de um componente ou página
+- Sempre herdam o nome de outro elemento (página, componente ou bloco pai)
     
     Se dividem em duas subcategorias:
     
-    ### Componentes globais
+    ### Blocos hereditários    
+    - Um bloco sempre será hereditário quando **pelo menos 1** elemento filho herdar o nome do bloco
+    ```html
+	<body class="pageHome">
+		<main class="pageHome_main"> <!-- Bloco hereditário -->
+			<h1 class="pageHome_main_title">Page title</h1>
+		</main>
+	</body>
+	```
     
-    - Componentes globais são partes de layout que são utilizados em várias páginas.
-    - Sempre tem um arquivo CSS exclusivo para esse componente
-    
-    ### Componentes de página
-    
-    - Componentes de página, como já diz o nome, é uma parte de layout exclusiva de uma página.
-    - O CSS deste componente sempre fica junto com o CSS da página.
-    - Sempre são seguidos do prefixo `p-`. O prefixo não é obrigatório, porém facilita muito para identificar o tipo de componente.
-    
-
-## Blocos
-
-- São utilizados para agrupar quaisquer outros elementos  dentro de um componente ou página
-- Sempre herdam o nome de outro elemento (página, componente ou bloco pai)
-    
-    Se dividem em três subcategorias:
-    
-    ### Blocos hereditários
-    
-    - Um bloco sempre será hereditário quando **pelo menos 1** elemento filho herdar o seu nome.
-    
-    ### Blocos de estruturação
-    
-    - Um bloco sempre será de estruturação quando **nenhum** elemento filho herdar o seu nome.
+    ### Blocos de estruturação    
+    - Esse blocos servem unicamente para organizar elementos
+    - Um bloco sempre será de estruturação quando **nenhum** elemento filho herdar o nome do bloco
+    ```html
+	<body class="pageHome">
+		<main class="pageHome_main"> <!-- Bloco de estruturação-->
+			<h1 class="pageHome_title">Page title</h1>
+		</main>
+	</body>
+	```
 
 ## Unidades
-
-- É a parte de um componente que **NÃO** possui outros elementos dentro
-- Sempre herdam o nome de outro elemento (página, componente ou bloco pai)
-- Pode virar um bloco a partir do momento que tiver outros elementos dentro
+- É um elemento que **NÃO** possui outros elementos dentro
+- Sempre herda o nome de outro elemento (página, componente ou bloco pai)
+- Pode virar um bloco a partir do momento que houverem outros elementos dentro
 - Normalmente vai conter algum tipo de media ou texto
+
+```html
+<img class="featuredPosts_card_image" src="/image" alt="Card Image">
+<h2 class="featuredPosts_card_title">Relate post card title</h2>
+<p class="featuredPosts_card_description">featured post card description</p>
+```
 
 Exemplo de uma estrutura HTML com todas as categorias
 
 ```html
 <!-- página -->
-
 <body class="pageHome">
 
     <!-- componente -->
-    <header class="header"></header>
+    <header class="header">
+		<img class="header_logo" src="" alt="">
+		<nav class="header_nav"></nav>
+	</header>
 
     <!-- bloco de estruturação -->
     <main class="pageHome_main">
@@ -72,10 +107,10 @@ Exemplo de uma estrutura HTML com todas as categorias
             <!-- bloco de estruturação -->
             <div class="featuredPosts_container">
 
-                <!-- bloco hereditário -->
+                <!-- bloco de estruturação -->
                 <div class="featuredPosts_header">
-                    <h1 class="featuredPosts_header_title">featured posts</h1> <!-- unidade -->
-                    <p class="featuredPosts_header_description">featured posts description</p> <!-- unidade -->
+                    <h1 class="featuredPosts_title">featured posts</h1> <!-- unidade -->
+                    <p class="featuredPosts_description">featured posts description</p> <!-- unidade -->
                 </div>
 
                 <!-- bloco de estruturação -->
@@ -105,60 +140,16 @@ Exemplo de uma estrutura HTML com todas as categorias
                 </ul>
             </div>
         </section>
-
-        <!-- componente de página -->
-        <section class="p-featuredPosts">
-
-            <!-- bloco de estruturação -->
-            <div class="p-featuredPosts_container">
-
-                <!-- bloco hereditário -->
-                <div class="p-featuredPosts_header">
-                    <h1 class="p-featuredPosts_header_title">featured posts</h1> <!-- unidade -->
-                    <p class="p-featuredPosts_header_description">featured posts description</p> <!-- unidade -->
-                </div>
-
-                <!-- bloco de estruturação -->
-                <ul class="p-featuredPosts_list">
-
-                    <!-- bloco hereditário -->
-                    <li class="p-featuredPosts_card">
-
-                        <!-- bloco de estruturação -->
-                        <div class="p-featuredPosts_card_imageContainer">
-                            <img class="p-featuredPosts_card_image" src="/image" alt="Card Image"> <!-- unidade -->
-
-                            <!-- bloco hereditário -->
-                            <ul class="p-featuredPosts_card_tags">
-                                <li class="p-featuredPosts_card_tags_item">Category A</li> <!-- unidade -->
-                                <li class="p-featuredPosts_card_tags_item">Category B</li> <!-- unidade -->
-                            </ul>
-                        </div>
-
-                        <!-- bloco hereditário -->
-                        <div class="p-featuredPosts_card_data">
-                            <h2 class="p-featuredPosts_card_title">Relate post card title</h2> <!-- unidade -->
-                            <p class="p-featuredPosts_card_description">featured post card description</p> <!-- unidade -->
-                            <a class="p-featuredPosts_card_link" href="/item-link">Read More</a> <!-- unidade -->
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
     </main>
+
+	<!-- bloco hereditário -->
+	<aside class="pageHome_aside">
+		<h2 class="pageHome_aside_title"></h2>
+		<p class="pageHome_aside_description"></p>
+	</aside>
 
     <!-- componente -->
     <footer class="footer"></footer>
 
 </body>
 ```
-
-## Classes Javascript
-* Utilize o prefixo `js_` em classes de elementos que são manipulados no javascript.
-  * Esse tipo de classe não envolve alteração de estilos do elemento pelo javascript. São classes utilizadas para manipulação da DOM (loops, inserts, remove etc...)
-  * Classes com o prefixo `js_` são utilizadas apenas no javascript, não aplique estilos utilizando esse tipo de classe.
-  * Classes com prefixo `js_` são seguidas pelo nome da classe do elemento
-	```html
-	<li class="blogCard js_blogCard">
-	</li>
-	```
