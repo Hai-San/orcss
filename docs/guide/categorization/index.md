@@ -9,7 +9,8 @@ Elementos de página são formados apenas por um elemento principal que engloba 
 
 Esse elemento é formado pelas seguintes características:
 - Possui uma classe única formada pelo prefixo `page` seguido pelo nome da página: `pageHome` `pageBlog` `pagePostBlog`
-- Elementos que não fazem parte de nenhum componente especifico, herdam o nome da página.
+- A classe da página deve existir mesmo que não seja aplicado nenhum estilho diretamente a ela, pois ela servirá como parâmetro para elementos filhos
+- Elementos que não fazem parte de um componente herdam o nome da página
 
 ```html
 <body class="pageHome">
