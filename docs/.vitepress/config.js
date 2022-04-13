@@ -52,7 +52,8 @@ function getGuideSidebar() {
                 { text: 'Tokens', link: '/guide/structuring/tokens' },
                 { text: 'Tools', link: '/guide/structuring/tools' },
                 { text: 'Utils', link: '/guide/structuring/utils' },
-                { text: 'Components', link: '/guide/structuring/components' }
+                { text: 'Components', link: '/guide/structuring/components' },
+                { text: 'Pages', link: '/guide/structuring/pages' }
             ]
         },
         {
