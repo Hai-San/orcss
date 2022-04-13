@@ -213,7 +213,7 @@ Apesar do aninhamento ser muito bom, cuidado para não tornar isso um grande pro
 }
 ```
 
-## Classes modificadoras
+## Classes modificadoras {#modifier-classes}
 As classes modificadoras são classes utilizadas para criar diferentes variações de um componente.
 
 #### Regras
@@ -240,8 +240,20 @@ As classes modificadoras são classes utilizadas para criar diferentes variaçõ
 }	
 ```
 
-## Classes Javascript
-Classes javascript são classes que utilizam o prefixo `js-` seguido do nome da classe: `js-blogCard` `js-card`
+## Relação com Javascript
+Muitas vezes alguns elementos são utilizados dentro do javascript e precisamos de alguma referência para trabalhar com o elemento.
+
+#### Seleção única
+Como já dito antes, não devemos utilizar IDs para aplicar estilos CSS, porém eles são essenciais para criar identificadores únicos em elementos e são ótimo para trabalhar dentro do javascript quando precisamos selecionar um único elemento. Então, sempre utilize o atributo `id=""` para selecionar elementos únicos no seu projeto utilizando javascript.
+
+```html
+<button id="pageHome_submitButton" class="button -secondary -big">
+	Submit
+</button>
+```
+
+#### Seleção múltipla
+Para trabalhar com seleções múltiplas, nós devemos criar classes com o prefixo `js-` seguido do nome da classe: `js-blogCard` `js-card`
 
 * Esse tipo de classe não envolve alteração de estilos do elemento pelo javascript. São classes utilizadas para manipulação da DOM (loops, inserts, remove etc...)
 * Classes com o prefixo `js-` são utilizadas apenas no javascript, não aplique estilos utilizando esse tipo de classe.
@@ -250,5 +262,21 @@ Classes javascript são classes que utilizam o prefixo `js-` seguido do nome da 
 <li class="blogCard js-blogCard">
 </li>
 ```
+
+## Estilos de página
+Estilos de página acontecem quando um componente precisa de estilos que são unicamente feitas dentro de uma página e não representam uma classe modificadora.
+
+#### Regras
+- Evite o máximo que puder, sempre dê preferência para [classes modificadoras](#modifier-classes)
+- Crie um elemento `container` que o nome de classe é formado pelo nome da página mais o nome do componente: `pageHome` + `blogCard` = `pageHome_blogCard`
+- Insira o componente dentro do elemento container e faça todas as alterações a partir da classe do container.
+
+#### Casos
+- Você precisa adicionar um `margin-top: 12px` no componente.
+- Na versão mobile o componente precisa mudar de ordem no layout e precisamos incluir o atributo `order: 2;`
+
+
+
+
 
 
