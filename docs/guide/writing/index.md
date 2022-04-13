@@ -1,14 +1,13 @@
 # Escrita
-Regras de como as classes devem ser nomeadas e organizadas dentro do CSS.
+Agora que já vimos como [categorizar](../categorization/index.md) uma estrutura HTML, é importante saber como as classes devem ser nomeadas e organizadas dentro do CSS.
 
 ## Dicas gerais
 * Evite nomes atômicos e difíceis de entender
-* Não utilize IDs ou tags para aplicar estilo, SEMPRE utilize classes. Isso diminui a probabilidade de conflitos de especificidade.
+* Não utilize IDs ou tags para aplicar estilo, SEMPRE utilize classes. Isso diminui a probabilidade de conflitos de especificidade e facilita a manutenção.
 * Sempre crie variáveis (tokens) para valores de atributos que são utilizados em todo o projeto (cores, espaçamentos, bordas, fontes etc...)
 
 ---
 ## Nomenclatura
-
 * Use `camelCase` para nomes com mais de uma palavra
 	```css
 	.card {
@@ -21,7 +20,12 @@ Regras de como as classes devem ser nomeadas e organizadas dentro do CSS.
 	}
 	```
 
-* Elementos filhos devem herdar o nome do componente. Utilize underline `_` para separar os nomes.
+* Elementos "filhos" sempre herdam o nome do elemento "pai". Utilize underline `_` para separar os nomes. Elementos pais são **páginas** e **componentes**.
+  
+	:heavy_check_mark: Correto
+	- Especificidade baixa
+	- Pouca repetição de código para responsividade
+
   	```html
 	<li class="blogCard">
 		<div class="blogCard_header">
@@ -32,7 +36,7 @@ Regras de como as classes devem ser nomeadas e organizadas dentro do CSS.
 		<p class="blogCard_tagName"></p>
 	</li>
 	```
-	```css
+	```scss
 	.blogCard_header {
 	}
 
@@ -41,8 +45,55 @@ Regras de como as classes devem ser nomeadas e organizadas dentro do CSS.
 
 	.blogCard_tagName {
 	}
+
+	@media (max-width: 20rem) {
+		.blogCard_title {
+		}
+	}
 	```
+
+	:x: Errado 
+	- Especificidade muito alta
+	- Mais difícil de manter
+	- Temos que repetir a estrutura toda vez que é necessário ajustar o estilo em um tamanho de tela diferente `@media`
+
+	```html
+	<li class="blogCard">
+		<div class="header">
+			<h3 class="title">
+				Title
+			</h3>
+		</div>
+		<p class="tagName"></p>
+	</li>
+	```
+	```scss
+	.blogCard {
+		> .header {		
+			> .title {			
+			}	
+		}
+
+		> .tagName {			
+		}
+	}
+
+	@media (max-width: 20rem) {
+		.blogCard {
+			> .header {		
+				> .title {			
+				}	
+			}
+		}
+	}
+	```
+
 * Podemos utilizar encadeamento de herança para evitar elementos com nome de classe duplicado.
+
+	:heavy_check_mark: Correto
+	- Baixa especificidade
+	- Fácil de manter
+	- Probabilidade de conflitos é muito menor
 	```html
 	<li class="blogCard">
 		<h2 class="blogCard_title">Title</h2>
@@ -53,11 +104,37 @@ Regras de como as classes devem ser nomeadas e organizadas dentro do CSS.
 		</div>
 	</li>
 	```
-	```css
+	```scss
 	.blogCard_title {		
 	}
 
 	.blogCard_header_title {
+	}
+	```
+
+	:x: Errado
+	- Especificidade desnecessária
+	- Mais difícil de manter
+	- Probabilidade de conflitos é muito maior
+	```html
+	<li class="blogCard">
+		<h2 class="blogCard_title">Title</h2>
+		<div class="blogCard_header">
+			<h3 class="blogCard_title">
+				Title
+			</h3>
+		</div>
+	</li>
+	```
+	```scss
+	.blogCard {
+		> .blogCard_title {		
+		}
+	}	
+
+	.blogCard_header {
+		.blogCard_title {			
+		}
 	}
 	```
 
@@ -85,7 +162,10 @@ Apesar do aninhamento ser muito bom, cuidado para não tornar isso um grande pro
 </li>
 ```
 
-:heavy_check_mark: Correto - O sistema de herança é feito justamente para evitar aninhamentos, criar nomes de classes únicos e evitar especificidade.
+:heavy_check_mark: Correto 
+- Baixa especificidade
+- Mais clareza para leitura
+- Completo aproveitamento sobre sistema de herança de nomes que é feito justamente para evitar os problemas citados acima
 ```scss
 .blogCard {
 }
@@ -101,7 +181,8 @@ Apesar do aninhamento ser muito bom, cuidado para não tornar isso um grande pro
 ```
 
 :x: Errado
-- Gera muito mais CSS e com maior especificidade
+- Gera mais CSS
+- Maior especificidade
 - Grandes aninhamentos ficam difíceis de ler
 - Classes modificadoras, filhos e seletores ficam todos juntos
   
@@ -114,19 +195,6 @@ Apesar do aninhamento ser muito bom, cuidado para não tornar isso um grande pro
 		.blogCard_header_title {
 		}
 	}
-}
-
-// CSS gerado
-.blogCard {
-}
-
-.blogCard .blogCard_title {
-}
-
-.blogCard .blogCard_header {		
-}
-
-.blogCard .blogCard_header .blogCard_header_title {
 }
 ```
 
@@ -143,6 +211,33 @@ Apesar do aninhamento ser muito bom, cuidado para não tornar isso um grande pro
 		}
 	}
 }
+```
+
+## Classes modificadoras
+As classes modificadoras são classes utilizadas para criar diferentes variações de um componente.
+
+#### Regras
+- Possuem um hífen `-` como prefixo `-secondary` `-big`
+- **SEMPRE** ficam aninhadas dentro da classe de um componente
+```html
+<button class="button -secondary -big">
+	Submit
+</button>
+```
+```scss
+.button {
+	color: $color-text-primary-button;
+
+	padding: $padding-button;
+
+	&.-secondary {	
+		color: $color-text-secondary-button;
+	}
+
+	&.-big {
+		padding: $padding-big-button;
+	}
+}	
 ```
 
 ## Classes Javascript
