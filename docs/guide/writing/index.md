@@ -257,24 +257,130 @@ Para trabalhar com seleções múltiplas, nós devemos criar classes com o prefi
 
 * Esse tipo de classe não envolve alteração de estilos do elemento pelo javascript. São classes utilizadas para manipulação da DOM (loops, inserts, remove etc...)
 * Classes com o prefixo `js-` são utilizadas apenas no javascript, não aplique estilos utilizando esse tipo de classe.
+  * Isso facilita a manutenção, pois se o nome da classe precisar ser alterado você vai saber exatamente onde o código vai ser afetado.
   
 ```html
 <li class="blogCard js-blogCard">
 </li>
 ```
 
-## Estilos de página
-Estilos de página acontecem quando um componente precisa de estilos que são unicamente feitas dentro de uma página e não representam uma classe modificadora.
+## Estilos exclusivos
+Estilos exclusivos acontecem quando um componente precisa de estilos que são unicamente feitos dentro de uma página ou outro componente.
 
 #### Regras
-- Evite o máximo que puder, sempre dê preferência para [classes modificadoras](#modifier-classes)
-- Crie um elemento `container` que o nome de classe é formado pelo nome da página mais o nome do componente: `pageHome` + `blogCard` = `pageHome_blogCard`
-- Insira o componente dentro do elemento container e faça todas as alterações a partir da classe do container.
+- Evite o máximo que puder, sempre dê preferência para [classes modificadoras](#modifier-classes).
+- Crie um nome de classe customizado formado pelo nome do elemento principal mais o nome do componente filho.
+  - Páginas: `pageHome` + `featuredPosts` = `pageHome_featuredPosts`.
+  - Componentes: `featuredPosts` + `blogCard` = `featuredPosts_blogCard`.
+- Nestes casos é obrigatório o aninhamento das classes do componente dentro da classe customizada para ter um grau de especificidade maior. Assim não teremos conflitos com os estilos originais.
 
-#### Casos
-- Você precisa adicionar um `margin-top: 12px` no componente.
-- Na versão mobile o componente precisa mudar de ordem no layout e precisamos incluir o atributo `order: 2;`
+#### Estilos exclusivos com elemento container
+Existem casos onde não é possível modificar a estrutura HTML do componente. Nesses casos você deve criar um elemento container e nomear ele com a classe customizada. Em seguida insira o componente dentro do elemento container e faça todas as alterações a partir da classe do container.
 
+Componente dentro de uma página
+```html
+<body class="pageHome"> <!-- Page -->
+	<aside class="pageHome_aside">
+		<div class="pageHome_featuredPosts"> <!-- Container -->
+			<section class="featuredPosts"> <!-- Component -->
+				<h2 class="featuredPosts_title">featuredPosts title</h2>
+			</section>
+		</div>
+	</aside>
+</body>
+```
+```scss
+// pageHome.scss
+.pageHome_aside {
+}
+
+.pageHome_featuredPosts { // Container
+	margin-top: 12px;
+
+	.featuredPosts { // Component class
+		background-color: red;
+	}
+
+	.featuredPosts_title { // Component class
+		font-weight: 600;
+	}
+}	
+```
+
+Componente dentro de outro componente
+```html
+<section class="featuredPosts"> <!-- Component -->
+	<h2 class="featuredPosts_title">featuredPosts title</h2>
+	<ul class="featuredPosts_list">
+		<div class="featuredPosts_blogCard"> <!-- container -->
+			<li class="blogCard"> <!-- child component -->
+				<h2 class="blogCard_title">Title</h2>
+				<div class="blogCard_header">
+					<h3 class="blogCard_header_title">
+						Title
+					</h3>
+				</div>
+			</li>
+		</div>
+	</ul>
+</section>
+```
+```scss
+// featuredPosts.scss
+.featuredPosts_list {
+}
+
+.featuredPosts_blogCard { // Container
+	margin-top: 12px;
+
+	.blogCard { // Component class
+		background-color: red;
+	}
+
+	.blogCard_header_title { // Component class
+		font-weight: 600;
+	}
+}	
+```
+#### Estilos exclusivos diretos
+Não é necessário criar o elemento container para casos onde é possível mexer na estrutura do componente. Nesses casos você pode inserir a classe customizada direto no elemento principal do componente. As regras permanecem as mesmas.
+
+```html
+<section class="featuredPosts"> <!-- Component -->
+	<h2 class="featuredPosts_title">featuredPosts title</h2>
+	<ul class="featuredPosts_list">
+		<li class="blogCard featuredPosts_blogCard"> <!-- child component + custom class -->
+			<h2 class="blogCard_title">Title</h2>
+			<div class="blogCard_header">
+				<h3 class="blogCard_header_title">
+					Title
+				</h3>
+			</div>
+		</li>
+	</ul>
+</section>
+```
+```scss
+// featuredPosts.scss
+.featuredPosts_list {
+}
+
+.featuredPosts_blogCard { // Component custom class
+	margin-top: 12px;
+
+	&.blogCard { // Component class
+		background-color: red;
+	}
+
+	.blogCard_header_title { // Component class
+		font-weight: 600;
+	}
+}	
+```
+#### Em frameworks
+Nas estruturas atuais é possível importar os componentes e inserir dentro da página, dessa forma não temos o HTML do componente diretamente dentro do HTML da página, assim não podemos atribuir um nome de classe diretamente ao componente e criar um container é uma forma mais simples. 
+
+Caso você queira fazer algo mais sofisticado, você pode criar uma propriedade `const customClass = ''` dentro do componente, essa propriedade seria inserida dentro do atributo `class` do componente. Em seguida, dentro da página onde o componente foi inserido, passamos o nome da classe como valor da propriedade criada `customClass="pageHome_featuredPosts"`. A forma como isso pode ser feito varia de acordo com o framework utilizado, mas a lógica é a mesma.
 
 
 
