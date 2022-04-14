@@ -24,26 +24,30 @@ module.exports = {
 function getGuideSidebar() {
     return [
         {
-            text: 'Introdução',
+            text: 'Sobre',
+            link: '/guide/'
+        },
+        {
+            text: 'Iniciando',
             children: [
-                { text: 'Sobre o ORCSS', link: '/guide/' },
                 {
-                    text: 'Iniciando',
-                    link: '/guide/starting/'
+                    text: 'Configurações',
+                    link: '/guide/settings/',
+                    children: [
+                        { text: 'VSCode', link: '/guide/settings/vscode' },
+                        { text: 'Stylelint', link: '/guide/settings/stylelint' },
+                        { text: 'Stylelint Vue.js', link: '/guide/settings/stylelint-vue' }
+                    ]
                 }
             ]
         },
         {
             text: 'Categorização',
-            children: [
-                { text: 'Categorização', link: '/guide/categorization/' }
-            ]
+            link: '/guide/categorization/'
         },
         {
             text: 'Escrita',
-            children: [
-                { text: 'Escrita', link: '/guide/writing/' }
-            ]
+            link: '/guide/writing/'
         },
         {
             text: 'Estruturação',
@@ -54,15 +58,6 @@ function getGuideSidebar() {
                 { text: 'Utils', link: '/guide/structuring/utils' },
                 { text: 'Components', link: '/guide/structuring/components' },
                 { text: 'Pages', link: '/guide/structuring/pages' }
-            ]
-        },
-        {
-            text: 'Configurações',
-            link: '/guide/settings/',
-            children: [
-                { text: 'VSCode', link: '/guide/settings/vscode' },
-                { text: 'Stylelint', link: '/guide/settings/stylelint' },
-                { text: 'Stylelint Vue.js', link: '/guide/settings/stylelint-vue' }
             ]
         }
     ];
