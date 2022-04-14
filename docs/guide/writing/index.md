@@ -241,32 +241,8 @@ As classes modificadoras são classes utilizadas para criar diferentes variaçõ
 }	
 ```
 
-## Interação com Javascript
-Muitas vezes alguns elementos são utilizados dentro do javascript e precisamos de alguma referência para trabalhar com o elemento.
-
-#### Seleção única
-Como já dito antes, não devemos utilizar IDs para aplicar estilos CSS, porém eles são essenciais para criar identificadores únicos em elementos e são ótimo para trabalhar dentro do javascript quando precisamos selecionar um único elemento. Então, sempre utilize o atributo `id=""` para selecionar elementos únicos no seu projeto utilizando javascript.
-
-```html
-<button id="pageHome_submitButton" class="button -secondary -big">
-	Submit
-</button>
-```
-
-#### Seleção múltipla
-Para trabalhar com seleções múltiplas, nós devemos criar classes com o prefixo `js-` seguido do nome da classe: `js-blogCard` `js-card`
-
-* Esse tipo de classe não envolve alteração de estilos do elemento pelo javascript. São classes utilizadas para manipulação da DOM (loops, inserts, remove etc...)
-* Classes com o prefixo `js-` são utilizadas apenas no javascript, não aplique estilos utilizando esse tipo de classe.
-  * Isso facilita a manutenção, pois se o nome da classe precisar ser alterado você vai saber exatamente onde o código vai ser afetado.
-  
-```html
-<li class="blogCard js-blogCard">
-</li>
-```
-
-## Estilos exclusivos
-Estilos exclusivos acontecem quando um componente precisa de estilos que são unicamente feitos dentro de uma página ou outro componente.
+## Estilos específicos
+Estilos específicos acontecem quando um componente precisa de estilos que são unicamente feitos dentro de uma página ou outro componente.
 
 #### Regras
 - Evite o máximo que puder, sempre dê preferência para [classes modificadoras](#modifier-classes).
@@ -378,11 +354,32 @@ Não é necessário criar o elemento container para casos onde é possível mexe
 	}
 }	
 ```
+
 ### Frameworks
 Nas estruturas atuais é possível importar os componentes e inserir dentro da página, dessa forma não temos o HTML do componente diretamente dentro do HTML da página, assim não podemos atribuir um nome de classe diretamente ao componente e criar um container é uma forma mais simples. 
 
 Caso você queira inserir de forma direta, você pode criar uma propriedade `const customClass = ''` dentro do componente, essa propriedade seria inserida dentro do atributo `class` do componente. Em seguida, dentro da página onde o componente foi inserido, passamos o nome da classe como valor da propriedade criada `customClass="pageHome_featuredPosts"`. A forma como isso pode ser feito varia de acordo com o framework utilizado, mas a lógica é a mesma.
 
+## Interação com Javascript
+Muitas vezes alguns elementos são utilizados dentro do javascript e precisamos de alguma referência para trabalhar com o elemento.
 
+#### Seleção única
+Como já dito antes, não devemos utilizar IDs para aplicar estilos CSS, porém eles são essenciais para criar identificadores únicos em elementos e são ótimo para trabalhar dentro do javascript quando precisamos selecionar um único elemento. Então, sempre utilize o atributo `id=""` para selecionar elementos únicos no seu projeto utilizando javascript.
 
+```html
+<button id="pageHome_submitButton" class="button -secondary -big">
+	Submit
+</button>
+```
 
+#### Seleção múltipla
+Para trabalhar com seleções múltiplas, nós devemos criar classes com o prefixo `js-` seguido do nome da classe: `js-blogCard` `js-card`
+
+* Esse tipo de classe não envolve alteração de estilos do elemento pelo javascript. São classes utilizadas para manipulação da DOM (loops, inserts, remove etc...)
+* Classes com o prefixo `js-` são utilizadas apenas no javascript, não aplique estilos utilizando esse tipo de classe.
+  * Isso facilita a manutenção, pois se o nome da classe precisar ser alterado você vai saber exatamente onde o código vai ser afetado.
+  
+```html
+<li class="blogCard js-blogCard">
+</li>
+```
