@@ -4,12 +4,12 @@ Agora que já vimos como [categorizar](../categorization/index.md) uma estrutura
 ## Dicas gerais
 * Evite nomes atômicos e difíceis de entender
 * Não utilize IDs ou tags para aplicar estilo, SEMPRE utilize classes. Isso diminui a probabilidade de conflitos de especificidade e facilita a manutenção.
-* Sempre crie variáveis (tokens) para valores de atributos que são utilizados em todo o projeto (cores, espaçamentos, bordas, fontes etc...)
 
 ---
 ## Nomenclatura
-* Use `camelCase` para nomes com mais de uma palavra
-	```css
+Estrutura de nomenclatura que devemos utilizar nos nomes de classes CSS
+* Use `camelCase` para nomes com mais de uma palavra.
+	```scss
 	.card {
 	}
 
@@ -19,6 +19,7 @@ Agora que já vimos como [categorizar](../categorization/index.md) uma estrutura
 	.myBlogCard {		
 	}
 	```
+	* Isso serve para IDs também, mesmo não sendo utilizado dentro do CSS.
 
 * Elementos "filhos" sempre herdam o nome do elemento "pai". Utilize underline `_` para separar os nomes. Elementos pais são **páginas** e **componentes**.
   
@@ -240,7 +241,7 @@ As classes modificadoras são classes utilizadas para criar diferentes variaçõ
 }	
 ```
 
-## Relação com Javascript
+## Interação com Javascript
 Muitas vezes alguns elementos são utilizados dentro do javascript e precisamos de alguma referência para trabalhar com o elemento.
 
 #### Seleção única
@@ -274,7 +275,7 @@ Estilos exclusivos acontecem quando um componente precisa de estilos que são un
   - Componentes: `featuredPosts` + `blogCard` = `featuredPosts_blogCard`.
 - Nestes casos é obrigatório o aninhamento das classes do componente dentro da classe customizada para ter um grau de especificidade maior. Assim não teremos conflitos com os estilos originais.
 
-#### Estilos exclusivos com elemento container
+### Container
 Existem casos onde não é possível modificar a estrutura HTML do componente. Nesses casos você deve criar um elemento container e nomear ele com a classe customizada. Em seguida insira o componente dentro do elemento container e faça todas as alterações a partir da classe do container.
 
 Componente dentro de uma página
@@ -342,7 +343,7 @@ Componente dentro de outro componente
 	}
 }	
 ```
-#### Estilos exclusivos diretos
+### Direto
 Não é necessário criar o elemento container para casos onde é possível mexer na estrutura do componente. Nesses casos você pode inserir a classe customizada direto no elemento principal do componente. As regras permanecem as mesmas.
 
 ```html
@@ -377,11 +378,10 @@ Não é necessário criar o elemento container para casos onde é possível mexe
 	}
 }	
 ```
-#### Em frameworks
+### Frameworks
 Nas estruturas atuais é possível importar os componentes e inserir dentro da página, dessa forma não temos o HTML do componente diretamente dentro do HTML da página, assim não podemos atribuir um nome de classe diretamente ao componente e criar um container é uma forma mais simples. 
 
-Caso você queira fazer algo mais sofisticado, você pode criar uma propriedade `const customClass = ''` dentro do componente, essa propriedade seria inserida dentro do atributo `class` do componente. Em seguida, dentro da página onde o componente foi inserido, passamos o nome da classe como valor da propriedade criada `customClass="pageHome_featuredPosts"`. A forma como isso pode ser feito varia de acordo com o framework utilizado, mas a lógica é a mesma.
-
+Caso você queira inserir de forma direta, você pode criar uma propriedade `const customClass = ''` dentro do componente, essa propriedade seria inserida dentro do atributo `class` do componente. Em seguida, dentro da página onde o componente foi inserido, passamos o nome da classe como valor da propriedade criada `customClass="pageHome_featuredPosts"`. A forma como isso pode ser feito varia de acordo com o framework utilizado, mas a lógica é a mesma.
 
 
 
