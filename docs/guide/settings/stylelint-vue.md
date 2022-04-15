@@ -1,8 +1,8 @@
 # Stylelint - Vue
-Configurações especificas que devem ser feitas quando queremos utilizar stylelint com Vue.js
+Configurações especificas que devem ser feitas quando queremos utilizar stylelint com Vue.js.
 
 :::warning Atenção
-Antes de seguir com este guia tenha certeza de ter aplicado as configurações padrões do styelint. [Olhe aqui](stylelint.md)
+Antes de seguir com este guia tenha certeza de ter aplicado as configurações padrões do styelint. [Olhe aqui](stylelint.md).
 :::
 
 ## VSCode
@@ -23,9 +23,9 @@ Antes de seguir com este guia tenha certeza de ter aplicado as configurações p
 
 ## .stylelintrc
 Para que o stylelint funcione corretamente com Vue.js são necessárias algumas bibliotecas auxiliares:
-  - [postcss-scss](https://github.com/postcss/postcss-scss#readme) - Apenas se estiver utilizando SASS
-  - [postcss-safe-parser](https://github.com/postcss/postcss-safe-parser#readme)
-  - [postcss-html](https://github.com/ota-meshi/postcss-html#readme)
+  - [postcss-scss](https://github.com/postcss/postcss-scss#readme) - Apenas se estiver utilizando SASS.
+  - [postcss-safe-parser](https://github.com/postcss/postcss-safe-parser#readme).
+  - [postcss-html](https://github.com/ota-meshi/postcss-html#readme).
 
 Após a instalação finalizar, ensira a seguinte configuração no stylelint.
 

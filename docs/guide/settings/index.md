@@ -1,6 +1,8 @@
 # O que você vai precisar
 Para aplicar o ORCSS de uma forma mais eficiente você vai precisar de algumas ferramentas auxiliares que simplificam o seu trabalho e trazem ótimos beneficios dentro do CSS.
 
+Se primeiro quiser entender como o ORCSS funciona, comece por [aqui](../categorization/index.md).
+
 ## SASS
 O pre-processador SASS (Dart) é essencial para que possamos organizar os estilos CSS em vários arquivos menores e consequentemente ganhamos todos os outros benefícios que ele trás, que otimizam muito o fluxo de trabalho com o CSS. 
 
@@ -17,5 +19,5 @@ O StyleLint é um Linter CSS essencial para manter o CSS organizado e aplicar co
 [Integração com editores](https://stylelint.io/user-guide/integrations/editor)
 
 :::info Observação
-Essa lista pode ser alterada de acordo com a evolução das soluções no mercado
+Essa lista pode ser alterada de acordo com a evolução das soluções no mercado.
 :::

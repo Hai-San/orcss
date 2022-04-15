@@ -1,5 +1,5 @@
 # Sobre ( DOCUMENTAÇÃO EM PROGRESSO )
-<abbr title="Regras de organização para CSS">ORCSS</abbr> é um guia de nomenclatura e organização do CSS que agrupa algumas "regras" que eu considero como ideais para um CSS de qualidade.
+<abbr title="Regras de organização para CSS">ORCSS</abbr> é um guia de organização do CSS que agrupa algumas "regras" que eu considero como ideais para um CSS de qualidade.
 
 ## Problema
 O maior problema hoje quando se trata de CSS é a dificuldade que os desenvolvedores tem em organizar uma estrutura que seja escalável e simples de manter. Muitas "soluções" no mercado que tentam melhorar isso, porém acabam gerando uma curva de aprendizado muito maior do que o necessário, principalmente pelo fato de alterarem pontos que não deveriam ser alterados.
