@@ -1,5 +1,5 @@
 # VSCode
-Como as configurações do ORCSS são um padrão fixo para o projeto, o ideal é ter uma configuração do VSCode exclusiva para que todos os desenvolvedores do projeto sigam o mesmo padrão. Essa configuração é conhecida com `workspace` dentro do VSCode.
+Como as configurações do ORCSS são um padrão fixo para o projeto, o ideal é ter uma configuração do VSCode exclusiva para que todos os desenvolvedores do projeto sigam o mesmo padrão.
 
 [Documentação oficial](https://code.visualstudio.com/docs/getstarted/settings)
 
@@ -14,7 +14,7 @@ Exemplo de estrutura:
  ┃ ┣ 📜extensions.json\
  ┃ ┣ 📜settings.json
 
-Ambos os arquivos são gerados automaticamente se você adicionar uma extensão como recomendada ou adicionar uma configuração de workspace pelo painel do VSCode.
+Ambos os arquivos são gerados automaticamente se você adicionar uma extensão como recomendada no projeto ou adicionar uma configuração de workspace pelo painel do VSCode.
 
 ## extensions.json
 Este arquivo armazena uma lista de todas as extensões que são recomendadas para o projeto.
@@ -33,7 +33,7 @@ Exemplo:
 ```
 
 ## settings.json
-Este arquivo armazena todas as configurações exclusivas do projeto que serão utilizadas pelo VSCode.
+Este arquivo armazena todas as configurações do VSCode que serão utilizadas exclusivamente para o projeto
 
 Exemplo:
 ```json

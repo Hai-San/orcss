@@ -1,7 +1,18 @@
-## Components
-Aqui ficam todos os estilo relacionados diretamente com algum componente (buttons, links, fonts etc...) Podemos também criar pastas para agrupar diferentes estilos de um mesmo componente.
+# Components
+Aqui ficam todos os estilos de componentes do projeto
 
-### Regras importantes
-- Os componentes sempre serão formados por uma classe que será utilizada diretamente em um elemento HTML
+:::info Observação
+Essa pasta não vai existir dentro de um estrutura de frameworks modernos. Nesses casos os estilos ficam no mesmo arquivo do HTML, automaticamente aplicando as regras dos componentes.
+:::
+
+## Regras
 - Cada componente deve ter seu próprio arquivo
-- As classes de componentes não devem ser utilizadas por outras classes CSS
+- Componentes são formados por uma estrutura HTML que é diretamente ligada a um CSS exclusivo, ou seja, o CSS deve ser utilizado unicamente para um componente.
+- As classes de componentes não devem ser estendidas por outras classes dentro do CSS. As únicas classes com permissão para extensão são as classes da pasta [Utils](utils.md)
+- Podemos criar pastas para agrupar diferentes estilos de um mesmo componente\
+	📂styles\
+	┣ 📂components\
+	┃ ┣ 📂button\
+	┃ ┃ ┣ 📜tools.scss - Mixins e funções utilizadas para gerar o CSS padrão de todos os botões\
+	┃ ┃ ┣ 📜primary.scss - Utiliza os mixins e funções para ter um estilo exclusivo\
+	┃ ┃ ┗ 📜secondary.scss\

@@ -39,9 +39,9 @@ Crie o arquivo `.stylelintrc.js` na raiz do projeto e insira as configurações 
 Muitas regras indicadas aqui foram adicionadas na medida que meus projetos foram evoluindo e não são necessariamente obrigatórias. Você pode modificar ou remover de acordo com o que achar ideal para seu projeto. 
 
 Entre todas as regras existem algumas que são importantes para manter o CSS claro e organizado. Dito isso, tente manter essas regras ativas em seu projeto.
-- Regras de espaçamento
-- Regras de ordenação
-- Regras de aninhamento
+- Regras de espaçamento.
+- Regras de ordenação.
+- Regras de aninhamento.
 :::
 
 ### Regras padrões
@@ -349,10 +349,10 @@ module.exports = {
 ```
 
 ### stylelint-scss
-Esse plugin otimiza o stylelint para a aplicação de regras exclusivas do SCSS
+Esse plugin otimiza o stylelint para a aplicação de regras exclusivas do SCSS.
 
-- [Github stylelint-scss](https://github.com/stylelint-scss/stylelint-scss#readme)
-- [Lista de regras](https://github.com/stylelint-scss/stylelint-scss#list-of-rules)
+- [Github stylelint-scss](https://github.com/stylelint-scss/stylelint-scss#readme).
+- [Lista de regras](https://github.com/stylelint-scss/stylelint-scss#list-of-rules).
 
 Não esqueça de instalar o SASS `npm i -D sass` como dependência de desenvolvimento no projeto.
 
