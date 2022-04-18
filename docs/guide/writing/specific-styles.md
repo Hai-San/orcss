@@ -1,7 +1,7 @@
 # Estilos específicos
 Estilos específicos acontecem quando um componente precisa de estilos que são unicamente feitos dentro de uma página ou outro componente.
 
-Evite quando puder, sempre dê preferência para [classes modificadoras](/docs/guide/writing/modifiers.md).
+Evite quando puder, sempre dê preferência para [classes modificadoras](modifiers.md).
 
 ## Características
 - Crie um nome de classe customizado formado pelo nome do elemento principal mais o nome do componente filho.
