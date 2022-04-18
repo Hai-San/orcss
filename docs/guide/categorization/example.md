@@ -1,0 +1,83 @@
+# Exemplo completo
+
+```html
+<!-- página -->
+<body class="pageHome">
+
+	<!-- componente -->
+	<header class="header">
+		<img class="header_logo" src="" alt=""> <!-- unidade -->
+
+		<!-- componente -->
+		<nav class="nav">
+			<!-- bloco de estruturação -->
+			<ul class="nav_list">
+				<!-- bloco de estruturação -->
+				<li class="nav_item">
+					<a class="nav_link" href="">Menu link option</a> <!-- unidade -->
+				</li>
+				<!-- bloco de estruturação -->
+				<li class="nav_item">
+					<a class="nav_link" href="">Menu link option 2</a> <!-- unidade -->
+				</li>
+				<!-- bloco de estruturação -->
+				<li class="nav_item">
+					<a class="nav_link" href="">Menu link option 3</a> <!-- unidade -->
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- bloco de estruturação -->
+	<main class="pageHome_main">
+
+		<h1 class="pageHome_title">Page title</h1> <!-- unidade -->
+
+		<!-- componente -->
+		<section class="featuredPosts">
+
+			<!-- bloco de estruturação -->
+			<div class="featuredPosts_container">
+
+				<!-- bloco de estruturação -->
+				<div class="featuredPosts_header">
+					<h1 class="featuredPosts_title">featured posts</h1> <!-- unidade -->
+					<p class="featuredPosts_description">featured posts description</p> <!-- unidade -->
+				</div>
+
+				<!-- bloco de estruturação -->
+				<ul class="featuredPosts_list">
+
+					<!-- bloco hereditário -->
+					<li class="featuredPosts_card">
+
+						<!-- bloco de estruturação -->
+						<div class="featuredPosts_card_imageContainer">
+							<img class="featuredPosts_card_image" src="/image" alt="Card Image"> <!-- unidade -->
+
+							<!-- bloco hereditário -->
+							<ul class="featuredPosts_card_tags">
+								<li class="featuredPosts_card_tags_item">Category A</li> <!-- unidade -->
+								<li class="featuredPosts_card_tags_item">Category B</li> <!-- unidade -->
+							</ul>
+						</div>
+
+						<!-- bloco hereditário -->
+						<div class="featuredPosts_card_data">
+							<h2 class="featuredPosts_card_title">Relate post card title</h2> <!-- unidade -->
+							<p class="featuredPosts_card_description">featured post card description</p> <!-- unidade -->
+							<a class="featuredPosts_card_link" href="/item-link">Read More</a> <!-- unidade -->
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+
+	<!-- bloco hereditário -->
+	<aside class="pageHome_aside">
+		<h2 class="pageHome_aside_title"></h2> <!-- unidade -->
+		<p class="pageHome_aside_description"></p> <!-- unidade -->
+	</aside>
+</body>
+```

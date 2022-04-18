@@ -43,7 +43,14 @@ function getGuideSidebar() {
         },
         {
             text: 'Categorização',
-            link: '/guide/categorization/'
+            link: '/guide/categorization/',
+            children: [
+                { text: 'Páginas', link: '/guide/categorization/pages' },
+                { text: 'Componentes', link: '/guide/categorization/components' },
+                { text: 'Blocos', link: '/guide/categorization/blocks' },
+                { text: 'Unidades', link: '/guide/categorization/units' },
+                { text: 'Exemplo completo', link: '/guide/categorization/example' }
+            ]
         },
         {
             text: 'Escrita',
