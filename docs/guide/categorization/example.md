@@ -1,4 +1,5 @@
 # Exemplo completo
+Este exemplo apresenta todas as categorias que foram mostradas na sessão de categorização.
 
 ```html
 <!-- página -->
