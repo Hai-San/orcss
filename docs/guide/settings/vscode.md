@@ -1,5 +1,5 @@
 # VSCode
-Como as configurações do ORCSS são um padrão fixo para o projeto, o ideal é ter uma configuração do VSCode exclusiva para que todos os desenvolvedores do projeto sigam o mesmo padrão.
+Como as configurações do ORCSS são um padrão fixo para o projeto, o ideal é ter uma configuração do VSCode exclusiva para que todos os desenvolvedores do projeto sigam o mesmo padrão. Isso não serve apenas para o ORCSS, é legal utilizar isso para padronizar várias coisas dentro do projeto e evitar ao máximo que cada desenvolvedor faça o código da forma que achar melhor.
 
 [Documentação oficial](https://code.visualstudio.com/docs/getstarted/settings)
 
@@ -23,6 +23,7 @@ Para adicionar uma recomendação é só ir na lista de extensões já instalada
 
 Exemplo:
 ```json
+// extensions.json
 {
 	"recommendations": [
 		"johnsoncodehk.volar",
@@ -37,6 +38,7 @@ Este arquivo armazena todas as configurações do VSCode que serão utilizadas e
 
 Exemplo:
 ```json
+// settings.json
 {
 	"[css]": {
 		"editor.codeActionsOnSave": {

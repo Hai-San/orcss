@@ -28,17 +28,12 @@ function getGuideSidebar() {
             link: '/guide/'
         },
         {
-            text: 'Iniciando',
+            text: 'Configurações',
+            link: '/guide/settings/',
             children: [
-                {
-                    text: 'Configurações',
-                    link: '/guide/settings/',
-                    children: [
-                        { text: 'VSCode', link: '/guide/settings/vscode' },
-                        { text: 'Stylelint', link: '/guide/settings/stylelint' },
-                        { text: 'Stylelint Vue.js', link: '/guide/settings/stylelint-vue' }
-                    ]
-                }
+                { text: 'VSCode', link: '/guide/settings/vscode' },
+                { text: 'Stylelint', link: '/guide/settings/stylelint' },
+                { text: 'Stylelint Vue.js', link: '/guide/settings/stylelint-vue' }
             ]
         },
         {
