@@ -1,8 +1,8 @@
 module.exports = {
     base: '/',
     lang: 'pt-BR',
-    title: 'ORCSS - O guia de CSS',
-    description: 'ORCSS é um guia para deixar o CSS simples e escalável',	
+    title: 'ORCSS',
+    description: 'Um guia CSS focado na simplicidade e escalabilidade',	
     lastUpdated: true,
 	
     themeConfig: {
