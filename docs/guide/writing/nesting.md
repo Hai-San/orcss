@@ -10,7 +10,7 @@ Normalmente o aninhamento é normal para pseudo-classes, pseudo-elementos, valor
 
 ## Exemplos
 
-* Sempre tenha uma classe principal para aplicar o aninhamento
+* O aninhamento sempre deve começar por uma classe
 
 * Não faça grandes aninhamentos
 
