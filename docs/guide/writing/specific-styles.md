@@ -1,7 +1,7 @@
 # Estilos específicos
-Estilos específicos acontecem quando um componente precisa de estilos que são unicamente feitos dentro de uma página ou outro componente.
+Estilos específicos acontecem quando um componente precisa de estilos que são unicamente feitos dentro de uma página ou outro componente. Aqui é onde podem ocorrer os maiores níveis de aninhamento.
 
-Evite quando puder, sempre dê preferência para [classes modificadoras](modifiers.md).
+Evite quando puder, sempre dê preferência para [classes modificadoras](customization-classes.md).
 
 ## Características
 - Crie um nome de classe customizado formado pelo nome do elemento principal mais o nome do componente filho.
