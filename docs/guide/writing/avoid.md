@@ -7,7 +7,7 @@ Antes de começar a explicar todas as regras, já vou deixar aqui uma lista de t
   
 * Aninhamento em excesso
   * Evite sempre que puder
-  * Aninhamento é legal, mas tem gente que curte fazer aquele funil sem fim e não tem a menor idéia do caos que isso vai gerar no futuro.
+  * Aninhamento é legal, mas tem gente que curte fazer aquele funil sem fim e não tem a menor ideia do caos que isso vai gerar no futuro.
   * Quando digo `excesso`, me refiro à um aninhamento maior do que 2 níveis. Apenas em alguns casos específicos será maior que isso e terá um motivo claro.
   
 * Shorthands `background`, `margin`, `padding`, `border`, `flex` etc... Eles podem se tornar um pouco confusos na manutenção do código e também conflitam com propriedades mais específicas

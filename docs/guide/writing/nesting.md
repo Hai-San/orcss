@@ -90,7 +90,7 @@ Principais benefícios:
 Os exemplos abaixo podem causar os seguintes problemas:
 - Gera mais CSS
 - Maior especificidade de forma desnecessária
-- Mais dicifuldade para manter o código
+- Mais dificuldade para manter o código
 - Grandes aninhamentos que ficam difíceis de ler
 - Classes modificadoras, filhos e seletores ficam misturados
   

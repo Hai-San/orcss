@@ -6,7 +6,7 @@ Essas classes podem ser criadas de duas formas:
 ## Modificadores
 São pequenas classes aninhadas dentro da classe principal do componente e inseridas na estrutura HTML de acordo com as necessidades.
 
-### Caracteristicas
+### Características
 - Possuem um hífen `-` como prefixo `-secondary` `-big`
 - **SEMPRE** ficam aninhadas dentro de uma classe principal
 - Contém sobreposição de código
@@ -53,7 +53,7 @@ São pequenas classes aninhadas dentro da classe principal do componente e inser
 ## Clones
 São formadas pelo nome do componente junto com o nome das classes modificadoras.
 
-### Caracteristicas
+### Características
 - Evitam aninhamento
 - Evitam sobreposição de código
 - Possuem um código exclusivo
