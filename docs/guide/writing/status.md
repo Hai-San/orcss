@@ -2,7 +2,7 @@
 - São classes que representam a condição de um componente ou elemento. 
 - Essa condição pode ser temporária ou fixa até que o usuário execute alguma ação.
 - Não é utilizado para criar variações de um componente, para isso são utilizadas as [classes modificadoras](modifiers.md).
-- Sempre possuem um prefixo `is_`, `has_` ou `need_`
+- As próprias classes modificadoras podem conter classes de condição
 - Normalmente as condições são manipuladas pelo javascript
 - Sempre ficam aninhadas em uma classe principal
 
@@ -23,11 +23,17 @@ Indica a condição atual de um componente ou elemento.
 Indica quando o componente ou elemento possui uma condição específica.
 - Possui carregamento - `.has_loading`
 - Possui carregamento lento - `.has_lazy`
+- Possui um erro - `.has_error`
 
 ## Condições `need_`
 Indica quando o componente ou elemento necessita de uma condição específica.
 - Necessita carregar - `.need_load`
 - Necessita aguardar - `.need_wait`
+
+## Condições `was_`
+Indica quando o componente ou elemento atingiu uma determinada condição
+- Foi enviado - `.was_sent`
+- Foi aprovado - `.was_approved`
 
 ## Exemplos
 ```sass
