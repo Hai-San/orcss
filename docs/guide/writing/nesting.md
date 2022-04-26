@@ -6,7 +6,7 @@ Apesar do aninhamento ser muito bom, cuidado para não tornar isso um grande pro
 :::
 
 ## Quando utilizar?
-Normalmente o aninhamento é normal para pseudo-classes, pseudo-elementos, valores de atributos, [classes modificadoras](modifiers.md) e [estilos específicos](specific-styles.md). Nos casos de seletores por tag, id e classes filhas tente evitar ao máximo. O objetivo é que o aninhamento seja utilizado para casos realmente necessários e seja evitado sempre que possível.
+Normalmente o aninhamento é normal para pseudo-classes, pseudo-elementos, valores de atributos, [classes modificadoras](customization-classes.md) e [estilos específicos](specific-styles.md). Nos casos de seletores por tag, id e classes filhas tente evitar ao máximo. O objetivo é que o aninhamento seja utilizado para casos realmente necessários e seja evitado sempre que possível.
 
 ## Exemplos
 Como podemos utilizar o aninhamento de forma correta.
@@ -82,7 +82,7 @@ Principais benefícios:
 ```
 ### Outros exemplos
 * [Classes de condição](status.md)
-* [Classes modificadoras](modifiers.md)
+* [Classes modificadoras](customization-classes.md)
 * [Estilos específicos](specific-styles.md)
 
 ## Não faça isso!

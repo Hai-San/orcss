@@ -1,7 +1,7 @@
 # Classes de condição
 - São classes que representam a condição de um componente ou elemento. 
 - Essa condição pode ser temporária ou fixa até que o usuário execute alguma ação.
-- Não é utilizado para criar variações de um componente, para isso são utilizadas as [classes modificadoras](modifiers.md).
+- Não é utilizado para criar variações de um componente, para isso são utilizadas as [classes modificadoras](customization-classes.md).
 - As próprias classes modificadoras podem conter classes de condição
 - Normalmente as condições são manipuladas pelo javascript
 - Sempre ficam aninhadas em uma classe principal
