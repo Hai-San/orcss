@@ -57,7 +57,8 @@ function getGuideSidebar() {
                 { text: 'Classes de customização', link: '/guide/writing/customization-classes' },
                 { text: 'Condições', link: '/guide/writing/status' },
                 { text: 'Estilos específicos', link: '/guide/writing/specific-styles' },
-                { text: 'Classes javascript', link: '/guide/writing/javascript-classes' }
+                { text: 'Classes javascript', link: '/guide/writing/javascript-classes' },
+                { text: 'Tokens', link: '/guide/writing/tokens' }
             ]
         },
         {
