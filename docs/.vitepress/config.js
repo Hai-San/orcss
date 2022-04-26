@@ -54,6 +54,7 @@ function getGuideSidebar() {
                 { text: 'Nomenclatura', link: '/guide/writing/nomenclature' },
                 { text: 'Aninhamento', link: '/guide/writing/nesting' },
                 { text: 'Modificadores', link: '/guide/writing/modifiers' },
+                { text: 'Condições', link: '/guide/writing/status' },
                 { text: 'Estilos específicos', link: '/guide/writing/specific-styles' },
                 { text: 'Classes javascript', link: '/guide/writing/javascript-classes' }
             ]

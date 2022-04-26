@@ -1,0 +1,11 @@
+# Classes de condição
+- São classes que representam a condição de um componente ou elemento. 
+- Essa condição pode ser fixa ou temporária
+- Não é utilizado para criar variações de um componente, para isso são utilizadas as [classes modificadoras](modifiers.md)
+- São unicamente utilizadas para indicar condições como:
+  - ativo
+  - inativo
+  - aberto
+  - fechado
+  - carregando
+  - carregado
