@@ -51,6 +51,7 @@ function getGuideSidebar() {
             text: 'Escrita',
             link: '/guide/writing/',
             children: [
+                { text: 'Evite', link: '/guide/writing/avoid' },
                 { text: 'Nomenclatura', link: '/guide/writing/nomenclature' },
                 { text: 'Aninhamento', link: '/guide/writing/nesting' },
                 { text: 'Modificadores', link: '/guide/writing/modifiers' },

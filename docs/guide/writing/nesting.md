@@ -1,5 +1,5 @@
 # Aninhamento
-Utilizando o SASS é possível fazer aninhamento de classes. Essa funcionalidade é muito boa para deixar o CSS mais organizado e simples de entender. 
+Utilizando o SASS é possível fazer aninhamento de classes. Essa funcionalidade é muito boa para deixar o CSS mais organizado e simples de entender. O aninhamento também existe no CSS, porém não fica visivelmente claro como no SASS.
 
 :::danger Atenção
 Apesar do aninhamento ser muito bom, cuidado para não tornar isso um grande problema, pois fazer aninhamentos muito longos ou sem necessidade, acaba deixando o CSS com uma especificidade muito alta e consequentemente difícil de manter.
@@ -51,7 +51,7 @@ Principais benefícios:
 
 ### Tags
 - Tags sempre devem ser aninhadas
-- Sempre dê preferência para classes
+- Sempre dê preferência para classes que evitem o aninhamento
 ```scss
 .blogCard_description {
 	p {
@@ -61,6 +61,7 @@ Principais benefícios:
 ```
 
 ### Pseudo-classes
+- Sempre devem ser aninhados em uma classe
 ```scss
 .blogCard {
 	&:focus,
@@ -71,6 +72,7 @@ Principais benefícios:
 ```
 
 ### Pseudo-elementos
+- Sempre devem ser aninhados em uma classe
 ```scss
 .blogCard_header_title {
 	&::after {
@@ -78,10 +80,10 @@ Principais benefícios:
 	}
 }
 ```
-
-### [Classes modificadoras](modifiers.md)
-
-### [Estilos específicos](specific-styles.md)
+### Outros exemplos
+* [Classes de condição](status.md)
+* [Classes modificadoras](modifiers.md)
+* [Estilos específicos](specific-styles.md)
 
 ## Não faça isso!
 
@@ -89,9 +91,9 @@ Os exemplos abaixo podem causar os seguintes problemas:
 - Gera mais CSS
 - Maior especificidade de forma desnecessária
 - Mais dicifuldade para manter o código
-- Grandes aninhamentos ficam difíceis de ler
-- Classes modificadoras, filhos e seletores ficam todos juntos
-
+- Grandes aninhamentos que ficam difíceis de ler
+- Classes modificadoras, filhos e seletores ficam misturados
+  
 ### Reaproveitamento de nomes
 - Péssimo para leitura
 - Torna inútil a herança de nomes que é feita para evitar aninhamento e facilitar a leitura

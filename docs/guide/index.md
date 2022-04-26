@@ -6,3 +6,9 @@ O maior problema quando se trata de CSS é a dificuldade que os desenvolvedores 
 
 ## Objetivo
 O objetivo deste guia é mostrar como podemos organizar o CSS de uma forma simples e escalável sem ter que criar uma curva de aprendizado desnecessária e regras que complicam o aprendizado. O principal ponto é manter todas as regras de estilo dentro do CSS e envolver HTML e javascript o mínimo possível.
+
+## Principais benefícios
+- CSS mais limpo: Mais simples e fácil de manter.
+- Menor especificidade: Gera um código mais consistente e com menos conflitos.
+- Arquivos menores: Melhora a performance do projeto.
+- Escalável: Sendo algo mais leve, fácil de manter e organizado, consquentemente a escalabilidade se torna maior.

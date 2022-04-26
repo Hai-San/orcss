@@ -26,6 +26,7 @@ body {
 	--container-danger-bg: #ffe6e6;
 	--container-danger-border-color: #c00;
 	--container-details-bg: #eeeeee;
+	--table-tr-background: #f6f8fa;
 
 	@media (prefers-color-scheme: dark) {
 		--c-brand: #57cc97;
@@ -50,6 +51,7 @@ body {
 		--container-warning-bg: #a08500;
 		--container-danger-bg: #ca4242;
 		--container-details-bg: #0fa39c;
+		--table-tr-background: #222222;
 	}
 
     --c-text: var(--c-text-light-1);
@@ -98,4 +100,8 @@ body {
 	&.details {
 		background-color: var(--container-details-bg);
 	}
+}
+
+tr:nth-child(2n) {
+    background-color: var(--table-tr-background);
 }
