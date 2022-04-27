@@ -1,5 +1,5 @@
 # Tokens
-Os tokens são variáveis que vem do design system e servem para padronizar informações referente ao design do projeto. Essa informações normalmente são cores, espaçamentos, tamanhos, fontes e bordas. 
+Os tokens são variáveis que vem do design system e servem para padronizar informações referente ao design do projeto. Essas informações normalmente são cores, espaçamentos, tamanhos, fontes e bordas. Um conjunto de tokens pode ser utilizado para crianção de componentes e páginas inteiras.
 
 Dentro do CSS os tokens são vistos como variáveis e ajudam muito na organização e padronização do projeto. Também tornam a sincronização entre equipes de design e desenvolvedores muito mais simples.
 
@@ -8,12 +8,53 @@ Os tokens podem ser separados em 2 categorias:
 
 ### 1 - Core
 São os tokens que armazenam os valores brutos
+
+```scss
+--color-primary-base: #5523c9;
+--color-primary-dark: #4012ac;
+--color-primary-medium: #5f2ada;
+--color-primary-light: #7d4af3;
+
+--color-neutral-low-base: #000000;
+
+--color-neutral-high-base: #FFFFFF;
+
+--font-size-px-xs: 16px;
+
+--border-radius-sm: 4px;
+
+--border-width-sm: 1px;
+
+--spacing-px-xs: 16px;
+--spacing-px-sm: 20px;
+```
   
 ### 2 - Shortcuts
-São tokens que possuem como valor os tokens `core`, eles são necessários para facilitar a manutenção do código. O principal objetivo deles é reduzir a quantidade de modificações feitas no código CSS. FOcando as alterações apenas nos valores utilizados pelos tokens `shortcuts`. Também são ótimos para projetos que possuem temas variados. Os shortcuts se dividem em dois tipos:
-- **Layout**: Tokens utilizados em várias páginas do projeto.
-- **Componentes**: Tokens exclusivos de cada componente.
-  
+São tokens que possuem como valor os tokens `core`, eles são necessários para facilitar a manutenção do código. O principal objetivo deles é reduzir a quantidade de modificações feitas no código CSS, focando as alterações apenas nos valores utilizados pelos tokens `shortcuts`. Também são ótimos para projetos que possuem temas variados. Os shortcuts se dividem em dois tipos:
+- **Layout**: Tokens globais que podem ser utilizados em vários pontos do projeto.
+	```scss
+	--color-text: var(--color-primary-base);
+	--color-text-foreground: var(--color-neutral-high-base);
+
+	--color-background: var(--color-neutral-high-base);
+	--color-background-foreground: var(--color-neutral-low-base);
+	```
+- **Componentes**: Tokens que são criados exclusivamente para cada componente.
+	```scss
+	--button-color: var(--color-neutral-high-base);
+	--button-color-hover: var(--color-primary-base);
+
+	--button-background: var(--color-primary-base);
+	--button-background-hover: var(--color-neutral-high-base);
+
+	--button-border-size: var(--border-width-sm);
+	--button-border-color: var(--color-neutral-high-base);
+	--button-border-color-hover: var(--color-primary-base);
+
+	--button-font-size: var(--font-size-px-xs);
+	
+	--button-padding: var(--spacing-px-xs) var(--spacing-px-sm);
+	```
 
 
 ## Nomenclatura
