@@ -3,10 +3,41 @@ Os tokens são variáveis que vem do design system e servem para padronizar info
 
 Dentro do CSS os tokens são vistos como variáveis e ajudam muito na organização e padronização do projeto. Também tornam a sincronização entre equipes de design e desenvolvedores muito mais simples.
 
-## Tipos
-Os tokens podem ser separados em 2 categorias:
+## Nomenclatura
+Para que os tokens mantenham um mesmo padrão nos nomes, é indicado que seja criado uma estrutura de nomenclatura para os tokens. Muitas pessoas se perdem aqui e criam nomes super longos pensando apenas na parte de design, mas esquecem que cada um desses tokens vai ser escrito centenas de vezes no código, então eles precisam ser simples.
 
-### 1 - Core
+A forma que eu considero ideal é criar o nome pensando principalmente no tipo de propriedade que ele representa (cor, fonte, espaçamento, borda etc...), normalmente essa é a primeira coisa que vem ca cabeça quando alguém esta procurando um token especifico.
+
+Um ponto importante que temos que levar em conta é que nem todos os tokens possuem as mesmas especificações. Então alguns tokens acabam ficando um pouco diferentes, menores ou maiores do que outros e isso é normal. O que se deve fazer nesses casos é tentar deixar eles "logicamente" semelhantes, e para isso devemos primeiro criar uma estrutura de nome que contemple todas as variações.
+
+### Estrutura completa
+Essa estrutura representa todas as especificações que um token pode ter, porém quase nunca todas estarão presente em um mesmo token. Agora eu vou mostrar um estrutura que eu considero interessante.
+
+`componente -> tipo -> propriedade -> categoria -> variação -> escala -> unidade -> condição` 
+
+* Componente -> Qualquer nome que represente o componente que está sendo construído. 
+  * Ex: `button` `input` `link` `card` `title` `accordion`
+* Tipo -> É tipo de valor que o token representa. 
+  * Ex: `color` `font` `spacing` `border` `shadow`
+* Propriedade -> Representa a propriedade que o token vai estilizar. 
+  * Ex: `background` `text` `size` `color` `placeholder` `radius`
+* Categoria -> Utilizado para criar diferentes categorias de um mesmo tipo de token. 
+  * Ex: `primary` `secondary` `feedback` `neutral` `cta`
+* Variação -> É um complemento da categoria e é utilizado para criar diferentes variações de uma mesma categoria do token. 
+  * Ex: `low` `high` `success` `danger` `info` `warning`
+* Escala -> Representa diferentes escalas de um mesmo token. 
+  * Ex: `base` `dark` `medium` `light` `nano` `xxxs` `xl`
+* Unidade -> Normalmente utilizado para espaçamentos e fontes, pois podemos utilizar diferentes unidades para estes tipos. 
+  * Ex: `px` `rem` `percent` `vh` `vw`
+* Condição -> Indica a condição na qual o token vai ser utilizado. 
+  * Ex: `hover` `focus` `interaction` `disabled`
+  
+Agora que já vimos a estrutura completa, vamos ver como essa estrutura é utilizada em diferentes categorias de tokens.
+
+## Categorias
+Os tokens podem ser divididos nas categorias `core` `layout` e `componentes` e cada uma delas vai ser explicada em seguida.
+
+### Core
 São os tokens que armazenam os valores brutos
 
 ```scss
@@ -28,54 +59,41 @@ São os tokens que armazenam os valores brutos
 --spacing-px-xs: 16px;
 --spacing-px-sm: 20px;
 ```
-  
-### 2 - Shortcuts
-São tokens que possuem como valor os tokens `core`, eles são necessários para facilitar a manutenção do código. O principal objetivo deles é reduzir a quantidade de modificações feitas no código CSS, focando as alterações apenas nos valores utilizados pelos tokens `shortcuts`. Também são ótimos para projetos que possuem temas variados. Os shortcuts se dividem em dois tipos:
-- **Layout**: Tokens globais que podem ser utilizados em vários pontos do projeto.
-	```scss
-	--color-text: var(--color-primary-base);
-	--color-text-foreground: var(--color-neutral-high-base);
 
-	--color-background: var(--color-neutral-high-base);
-	--color-background-foreground: var(--color-neutral-low-base);
-	```
-- **Componentes**: Tokens que são criados exclusivamente para cada componente.
-	```scss
-	--button-color: var(--color-neutral-high-base);
-	--button-color-hover: var(--color-primary-base);
+---
 
-	--button-background: var(--color-primary-base);
-	--button-background-hover: var(--color-neutral-high-base);
-
-	--button-border-size: var(--border-width-sm);
-	--button-border-color: var(--color-neutral-high-base);
-	--button-border-color-hover: var(--color-primary-base);
-
-	--button-font-size: var(--font-size-px-xs);
-	
-	--button-padding: var(--spacing-px-xs) var(--spacing-px-sm);
-	```
-
-
-## Nomenclatura
-Para que os tokens mantenham um mesmo padrão nos nomes é indicado que seja criado uma estrutura de nomenclatura para os tokens. Muitas pessoas se perdem aqui e criam nomes super longos pensando apenas na parte de design, mas esquecem que cada um desses tokens vai ser escrito centenas de vezes no código, então eles precisam ser simples.
-
-### Core
+:::info Layout e componentes
+Ambas as categorias **layout** e **componentes** são tokens que possuem como valor os tokens **core**, elas são necessárias para facilitar a manutenção do código. O principal objetivo é reduzir a quantidade de modificações feitas no código CSS, focando as alterações apenas nos valores utilizados pelos tokens. Também são ótimos para projetos que possuem temas variados.
+:::
 
 ### Layout
+Tokens globais que podem ser utilizados em vários pontos do projeto.
 
-propriedade-variação-escala-componente-propriedade-estado
+```scss
+--color-text: var(--color-primary-base);
+--color-text-foreground: var(--color-neutral-high-base);
 
-color-primary-default
+--color-background: var(--color-neutral-high-base);
+--color-background-foreground: var(--color-neutral-low-base);
+```
 
-color-primary-default-button-text
+### Componentes
+Tokens que são criados exclusivamente para cada componente.
+```scss
+--button-color: var(--color-neutral-high-base);
+--button-color-hover: var(--color-primary-base);
 
-color-primary-default-button-text-hover
+--button-background: var(--color-primary-base);
+--button-background-hover: var(--color-neutral-high-base);
 
-### Componente
-Tokens de componente seguem o mesmo padrão dos tokens globais, porém iniciam o nome com o nome do componente.
+--button-border-size: var(--border-width-sm);
+--button-border-color: var(--color-neutral-high-base);
+--button-border-color-hover: var(--color-primary-base);
 
-componente-tipo-variação-escala-componente-propriedade-estado
+--button-font-size: var(--font-size-px-xs);
+
+--button-padding: var(--spacing-px-xs) var(--spacing-px-sm);
+```
 
 ### Dicas
 * Não crie tokens com nomes relacionados ao valor do token, pois se em algum momento o valor do token precisar ser alterado o nome do token também terá que mudar e isso acaba demandando muito mais trabalho.
