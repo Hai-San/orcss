@@ -27,7 +27,7 @@ Essa estrutura representa todas as especificações que um token pode ter, poré
   * Ex: `low` `high` `success` `danger` `info` `warning`
 * Escala -> Representa diferentes escalas de um mesmo token. 
   * Ex: `base` `dark` `medium` `light` `nano` `xxxs` `xl`
-* Unidade -> Normalmente utilizado para espaçamentos e fontes, pois podemos utilizar diferentes unidades para estes tipos. 
+* Unidade -> Normalmente utilizado para espaçamentos e fontes, pois podemos utilizar diferentes unidades para estes tipos. Normalmente na parte de design tudo é trabalhado em pixels, então esse parâmetro não é utilizado por ser óbvio. Mas no desenvolvimento podemos converter um mesmo token para diferentes tipos de unidades, então é muito bom utilizar para não se perder nos nomes.
   * Ex: `px` `rem` `percent` `vh` `vw`
 * Condição -> Indica a condição na qual o token vai ser utilizado. 
   * Ex: `hover` `focus` `interaction` `disabled`
@@ -38,26 +38,37 @@ Agora que já vimos a estrutura completa, vamos ver como essa estrutura é utili
 Os tokens podem ser divididos nas categorias `core` `layout` e `componentes` e cada uma delas vai ser explicada em seguida.
 
 ### Core
-São os tokens que armazenam os valores brutos
+Tokens que armazenam os valores brutos.
+
+A estrutura normalmente utiliza os seguintes parâmetros:
+- `tipo -> categoria -> variação -> escala -> unidade` 
 
 ```scss
---color-primary-base: #5523c9;
+// tipo -> categoria -> escala
+--color-primary-base: #5523c9; 
 --color-primary-dark: #4012ac;
 --color-primary-medium: #5f2ada;
 --color-primary-light: #7d4af3;
 
---color-neutral-low-base: #000000;
+// tipo -> categoria -> escala
+--color-low-base: #000000;
 
---color-neutral-high-base: #FFFFFF;
+--color-high-base: #FFFFFF;
 
---font-size-px-xs: 16px;
+// tipo -> categoria -> variação -> escala
+--color-low-transparent-base: rgba(0,0,0, 0.5);
 
+// tipo -> propriedade -> escala -> unidade
+--font-size-xs-px: 16px;
+
+// tipo -> propriedade -> escala
 --border-radius-sm: 4px;
 
 --border-width-sm: 1px;
 
---spacing-px-xs: 16px;
---spacing-px-sm: 20px;
+// tipo -> escala -> unidade
+--spacing-xs-px: 16px;
+--spacing-sm-px: 20px;
 ```
 
 ---
@@ -69,12 +80,20 @@ Ambas as categorias **layout** e **componentes** são tokens que possuem como va
 ### Layout
 Tokens globais que podem ser utilizados em vários pontos do projeto.
 
+A estrutura normalmente utiliza os seguintes parâmetros:
+- `tipo -> propriedade -> categoria -> variação -> condição` 
+
 ```scss
 --color-text: var(--color-primary-base);
---color-text-foreground: var(--color-neutral-high-base);
-
 --color-background: var(--color-neutral-high-base);
+
+--color-text-foreground: var(--color-neutral-high-base);
 --color-background-foreground: var(--color-neutral-low-base);
+
+--color-text-hover: var(--color-neutral-high-base);
+--color-background-hover: var(--color-neutral-low-base);
+
+--color-background-transparent-base: var(--color-low-transparent-base);
 ```
 
 ### Componentes
