@@ -3,6 +3,13 @@ Os tokens são variáveis que vem do design system e servem para padronizar info
 
 Dentro do CSS os tokens são vistos como variáveis e ajudam muito na organização e padronização do projeto. Também tornam a sincronização entre equipes de design e desenvolvedores muito mais simples.
 
+#### Podemos classificar os tokens em três categorias:
+* **Core**: Tokens que armazenam os valores brutos.
+* **Layout**: São tokens que possuem como valor os tokens **core**, elas são necessárias para facilitar a manutenção do código. O principal objetivo é reduzir a quantidade de modificações feitas no código CSS, focando as alterações apenas nos valores utilizados pelos tokens. Também são ótimos para projetos que possuem temas variados.
+* **Components**: São exatamente como os tokens de layout, porém são exclusivos para componentes.
+
+Cada uma das categorias tem suas particularidades e isso será explicado com o decorrer da documentação.
+
 ## Nomenclatura
 Para que os tokens mantenham um mesmo padrão nos nomes, é indicado que seja criado uma estrutura de nomenclatura para os tokens. Muitas pessoas se perdem aqui e criam nomes super longos pensando apenas na parte de design, mas esquecem que cada um desses tokens vai ser escrito centenas de vezes no código, então eles precisam ser simples.
 
@@ -15,31 +22,52 @@ Essa estrutura representa todas as especificações que um token pode ter, poré
 
 `componente -> tipo -> propriedade -> categoria -> variação -> escala -> unidade -> condição` 
 
-* Componente -> Qualquer nome que represente o componente que está sendo construído. 
+* Componente - Qualquer nome que represente o componente que está sendo construído. Obviamente utilizado apenas para tokens da categoria **components**.
   * Ex: `button` `input` `link` `card` `title` `accordion`
-* Tipo -> É tipo de valor que o token representa e sempre vai ser utilizado.
-  * Ex: `color` `font` `spacing` `border`
-* Propriedade -> Representa a propriedade que o token vai estilizar. 
-  * Ex: `background` `text` `size` `color` `placeholder` `radius`
-* Categoria -> Utilizado para criar diferentes categorias de um mesmo tipo de token. 
-  * Ex: `primary` `secondary` `feedback`  `low` `high` `cta`
-* Variação -> É um complemento da categoria e é utilizado para criar diferentes variações de uma mesma categoria do token. 
-  * Ex: `success` `danger` `info` `warning`
-* Escala -> Representa diferentes escalas de um mesmo token. 
-  * Ex: `base` `dark` `medium` `light` `nano` `xxxs` `xl`
-* Unidade -> Normalmente utilizado para espaçamentos e fontes, pois podemos utilizar diferentes unidades para estes tipos. Normalmente na parte de design tudo é trabalhado em pixels, então esse parâmetro não é utilizado por ser óbvio. Mas no desenvolvimento podemos converter um mesmo token para diferentes tipos de unidades, então é muito bom utilizar para não se perder nos nomes.
-  * Ex: `px` `rem` `percent` `vh` `vw`
-* Condição -> Indica a condição na qual o token vai ser utilizado. 
-  * Ex: `hover` `focus` `interaction` `disabled`
+* Tipo - É tipo de valor que o token representa e sempre vai ser utilizado.
+  * Os mais comuns são: `color` `font` `spacing` `border`
+* Propriedade - Representa a propriedade que o token vai estilizar. 
+  * Os mais comuns são: `background` `text` `width` `size` `weight` `radius`
+* Categoria - Utilizado para criar diferentes categorias de um mesmo tipo de token. 
+  * Cores
+    * `primary` - Principal cor da marca
+    * `secondary` - Cor secundária da marca
+    * `tertiary` - Terceira cor da marca, porém raramente utilizada.
+    * `low` - Cores neutras escuras
+    * `high` - Cores neutras claras
+    * `feedback` - Cores para mensagens de feedback. Neste caso podemos usar as variações como categoria e não utilizar a palavra `feedback`.
+      * Cores de `feedback` normalmente são utilizadas diretamente no layout, sem a necessidade de um token de `layout`, pois já são feitas exclusivamente para mensagens de feedback.
+    * `cta` - Cores exclusivas para links e botões, não muito utilizadas. Normalmente as cores `primary` e `secondary` exercem essa função.
+* Variação - É um complemento da categoria e é utilizado para criar diferentes variações de uma mesma categoria do token. 
+  * Cores
+    * `transparent` - Versão com opacidade de uma categoria de cor.
+    * Essas são as variações de `feedback`. Mas também podem ser utilizadas como categoria de cor
+      * `success` - Normalmente tons de verde
+      * `info` - Normalmente tons de azul
+      * `warning` - Normalmente tons de amarelo
+      * `danger` - Normalmente tons de vermelho
+* Escala - Representa diferentes escalas de um mesmo token. 
+  * Cores
+	* `base` - Utilizado para a principal cor da categoria. Pode ter outros nomes como `main` `pure` `default` e `core`
+	* `darkest` - Escala mais escura
+	* `dark` - Escala escura
+	* `medium` - Escala mediana, normalmente mais escura do que a cor `base` e mais clara do que o `dark`
+	* `light` - Escala clara
+	* `lightest` - Escala mais clara
+  * Espaçamentos, font-size, border-width
+    * Nessa ordem - `nano` `xxxs` `xxs` `xs` `sm` `md` `lg` `xl` `xxl` `xxxl` `ul`
+  * border-radius
+    * Nessa ordem - `base` `small` `medium` `large`
+  * font-weight
+    * Segue o padrão das fontes - `thin` `light` `regular` `medium` `semiBold` `bold` `black`
+* Unidade - Normalmente utilizado para espaçamentos e fontes, pois podemos utilizar diferentes unidades para estes tipos. Normalmente na parte de design tudo é trabalhado em pixels, então esse parâmetro não é utilizado por ser óbvio. Mas no desenvolvimento podemos converter um mesmo token para diferentes tipos de unidades, então é muito bom utilizar para não se perder nos nomes.
+  * Os mais comuns são: `px` `rem` `percent` `vh` `vw`
+* Condição - Indica a condição na qual o token vai ser utilizado. 
+  * Os mais comuns são: `hover` `focus` `interaction` `disabled`
   
 Agora que já vimos a estrutura completa, vamos ver como essa estrutura é utilizada em diferentes categorias de tokens.
 
-## Categorias
-Os tokens podem ser divididos nas categorias `core` `layout` e `componentes` e cada uma delas vai ser explicada em seguida.
-
-### Core
-Tokens que armazenam os valores brutos.
-
+### Estrutura Core
 A estrutura normalmente utiliza os seguintes parâmetros:
 * `tipo -> categoria -> variação -> escala -> unidade`
 
@@ -78,7 +106,7 @@ $spacing-sm-px: 20px;
 Ambas as categorias **layout** e **componentes** são tokens que possuem como valor os tokens **core**, elas são necessárias para facilitar a manutenção do código. O principal objetivo é reduzir a quantidade de modificações feitas no código CSS, focando as alterações apenas nos valores utilizados pelos tokens. Também são ótimos para projetos que possuem temas variados.
 :::
 
-### Layout
+### Estrutura Layout
 Tokens globais que podem ser utilizados em vários pontos do projeto.
 - A nomenclatura desses tokens não tem ligação com o nome do token `core` que esta sendo utilizado como valor.
 - A estrutura normalmente utiliza os seguintes parâmetros:
@@ -97,7 +125,7 @@ $color-background-hover: $color-low-base;
 $color-background-transparent-base: $color-low-transparent-base;
 ```
 
-### Componentes
+### Estrutura Components
 Tokens que são criados exclusivamente para cada componente.
 ```scss
 $button-color: $color-high-base;
@@ -115,32 +143,6 @@ $button-font-size: $font-size-xs-rem;
 $button-padding: $spacing-px-xs $spacing-px-sm;
 ```
 
-## Nomeando cores
-- Cores são formadas por `tipo -> categoria -> variação -> escala`.
-- As categorias mais comuns de cor são
-  - `primary` - Principal cor da marca
-  - `secondary` - Cor secundária da marca
-  - `tertiary` - Terceira cor da marca, porém raramente utilizada.
-  - `low` - Cores neutras escuras
-  - `high` - Cores neutras claras
-  - `feedback` - Cores para mensagens de feedback. Neste caso podemos usar as variações como categoria e não utilizar a palavra `feedback`.
-    - Cores de `feedback` normalmente são utilizadas diretamente no layout, sem a necessidade de um token de `layout`, pois já são feitas exclusivamente para mensagens de feedback.
-  - `cta` - Cores exclusivas para links e botões, não muito utilizadas. Normalmente as cores `primary` e `secondary` exercem essa função.
-- As variações mais comuns são:
-  - `transparent` - Versão com opacidade de uma categoria de cor.
-  - Essas são as variações de `feedback`. Mas também podem ser utilizadas como categoria.
-    - `success` - Normalmente tons de verde
-    - `info` - Normalmente tons de azul
-    - `warning` - Normalmente tons de amarelo
-    - `danger` - Normalmente tons de vermelho
-- As escalas mais comuns de cores são:
-  - `base` - Utilizado para a principal cor da categoria. Pode ter outros nomes como `main` `pure` `default` e `core`
-  - `darkest` - Escala mais escura
-  - `dark` - Escala escura
-  - `medium` - Escala mediana, normalmente mais escura do que a cor `base` e mais clara do que o `dark`
-  - `light` - Escala clara
-  - `lightest` - Escala mais clara
-- Exemplos
 ```scss
 $color-primary-base: #4b1eb6; 
 $color-primary-dark: #36138a;
