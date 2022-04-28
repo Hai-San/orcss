@@ -11,7 +11,7 @@ Antes de começar a explicar todas as regras, já vou deixar aqui uma lista de t
   * Quando digo `excesso`, me refiro à um aninhamento maior do que 2 níveis. Apenas em alguns casos específicos será maior que isso e terá um motivo claro.
   
 * Shorthands `background`, `margin`, `padding`, `border`, `flex` etc... Eles podem se tornar um pouco confusos na manutenção do código e também conflitam com propriedades mais específicas
-  * Evite sempre que possível
+  * Evite se não for manter o mesmo padrão dentro da classe ao trabalhar com a responsividade. Começou utilizando `background`, continue utilizando `background`. Lembre, Isso dentro da mesma classe, não no projeto inteiro.
   * De preferência para propriedades mais específicas `background-color` `margin-top` `padding-left` `border-color` `flex-grow` etc...
   
 * Não utilize `#id` ou `tag` para aplicar estilo, SEMPRE utilize classes. 
