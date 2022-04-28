@@ -347,6 +347,7 @@ module.exports = {
 	}
 }
 ```
+Sim, é um pouco grande :V Mas raramente você vai precisar mexer nisso novamente.
 
 ### stylelint-scss
 Esse plugin otimiza o stylelint para a aplicação de regras exclusivas do SCSS.
