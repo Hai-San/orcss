@@ -20,15 +20,17 @@ Um ponto importante que temos que levar em conta é que os tokens não possuem a
 ### Estrutura completa
 Essa estrutura representa todas as especificações que um token pode ter, porém quase nunca todas estarão presente em um mesmo token. Agora eu vou mostrar um estrutura que eu considero interessante.
 
+`component -> type -> property -> category -> variation -> scale -> unit -> condition`
+
 `componente -> tipo -> propriedade -> categoria -> variação -> escala -> unidade -> condição` 
 
-* Componente - Qualquer nome que represente o componente que está sendo construído. Obviamente utilizado apenas para tokens da categoria **components**.
+* `component` - Qualquer nome que represente o componente que está sendo construído. Obviamente utilizado apenas para tokens da categoria **components**.
   * Ex: `button` `input` `link` `card` `title` `accordion`
-* Tipo - É tipo de valor que o token representa e sempre vai ser utilizado.
+* `type` - É tipo de valor que o token representa e sempre vai ser utilizado.
   * Os mais comuns são: `color` `font` `spacing` `border`
-* Propriedade - Representa a propriedade que o token vai estilizar. 
+* `property` - Representa a propriedade que o token vai estilizar. 
   * Os mais comuns são: `background` `text` `width` `size` `weight` `radius`
-* Categoria - Utilizado para criar diferentes categorias de um mesmo tipo de token. 
+* `category` - Utilizado para criar diferentes categorias de um mesmo tipo de token. 
   * Cores
     * `primary` - Principal cor da marca
     * `secondary` - Cor secundária da marca
@@ -38,7 +40,7 @@ Essa estrutura representa todas as especificações que um token pode ter, poré
     * `feedback` - Cores para mensagens de feedback. Neste caso podemos usar as variações como categoria e não utilizar a palavra `feedback`.
       * Cores de `feedback` normalmente são utilizadas diretamente no layout, sem a necessidade de um token de `layout`, pois já são feitas exclusivamente para mensagens de feedback.
     * `cta` - Cores exclusivas para links e botões, não muito utilizadas. Normalmente as cores `primary` e `secondary` exercem essa função.
-* Variação - É um complemento da categoria e é utilizado para criar diferentes variações de uma mesma categoria do token. 
+* `variation` - É um complemento da categoria e é utilizado para criar diferentes variações de uma mesma categoria do token. 
   * Cores
     * `transparent` - Versão com opacidade de uma categoria de cor.
     * Essas são as variações de `feedback`. Mas também podem ser utilizadas como categoria de cor
@@ -46,7 +48,7 @@ Essa estrutura representa todas as especificações que um token pode ter, poré
       * `info` - Normalmente tons de azul
       * `warning` - Normalmente tons de amarelo
       * `danger` - Normalmente tons de vermelho
-* Escala - Representa diferentes escalas de um mesmo token. 
+* `scale` - Representa diferentes escalas de um mesmo token. 
   * Cores
 	* `base` - Utilizado para a principal cor da categoria. Pode ter outros nomes como `main` `pure` `default` e `core`
 	* `darkest` - Escala mais escura
@@ -60,90 +62,24 @@ Essa estrutura representa todas as especificações que um token pode ter, poré
     * Nessa ordem - `base` `small` `medium` `large`
   * font-weight
     * Segue o padrão das fontes - `thin` `light` `regular` `medium` `semiBold` `bold` `black`
-* Unidade - Normalmente utilizado para espaçamentos e fontes, pois podemos utilizar diferentes unidades para estes tipos. Normalmente na parte de design tudo é trabalhado em pixels, então esse parâmetro não é utilizado por ser óbvio. Mas no desenvolvimento podemos converter um mesmo token para diferentes tipos de unidades, então é muito bom utilizar para não se perder nos nomes.
-  * Os mais comuns são: `px` `rem` `percent` `vh` `vw`
-* Condição - Indica a condição na qual o token vai ser utilizado. 
+* `unit` - Normalmente utilizado para espaçamentos e fontes. Normalmente na parte de design tudo é trabalhado em pixels, então esse parâmetro não é utilizado por ser óbvio. Mas no desenvolvimento podemos converter um mesmo token para diferentes unidades, então é muito bom utilizar para não se perder nos nomes.
+  * As mais comuns são: `px` `rem` `percent` `vh` `vw`
+* `condition` - Indica a condição na qual o token vai ser utilizado. 
   * Os mais comuns são: `hover` `focus` `interaction` `disabled`
-  
+
+:::info Informações úteis
+* `color` pode ser tanto um `type` quando uma `property`
+* Tokens relacionados ao `border-color` são tokens de `layout`, pois utilizam os tokens de cor do `core` como valor.
+:::
+
 Agora que já vimos a estrutura completa, vamos ver como essa estrutura é utilizada em diferentes categorias de tokens.
 
 ### Estrutura Core
-A estrutura normalmente utiliza os seguintes parâmetros:
-* `tipo -> categoria -> variação -> escala -> unidade`
+* A estrutura normalmente utiliza os seguintes parâmetros:
+  * `type -> category -> variation -> scale -> unit`
 
 ```scss
-// tipo -> categoria -> escala
-$color-primary-base: #5523c9; 
-$color-primary-dark: #4012ac;
-$color-primary-medium: #5f2ada;
-$color-primary-light: #7d4af3;
-
-// tipo -> categoria -> escala
-$color-low-base: #000000;
-
-$color-high-base: #FFFFFF;
-
-// tipo -> categoria -> variação -> escala
-$color-low-transparent-base: rgba(0,0,0, 0.5);
-
-// tipo -> propriedade -> escala -> unidade
-$font-size-xs-px: 16px;
-$font-size-xs-rem: 1rem;
-
-// tipo -> propriedade -> escala
-$border-radius-sm: 4px;
-
-$border-width-sm: 1px;
-
-// tipo -> escala -> unidade
-$spacing-xs-px: 16px;
-$spacing-sm-px: 20px;
-```
-
----
-
-:::info Layout e componentes
-Ambas as categorias **layout** e **componentes** são tokens que possuem como valor os tokens **core**, elas são necessárias para facilitar a manutenção do código. O principal objetivo é reduzir a quantidade de modificações feitas no código CSS, focando as alterações apenas nos valores utilizados pelos tokens. Também são ótimos para projetos que possuem temas variados.
-:::
-
-### Estrutura Layout
-Tokens globais que podem ser utilizados em vários pontos do projeto.
-- A nomenclatura desses tokens não tem ligação com o nome do token `core` que esta sendo utilizado como valor.
-- A estrutura normalmente utiliza os seguintes parâmetros:
-  - `tipo -> propriedade -> categoria -> variação -> condição` 
-
-```scss
-$color-text: $color-primary-base;
-$color-background: $color-high-base;
-
-$color-text-foreground: $color-high-base;
-$color-background-foreground: $color-low-base;
-
-$color-text-hover: $color-high-base;
-$color-background-hover: $color-low-base;
-
-$color-background-transparent-base: $color-low-transparent-base;
-```
-
-### Estrutura Components
-Tokens que são criados exclusivamente para cada componente.
-```scss
-$button-color: $color-high-base;
-$button-color-hover: $color-primary-base;
-
-$button-background: $color-primary-base;
-$button-background-hover: $color-high-base;
-
-$button-border-size: $border-width-sm;
-$button-border-color: $color-high-base;
-$button-border-color-hover: $color-primary-base;
-
-$button-font-size: $font-size-xs-rem;
-
-$button-padding: $spacing-px-xs $spacing-px-sm;
-```
-
-```scss
+// type -> category -> scale
 $color-primary-base: #4b1eb6; 
 $color-primary-dark: #36138a;
 $color-primary-darkest: #270b68;
@@ -152,41 +88,92 @@ $color-primary-light: #5b29cf;
 $color-primary-lightest: #7644ec;
 
 $color-low-base: #000000;
-$color-low-transparent-base: rgba(0,0,0, 0.5);
-
 $color-high-base: #FFFFFF;
 
-$color-cta-base: #d438b3;
-
-$color-feedback-success-pure: #3eac30;
-$color-feedback-success-dark: #238017;
-$color-feedback-success-light: #66ce58;
-// ou
 $color-success-pure: #3eac30;
 $color-success-dark: #238017;
 $color-success-light: #66ce58;	
+
+$color-cta-base: #d438b3;
+
+// type -> category -> variation -> scale
+$color-low-transparent-base: rgba(0,0,0, 0.5);
+
+// type -> property -> scale -> unit
+$font-size-xs-px: 16px;
+$font-size-xs-rem: 1rem;
+
+// type -> property -> scale
+$border-radius-base: 4px;
+
+$border-width-sm: 1px;
+
+// type -> scale -> unit
+$spacing-xs-px: 16px;
+$spacing-sm-px: 20px;
 ```
-- ### Cores de layout
-  - Os tokens de cor de layout `tipo -> propriedade -> categoria -> variação -> escala` porém o mais comum é `tipo -> propriedade -> categoria`
-  - Para tokens de cor de layout são utilizadas propriedades
-    - `text` - Cor utilizada nos textos do layout
-    - `background` - Cor de fundo utilizada em contraste com o texto
-    - `text` e `background` sempre trabalham em conjunto, um depende do outro. Sempre existe contraste entre essas duas categorias.
-  - As variações mais comuns são:
-    - `foreground` - Variação de contraste utilizada por cima da categoria base
-    - `reverse` - Variação inversa da categoria base
-    - `film` - Versão transparente da categoria base e normalmente utilizada como fundo modais
-  - Exemplos
-	```scss
-	$color-text: $color-low-base;
-	$color-background: $color-primary-lightest;
 
-	$color-text-foreground: $color-primary-lightest;
-	$color-background-foreground: $color-primary-base;
+### Estrutura Layout
+* Normalmente utiliza os seguintes parâmetros:
+  * Mais comum: `type -> property -> category` 
+  * Ocasionalmente: `variation` `scale` `condition`
+* A nomenclatura desses tokens não deve ter ligação com o nome do token `core` que esta sendo utilizado como valor, pois ele pode mudar.
+* `property` mais comuns para tokens de layout são:
+  * `text` - Cor utilizada nos textos do layout
+  * `background` - Cor de fundo utilizada em contraste com o texto
+* `text` e `background` sempre trabalham em conjunto, um depende do outro. Sempre existe contraste entre essas duas propriedades.
+* As variações mais comuns são:
+  * `foreground` - Variação de contraste utilizada por cima da categoria base
+  * `reverse` - Variação inversa da categoria base
+  * `film` - Versão transparente da categoria base e normalmente utilizada como fundo modais
 
-	$color-text-reverse: $color-high-base;
-	$color-background-reverse: $color-primary-darkest;
-	```
+```scss
+// type -> property -> category
+$color-text: $color-low-base;
+$color-background: $color-primary-lightest;
+
+$color-text-foreground: $color-primary-lightest;
+$color-background-foreground: $color-primary-base;
+
+$color-text-reverse: $color-high-base;
+$color-background-reverse: $color-primary-darkest;
+
+// type -> property -> variation -> scale
+$color-background-transparent-base: $color-low-transparent-base;
+
+// type -> property -> condition
+$color-background-hover: $color-primary-light;
+
+// type -> property -> scale
+$border-color-base: $color-primary-medium;
+```
+
+### Estrutura Components
+* Sempre iniciam com o nome do componente
+* Normalmente possui a seguinte estrutura:
+  * `component -> type -> property -> condition`
+  * `component -> property -> condition`
+
+```scss
+// component -> property
+$button-color: $color-high-base;
+$button-background: $color-primary-base;
+$button-padding: $spacing-px-xs $spacing-px-sm;
+
+// component -> property -> condition
+$button-color-hover: $color-primary-base;
+$button-background-hover: $color-high-base;
+
+// componente -> type -> property
+$button-border-size: $border-width-sm;
+$button-border-color: $color-high-base;
+$button-font-size: $font-size-xs-rem;
+
+// componente -> type -> property -> condition
+$button-border-color-hover: $color-primary-base;
+```
+
+## Exemplo completo
   
 ## Não faça isso!
 * Não crie tokens com nomes relacionados ao valor do token, pois se em algum momento o valor do token precisar ser alterado o nome do token também terá que mudar e isso acaba demandando muito mais trabalho.
