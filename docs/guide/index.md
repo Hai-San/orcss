@@ -17,3 +17,5 @@ O básico bem feito é capaz de criar qualquer tipo de layout.
 - Simples
 - Escalável
 - Fácil de aprender
+
+No começo pode parecer muita informação, mas é MUITA informação SIMPLES. Aplique as regras aos poucos e logo você vai ver os resultados no projeto.
