@@ -27,9 +27,16 @@ Essa estrutura representa todas as especificações que um token pode ter, poré
 * `component` - Qualquer nome que represente o componente que está sendo construído. Obviamente utilizado apenas para tokens da categoria **components**.
   * Ex: `button` `input` `link` `card` `title` `accordion`
 * `type` - É tipo de valor que o token representa e sempre vai ser utilizado.
-  * Os mais comuns são: `color` `font` `spacing` `border`
+  * Mais comuns: 
+    * `color` - Todas as cores do projeto
+    * `font` - `size`, `weight` e `family` das fontes
+* `spacing` - Todos os tamanhos de espaçamentos utilizados para `margin` e `padding`
+    * `border` -  `width`, `color` e `radius` das bordas
+    * `screen` - Utilizado para determinar todos os tamanhos de tela que o projeto deve atender 
+    * `container` - Utilizado para determinar os tamanhos de container do layout 
+    * `speed` - Utilizado para determinar a velocidade das animações de interação (hover)
 * `property` - Representa a propriedade que o token vai estilizar. 
-  * Os mais comuns são: `background` `text` `width` `size` `weight` `radius`
+  * Mais comuns: `width` `size` `weight` `radius` `color` `background` `text`
 * `category` - Utilizado para criar diferentes categorias de um mesmo tipo de token. 
   * Cores
     * `primary` - Principal cor da marca
@@ -53,17 +60,21 @@ Essa estrutura representa todas as especificações que um token pode ter, poré
 	* `base` - Utilizado para a principal cor da categoria. Pode ter outros nomes como `main` `pure` `default` e `core`
 	* `darkest` - Escala mais escura
 	* `dark` - Escala escura
-	* `medium` - Escala mediana, normalmente mais escura do que a cor `base` e mais clara do que o `dark`
+	* `medium` - Escala mediana. Pode ser mais escura ou mais clara do que a `base`, porém mais escura do que o `light` e mais clara do que o `dark`.
 	* `light` - Escala clara
 	* `lightest` - Escala mais clara
-  * Espaçamentos, font-size, border-width
+  * Espaçamentos, font-size
     * Nessa ordem - `nano` `xxxs` `xxs` `xs` `sm` `md` `lg` `xl` `xxl` `xxxl` `ul`
-  * border-radius
+  * border-radius, border-width
     * Nessa ordem - `base` `small` `medium` `large`
+    * Radius também tem o `rounded` para bordas arredondadas
   * font-weight
     * Segue o padrão das fontes - `thin` `light` `regular` `medium` `semiBold` `bold` `black`
 * `unit` - Normalmente utilizado para espaçamentos e fontes. Normalmente na parte de design tudo é trabalhado em pixels, então esse parâmetro não é utilizado por ser óbvio. Mas no desenvolvimento podemos converter um mesmo token para diferentes unidades, então é muito bom utilizar para não se perder nos nomes.
-  * As mais comuns são: `px` `rem` `percent` `vh` `vw`
+  * Para fontes: 
+    * `rem`
+  * Para espaçamentos
+    * `px` `percent` `vh` `vw`
 * `condition` - Indica a condição na qual o token vai ser utilizado. 
   * Os mais comuns são: `hover` `focus` `interaction` `disabled`
 
@@ -123,9 +134,8 @@ $spacing-sm-px: 20px;
   * `background` - Cor de fundo utilizada em contraste com o texto
 * `text` e `background` sempre trabalham em conjunto, um depende do outro. Sempre existe contraste entre essas duas propriedades.
 * As variações mais comuns são:
-  * `foreground` - Variação de contraste utilizada por cima da categoria base
-  * `reverse` - Variação inversa da categoria base
-  * `film` - Versão transparente da categoria base e normalmente utilizada como fundo modais
+  * `foreground` - Variação de contraste utilizada por cima do token base
+  * `reverse` - Variação inversa do token
 
 ```scss
 // type -> property -> category
@@ -153,6 +163,18 @@ $border-color-base: $color-primary-medium;
 * Normalmente possui a seguinte estrutura:
   * `component -> type -> property -> condition`
   * `component -> property -> condition`
+* Tudo que é utilizado em mais de um lugar no projeto normalmente se torna um componente e os mais comuns são:
+  * `button`
+  * `link`
+  * `input`
+  * `textarea`
+  * `select` - Inputs com dropdown
+  * `choose` - Inputs de radio e checkbox
+  * `form`
+  * `header`
+  * `footer`
+  * `title`
+  * `icon`
 
 ```scss
 // component -> property
@@ -172,8 +194,6 @@ $button-font-size: $font-size-xs-rem;
 // componente -> type -> property -> condition
 $button-border-color-hover: $color-primary-base;
 ```
-
-## Exemplo completo
   
 ## Não faça isso!
 * Não crie tokens com nomes relacionados ao valor do token, pois se em algum momento o valor do token precisar ser alterado o nome do token também terá que mudar e isso acaba demandando muito mais trabalho.
@@ -212,3 +232,158 @@ $color-primary-default: green;
 
 * NÃO crie muitas variações de tokens de cores, tamanhos, fontes e etc... Como no caso anterior, isso também dificulta a manutenção e prejudica a consistência do projeto. Isso também prejudica muito na hora de criar um novo tema ou utilizar os tokens em outra marca, pois se foram criados 100 tokens no core, será necessário alterar o valor desses 100 tokens para cada novo tema e/ou marca que ser criado.
 
+## Exemplo completo
+Vou deixar aqui um exemplo completo com vários tokens que podem existir em um projeto
+
+### Cores
+Os valores são apenas exemplos.
+```scss
+$color-primary-base: #4b1eb6; 
+$color-primary-dark: #36138a;
+$color-primary-darkest: #270b68;
+$color-primary-medium: #4317aa;
+$color-primary-light: #5b29cf;
+$color-primary-lightest: #7644ec;
+
+$color-low-pure: #242424;
+$color-low-dark: #1b1b1b;
+$color-low-darkest: #000000;
+$color-low-medium: #303030;
+$color-low-light: #4b4b4b;
+$color-low-lightest: #666666;
+
+$color-high-pure: #c0c0c0;
+$color-high-dark: #a0a0a0;
+$color-high-darkest: #8d8d8d;
+$color-high-medium: #d1d1d1;
+$color-high-light: #eeeeee;
+$color-high-lightest: #ffffff;
+
+$color-success-pure: #2fac1e;
+$color-success-dark: #1b6412;
+$color-success-medium: #1e8a10;
+$color-success-light: #56cf46;
+
+$color-info-pure: #434cc7;
+$color-info-dark: #262c81;
+$color-info-medium: #3139aa;
+$color-info-light: #7880ee;
+
+$color-warning-pure: #dbc12c;
+$color-warning-dark: #96810d;
+$color-warning-medium: #bba213;
+$color-warning-light: #ecda71;
+
+$color-danger-pure: #c52929;
+$color-danger-dark: #7e0a0a;
+$color-danger-medium: #b31313;
+$color-danger-light: #f35d5d;
+```
+
+## Espaçamentos
+* Espaçamentos escalam de forma diferente na medida que os valores  ficam maiores
+  * Em espaçamentos menores qualquer diferença de valor é perceptível no layout `4` para `8` é o dobro do valor
+  * Em espaçamentos maiores a diferença precisa ser maior para que haja percepção da diferença de tamanhos no layout `24` para `32`
+```scss
+// No lado de design esses valores estarão em pixels 4px, 8px...
+$spacing-nano: 4;
+$spacing-xxxs: 8;
+$spacing-xxs: 12;
+$spacing-xs: 16;
+$spacing-sm: 20;
+$spacing-md: 24;
+$spacing-lg: 32;
+$spacing-xl: 40;
+$spacing-xxl: 52;
+$spacing-xxxl: 64;
+$spacing-ul: 88;
+
+// Tokens de layout, utilizados apenas no desenvolvimento
+
+// Valores em px 
+$spacing-nano-px: #{$spacing-nano}px;
+
+// Valores convertidos para vh (Altura da viewport)
+$spacing-nano-vh: convertPxToVh($spacing-nano);
+```
+
+## Fontes
+Fontes menores que 12px não são acessíveis, mas 12 ainda é muito pequeno, tente começar em 14px.
+```scss
+// No lado de design esses valores estarão em pixels 14px, 16px...
+$font-xxs: 14;
+$font-xs: 16;
+$font-sm: 18;
+$font-md: 24;
+$font-lg: 28;
+$font-xl: 36;
+$font-xxl: 44;
+$font-xxxl: 52;
+$font-ul: 64;
+
+// Tokens de layout, utilizados apenas no desenvolvimento
+// Valores em rem 
+$font-xxs-rem: convertPxToRem($font-xxs);
+```
+
+## Bordas
+* São tokens `core` que podem ser utilizados como tokens de `layout`
+```scss
+$border-width-base: 2px;
+$border-width-small: 1px;
+$border-width-medium: 3px;
+$border-width-large: 4px;
+
+$border-radius-base: 4px;
+$border-radius-small: 2px;
+$border-radius-medium: 6px;
+$border-radius-large: 10px;
+$border-radius-rounded: 50%;
+
+$border-color-pure: $color-low-pure;
+$border-color-dark: $color-low-light;
+$border-color-darkest: $color-low-darkest;
+$border-color-medium: $color-high-darkest;
+$border-color-light: $color-high-pure;
+$border-color-lightest: $color-high-light;
+```
+
+## Tamanhos de tela
+```scss
+// No lado de design esses valores estarão em pixels 1600px, 1366px...
+// Desktop
+$screen-desktop-xl: 1600;
+$screen-desktop-lg: 1366;
+$screen-desktop-md: 1280;
+$screen-desktop-sm: 1080;
+
+// Tablet
+$screen-tablet: 962;
+
+// Mobile
+$screen-mobile-xl: 768;
+$screen-mobile-lg: 640;
+$screen-mobile-md: 480;
+$screen-mobile-sm: 375;
+$screen-mobile-xs: 320;
+
+// Tokens de layout, utilizados apenas no desenvolvimento
+// Valores em rem 
+$screen-desktop-xl-rem: convertPxToRem($screen-desktop-xl);
+```
+
+## Containers
+* Dependem do tamanho de tela que o designer utilizou para criação do layout. 
+* São tokens `core` que podem ser utilizados como tokens de `layout`
+```scss
+$container-base: 1406px; 
+$container-small: 1320px; 
+```
+
+## Velocidade de interação
+* São tokens `core` que podem ser utilizados como tokens de `layout`
+```scss
+$speed-base: 250ms;
+$speed-slow: 350ms;
+$speed-fast: 180ms;
+```
