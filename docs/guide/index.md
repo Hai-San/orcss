@@ -1,14 +1,21 @@
 # Sobre ( DOCUMENTAÇÃO EM PROGRESSO )
-<abbr title="Regras de organização para CSS">ORCSS</abbr> é um guia de organização do CSS que agrupa algumas "regras" que eu considero como ideais para um CSS de qualidade.
+<abbr title="Regras de organização para CSS">ORCSS</abbr> (Regras de organização para CSS) é um guia de organização do CSS que agrupa algumas "regras" que eu considero como ideais para um CSS de qualidade.
 
 ## Problema
-O maior problema quando se trata de CSS é a dificuldade que os desenvolvedores tem em organizar uma estrutura que seja escalável e simples de manter. Muitas "soluções" no mercado tentam melhorar isso, porém acabam gerando uma curva de aprendizado maior do que o necessário, principalmente pelo fato de alterarem pontos que não deveriam ser alterados.
+O maior problema quando se trata de CSS é a dificuldade que os desenvolvedores tem em organizar uma estrutura que seja escalável e simples de manter. Muitas "soluções" no mercado tentam melhorar isso, porém acabam gerando uma curva de aprendizado maior do que o necessário, principalmente pelo fato de alterarem pontos que não deveriam ser alterados. Outro problema é que todo dia surge alguma solução "inovadora", isso vira requisito para vagas de emprego, e o desenvolvedor é obrigado a aprender "mil formas" de escrever um simples CSS para conseguir acompanhar o mercado ansioso. Uma observação aqui é que muitos desenvolvedores não gostam do CSS e acabam procurando meios de contornar essa linguagem, por isso muitas soluções do mercado acabam fazendo sucesso não por serem boas e sim por livrarem os desenvolvedores de ter que lidar diretamente com o CSS.
+
+Outro ponto, é fica muito difícil fazer com que os designers saibam e respeitem todos os limites das "soluções" utilizadas. Isso acaba se tornando um problema, pois as empresas acabam misturando duas, três ou mais "soluções" em um mesmo projeto. Isso se deve ao fato de que nenhuma "solução" sozinha consegue atingir todas as demandas de layout da empresa que são exclusivamente feitas para o tipo de negócio ou focado na identidade da marca.
 
 ## Objetivo
-O objetivo deste guia é mostrar como podemos organizar o CSS de uma forma simples e escalável sem ter que criar uma curva de aprendizado desnecessária e regras que complicam o aprendizado. O principal ponto é manter todas as regras de estilo dentro do CSS e envolver HTML e javascript o mínimo possível.
+O objetivo deste guia é mostrar como utilizar o CSS de forma simples, rápida e escalável. A única exigência aqui é saber CSS e um pouco de SASS. Apesar da necessidade do SASS, ainda utilizamos o CSS nativo e isso torna o código muito mais flexível, fazendo com que os layouts feitos pelo time de design seja criados de forma muita mais fiel. 
+
+O básico bem feito é capaz de criar qualquer tipo de layout. 
 
 ## Principais benefícios
-- CSS mais limpo: Mais simples e fácil de manter.
-- Menor especificidade: Gera um código mais consistente e com menos conflitos.
-- Arquivos menores: Melhora a performance do projeto.
-- Escalável: Sendo algo mais leve, fácil de manter e organizado, consquentemente a escalabilidade se torna maior.
+- Fácil manutenção
+- Bem organizado
+- Simples
+- Escalável
+- Fácil de aprender
+
+No começo pode parecer muita informação, mas é MUITA informação SIMPLES. Aplique as regras aos poucos e logo você vai ver os resultados no projeto.
