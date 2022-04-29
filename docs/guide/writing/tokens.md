@@ -4,8 +4,9 @@ Os tokens são variáveis que vem do design system e servem para padronizar info
 Dentro do CSS os tokens são vistos como variáveis e ajudam muito na organização e padronização do projeto. Também tornam a sincronização entre equipes de design e desenvolvedores muito mais simples.
 
 #### Podemos classificar os tokens em três categorias:
-* **Core**: Tokens que armazenam os valores brutos.
+* **Core**: Tokens que armazenam os valores brutos e normalmente não são utilizados diretamente no layout do projeto.
 * **Layout**: São tokens que possuem como valor os tokens **core**, elas são necessárias para facilitar a manutenção do código. O principal objetivo é reduzir a quantidade de modificações feitas no código CSS, focando as alterações apenas nos valores utilizados pelos tokens. Também são ótimos para projetos que possuem temas variados.
+  * Alguns tokens `core` podem ser utilizados diretamente no layout sem a necessidade de um token de `layout`, pois seria algo redundante.
 * **Components**: São exatamente como os tokens de layout, porém são exclusivos para componentes.
 
 Cada uma das categorias tem suas particularidades e isso será explicado com o decorrer da documentação.
@@ -30,7 +31,8 @@ Essa estrutura representa todas as especificações que um token pode ter, poré
   * Mais comuns: 
     * `color` - Todas as cores do projeto
     * `font` - `size`, `weight` e `family` das fontes
-* `spacing` - Todos os tamanhos de espaçamentos utilizados para `margin` e `padding`
+    * `line` - Utilizado para altura de linhas de textos, pode ficar junto com as fontes
+    * `spacing` - Todos os tamanhos de espaçamentos utilizados para `margin` e `padding`
     * `border` -  `width`, `color` e `radius` das bordas
     * `screen` - Utilizado para determinar todos os tamanhos de tela que o projeto deve atender 
     * `container` - Utilizado para determinar os tamanhos de container do layout 
@@ -232,7 +234,7 @@ $color-primary-default: green;
 
 * NÃO crie muitas variações de tokens de cores, tamanhos, fontes e etc... Como no caso anterior, isso também dificulta a manutenção e prejudica a consistência do projeto. Isso também prejudica muito na hora de criar um novo tema ou utilizar os tokens em outra marca, pois se foram criados 100 tokens no core, será necessário alterar o valor desses 100 tokens para cada novo tema e/ou marca que ser criado.
 
-## Exemplo completo
+## Exemplo
 Vou deixar aqui um exemplo completo com vários tokens que podem existir em um projeto
 
 ### Cores
@@ -259,6 +261,7 @@ $color-high-medium: #d1d1d1;
 $color-high-light: #eeeeee;
 $color-high-lightest: #ffffff;
 
+// São tokens `core` que podem ser utilizados como tokens de `layout`
 $color-success-pure: #2fac1e;
 $color-success-dark: #1b6412;
 $color-success-medium: #1e8a10;
@@ -280,7 +283,7 @@ $color-danger-medium: #b31313;
 $color-danger-light: #f35d5d;
 ```
 
-## Espaçamentos
+### Espaçamentos
 * Espaçamentos escalam de forma diferente na medida que os valores  ficam maiores
   * Em espaçamentos menores qualquer diferença de valor é perceptível no layout `4` para `8` é o dobro do valor
   * Em espaçamentos maiores a diferença precisa ser maior para que haja percepção da diferença de tamanhos no layout `24` para `32`
@@ -307,7 +310,7 @@ $spacing-nano-px: #{$spacing-nano}px;
 $spacing-nano-vh: convertPxToVh($spacing-nano);
 ```
 
-## Fontes
+### Fontes
 Fontes menores que 12px não são acessíveis, mas 12 ainda é muito pequeno, tente começar em 14px.
 ```scss
 // No lado de design esses valores estarão em pixels 14px, 16px...
@@ -321,12 +324,29 @@ $font-xxl: 44;
 $font-xxxl: 52;
 $font-ul: 64;
 
+// São tokens `core` que podem ser utilizados diretamente no layout, pois seus valores nunca vão mudar
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semiBold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$font-family-titles: 'Libre Baskerville', serif;
+$font-family-texts: 'Roboto', sans-serif;
+
+// No design esse valores normalmente ficam em porcentagem 1.4 = 140%
+$line-height-thin: 1;
+$line-height-regular: 1.4;
+$line-height-medium: 1.6;
+
 // Tokens de layout, utilizados apenas no desenvolvimento
 // Valores em rem 
 $font-xxs-rem: convertPxToRem($font-xxs);
 ```
 
-## Bordas
+### Bordas
 * São tokens `core` que podem ser utilizados como tokens de `layout`
 ```scss
 $border-width-base: 2px;
@@ -348,7 +368,7 @@ $border-color-light: $color-high-pure;
 $border-color-lightest: $color-high-light;
 ```
 
-## Tamanhos de tela
+### Tamanhos de tela
 ```scss
 // No lado de design esses valores estarão em pixels 1600px, 1366px...
 // Desktop
@@ -372,7 +392,7 @@ $screen-mobile-xs: 320;
 $screen-desktop-xl-rem: convertPxToRem($screen-desktop-xl);
 ```
 
-## Containers
+### Containers
 * Dependem do tamanho de tela que o designer utilizou para criação do layout. 
 * São tokens `core` que podem ser utilizados como tokens de `layout`
 ```scss
@@ -380,10 +400,77 @@ $container-base: 1406px;
 $container-small: 1320px; 
 ```
 
-## Velocidade de interação
+### Velocidade de interação
 * São tokens `core` que podem ser utilizados como tokens de `layout`
 ```scss
 $speed-base: 250ms;
 $speed-slow: 350ms;
 $speed-fast: 180ms;
+```
+
+### Tokens de layout
+```scss
+$color-text: $color-low-base;
+$color-background: $color-primary-lightest;
+
+$color-text-foreground: $color-primary-lightest;
+$color-background-foreground: $color-primary-base;
+
+$color-text-reverse: $color-high-base;
+$color-background-reverse: $color-primary-darkest;
+
+$color-background-transparent-base: $color-low-transparent-base;
+
+$color-background-hover: $color-primary-light;
+
+$border-color-base: $color-primary-medium;
+```
+### Tokens de component
+```scss
+// Button
+$button-color: $color-primary-base;
+$button-color-hover: $color-primary-base;
+$button-color-focus: $color-primary-base;
+$button-color-disabled: $color-low-medium;
+
+$button-background: $color-primary-darkest;
+$button-background-hover: $color-primary-medium;
+$button-background-focus: $color-primary-medium;
+$button-background-disabled: $color-high-dark;
+
+$button-border-color: $color-primary-darkest;
+$button-border-color-hover: $color-primary-medium;
+$button-border-color-focus: $color-primary-base;
+$button-border-color-disabled: $color-high-dark;
+
+$button-padding: $spacing-xs-vh $spacing-md-vh;
+$button-font-size: $font-xs-rem;
+
+// Link
+$link-color: $color-primary-base;
+$link-color-hover: $color-primary-darkest;
+
+// Input
+$input-color: $color-primary-base;
+$input-color-hover: $color-primary-base;
+$input-color-focus: $color-primary-base;
+$input-color-disabled: $color-low-medium;
+
+$input-placeholder-color: $color-primary-base;
+$input-placeholder-color-hover: $color-primary-base;
+$input-placeholder-color-focus: $color-primary-base;
+$input-placeholder-color-disabled: $color-low-medium;
+
+$input-background: $color-primary-darkest;
+$input-background-hover: $color-primary-medium;
+$input-background-focus: $color-primary-medium;
+$input-background-disabled: $color-high-dark;
+
+$input-border-color: $color-primary-darkest;
+$input-border-color-hover: $color-primary-medium;
+$input-border-color-focus: $color-primary-base;
+$input-border-color-disabled: $color-high-dark;
+
+$input-padding: $spacing-xs-vh $spacing-md-vh;
+$input-font-size: $font-xs-rem;
 ```
