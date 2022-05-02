@@ -13,21 +13,65 @@ O modelo de estrutura de pastas e arquivos utilizado no ORCSS tem como principal
 
 ## Estrutura de pastas
 
+### Completa
+
 📂styles\
  ┣ 📂[tokens](tokens.md)\
- ┃ ┣ 📂[brands](tokens#📂-brands)\
+ ┃ ┣ 📂[brands](tokens#brands)\
  ┃ ┃ ┣ 📂default\
- ┃ ┃ ┃ ┣ 📜border.scss\
+ ┃ ┃ ┃ ┣ 📜borders.scss\
  ┃ ┃ ┃ ┣ 📜fonts.scss\
- ┃ ┃ ┃ ┗ 📜spacing.scss\
+ ┃ ┃ ┃ ┗ 📜spacings.scss\
+ ┃ ┃ ┃ ┗ 📜layouts.scss\
+ ┃ ┃ ┃ ┗ 📜others.scss\
  ┃ ┃ ┃ ┣ 📁components\
- ┃ ┃ ┃ ┣ 📂[themes](tokens#📂-themes)\
+ ┃ ┃ ┃ ┣ 📂[themes](tokens#themes)\
  ┃ ┃ ┃ ┃ ┣ 📂default\
  ┃ ┃ ┃ ┃ ┃ ┣ 📜colors.scss\
  ┃ ┃ ┃ ┃ ┃ ┣ 📜colors_dark.scss\
  ┃ ┃ ┃ ┃ ┃ ┗ 📜colors_light.scss\
- ┃ ┣ 📂[components](tokens#📂-components)\
- ┃ ┣ 📂[global](tokens#📂-global)\
+ ┃ ┣ 📂[components](tokens#components)\
+ ┃ ┣ 📂[global](tokens#global)\
+ ┣ 📂[tools](tools.md)\
+ ┣ 📂[utils](utils.md)\
+ ┣ 📂[global](global.md)\
+ ┣ 📂[components](components.md)\
+ ┣ 📂[pages](pages.md)
+
+### Sem marcas
+ 📂styles\
+ ┣ 📂[tokens](tokens.md)\
+ ┃ ┣ 📜borders.scss\
+ ┃ ┣ 📜fonts.scss\
+ ┃ ┣ 📜spacings.scss\
+ ┃ ┣ 📜layouts.scss\
+ ┃ ┣ 📜others.scss\
+ ┃ ┣ 📂[themes](tokens#themes)\
+ ┃ ┃ ┣ 📂default\
+ ┃ ┃ ┃ ┣ 📜colors.scss\
+ ┃ ┃ ┃ ┣ 📜colors_dark.scss\
+ ┃ ┃ ┃ ┗ 📜colors_light.scss\
+ ┃ ┣ 📂[components](tokens#components)\
+ ┃ ┣ 📂[global](tokens#global)\
+ ┣ 📂[tools](tools.md)\
+ ┣ 📂[utils](utils.md)\
+ ┣ 📂[global](global.md)\
+ ┣ 📂[components](components.md)\
+ ┣ 📂[pages](pages.md)
+
+ ### Sem marcas e temas
+ 📂styles\
+ ┣ 📂[tokens](tokens.md)\
+ ┃ ┣ 📜borders.scss\
+ ┃ ┣ 📜fonts.scss\
+ ┃ ┣ 📜spacings.scss\
+ ┃ ┣ 📜layouts.scss\
+ ┃ ┣ 📜others.scss\
+ ┃ ┣ 📂colors\
+ ┃ ┃ ┣ 📜colors.scss\
+ ┃ ┃ ┣ 📜colors_dark.scss\
+ ┃ ┃ ┗ 📜colors_light.scss\
+ ┃ ┣ 📂[components](tokens#components)\
  ┣ 📂[tools](tools.md)\
  ┣ 📂[utils](utils.md)\
  ┣ 📂[global](global.md)\

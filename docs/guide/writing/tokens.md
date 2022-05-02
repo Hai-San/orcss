@@ -336,7 +336,7 @@ $font-weight-black: 900;
 $font-family-titles: 'Libre Baskerville', serif;
 $font-family-texts: 'Roboto', sans-serif;
 
-// No design esse valores normalmente ficam em porcentagem 1.4 = 140%
+// No design esses valores normalmente ficam em porcentagem 1.4 = 140%
 $line-height-thin: 1;
 $line-height-regular: 1.4;
 $line-height-medium: 1.6;
