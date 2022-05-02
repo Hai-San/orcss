@@ -15,4 +15,4 @@ Essa pasta não vai existir dentro de um estrutura de frameworks modernos. Nesse
 	┃ ┣ 📂button\
 	┃ ┃ ┣ 📜tools.scss - Mixins e funções utilizadas para gerar o CSS padrão de todos os botões\
 	┃ ┃ ┣ 📜primary.scss - Utiliza os mixins e funções para ter um estilo exclusivo\
-	┃ ┃ ┗ 📜secondary.scss\
+	┃ ┃ ┗ 📜secondary.scss
