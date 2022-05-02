@@ -1,7 +1,5 @@
 # O que você vai precisar
-Para aplicar o ORCSS de uma forma mais eficiente você vai precisar de algumas ferramentas auxiliares que otimizam o trabalho e trazem ótimos benefícios dentro do CSS.
-
-Se antes preferir entender como o ORCSS funciona, comece por [aqui](../categorization/).
+Para aplicar o ORCSS de uma forma mais eficiente serão necessárias algumas ferramentas auxiliares que otimizam o trabalho e trazem ótimos benefícios dentro do CSS. Depois de configuradas, raramente você vai precisar mexer nelas novamente e para facilitar mais ainda, no decorrer deste tutorial terão várias configurações prontas.
 
 ## SASS
 O pre-processador SASS (Dart) é essencial para que possamos organizar os estilos CSS em vários arquivos menores. Consequentemente ganhamos outros benefícios que ele trás e que otimizam muito o fluxo de trabalho com o CSS. 

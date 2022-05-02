@@ -28,15 +28,6 @@ function getGuideSidebar() {
             link: '/guide/'
         },
         {
-            text: 'Configurações',
-            link: '/guide/settings/',
-            children: [
-                { text: 'VSCode', link: '/guide/settings/vscode' },
-                { text: 'Stylelint', link: '/guide/settings/stylelint' },
-                { text: 'Stylelint Vue.js', link: '/guide/settings/stylelint-vue' }
-            ]
-        },
-        {
             text: 'Categorização',
             link: '/guide/categorization/',
             children: [
@@ -70,6 +61,15 @@ function getGuideSidebar() {
                 { text: 'Utils', link: '/guide/structuring/utils' },
                 { text: 'Components', link: '/guide/structuring/components' },
                 { text: 'Pages', link: '/guide/structuring/pages' }
+            ]
+        },
+        {
+            text: 'Configurações',
+            link: '/guide/settings/',
+            children: [
+                { text: 'VSCode', link: '/guide/settings/vscode' },
+                { text: 'Stylelint', link: '/guide/settings/stylelint' },
+                { text: 'Stylelint Vue.js', link: '/guide/settings/stylelint-vue' }
             ]
         }
     ];
