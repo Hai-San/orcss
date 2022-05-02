@@ -1,4 +1,7 @@
 # ORCSS
+ORCSS é um guia CSS focado na simplicidade e escalabilidade.
+
+ORCSS = Organization Rules for CSS (Regras de organização para CSS)
 
 ## Documentação
 
