@@ -1,6 +1,6 @@
 ---
 home: true
-actionText: Guia (Em progresso)
+actionText: Guia
 actionLink: /guide/
 
 features:

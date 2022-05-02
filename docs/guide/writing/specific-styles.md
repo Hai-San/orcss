@@ -1,10 +1,8 @@
 # Estilos específicos
 Estilos específicos acontecem quando um componente precisa de estilos que são unicamente feitos dentro de uma página ou outro componente. Aqui é onde podem ocorrer os maiores níveis de aninhamento.
 
-Evite quando puder, sempre dê preferência para [classes modificadoras](customization-classes.md).
-
 ## Características
-- Crie um nome de classe customizado formado pelo nome do elemento principal mais o nome do componente filho.
+- Cria um nome de classe customizado formado pelo nome do elemento principal mais o nome do componente filho.
   - Páginas: `pageHome` + `featuredPosts` = `pageHome_featuredPosts`.
   - Componentes: `featuredPosts` + `blogCard` = `featuredPosts_blogCard`.
 - É obrigatório o aninhamento das classes do componente dentro da classe customizada para ter um grau de especificidade maior. Assim não teremos conflitos com os estilos originais.

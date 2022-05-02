@@ -10,26 +10,3 @@ O modelo de estrutura de pastas e arquivos utilizado no ORCSS tem como principal
 * **Código reutilizável**: Mais uma das vantagens da componentização é que podemos reaproveitar pequenos trechos de código, assim evitando código repetido.
 
 * **Design System**: Seu CSS vai escalar com o Design System da empresa independente de quantos projetos ou marcas existam
-
-## Estrutura de pastas
-
-📂styles\
- ┣ 📂[tokens](tokens.md)\
- ┃ ┣ 📂[brands](tokens#📂-brands)\
- ┃ ┃ ┣ 📂default\
- ┃ ┃ ┃ ┣ 📜border.scss\
- ┃ ┃ ┃ ┣ 📜fonts.scss\
- ┃ ┃ ┃ ┗ 📜spacing.scss\
- ┃ ┃ ┃ ┣ 📁components\
- ┃ ┃ ┃ ┣ 📂[themes](tokens#📂-themes)\
- ┃ ┃ ┃ ┃ ┣ 📂default\
- ┃ ┃ ┃ ┃ ┃ ┣ 📜colors.scss\
- ┃ ┃ ┃ ┃ ┃ ┣ 📜colors_dark.scss\
- ┃ ┃ ┃ ┃ ┃ ┗ 📜colors_light.scss\
- ┃ ┣ 📂[components](tokens#📂-components)\
- ┃ ┣ 📂[global](tokens#📂-global)\
- ┣ 📂[tools](tools.md)\
- ┣ 📂[utils](utils.md)\
- ┣ 📂[global](global.md)\
- ┣ 📂[components](components.md)\
- ┣ 📂[pages](pages.md)

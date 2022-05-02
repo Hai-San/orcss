@@ -1,15 +1,17 @@
 # Sobre ( DOCUMENTAÇÃO EM PROGRESSO )
-<abbr title="Regras de organização para CSS">ORCSS</abbr> (Regras de organização para CSS) é um guia de organização do CSS que agrupa algumas "regras" que eu considero como ideais para um CSS de qualidade.
+<abbr title="Regras de organização para CSS">ORCSS</abbr> (Regras de organização para CSS) é um guia de organização do CSS que agrupa algumas "regras" para um CSS de qualidade.
 
 ## Problema
-O maior problema quando se trata de CSS é a dificuldade que os desenvolvedores tem em organizar uma estrutura que seja escalável e simples de manter. Muitas "soluções" no mercado tentam melhorar isso, porém acabam gerando uma curva de aprendizado maior do que o necessário, principalmente pelo fato de alterarem pontos que não deveriam ser alterados. Outro problema é que todo dia surge alguma solução "inovadora", isso vira requisito para vagas de emprego, e o desenvolvedor é obrigado a aprender "mil formas" de escrever um simples CSS para conseguir acompanhar o mercado ansioso. Uma observação aqui é que muitos desenvolvedores não gostam do CSS e acabam procurando meios de contornar essa linguagem, por isso muitas soluções do mercado acabam fazendo sucesso não por serem boas e sim por livrarem os desenvolvedores de ter que lidar diretamente com o CSS.
+O maior problema quando se trata de CSS é a dificuldade que os desenvolvedores tem em organizar uma estrutura que seja escalável e simples de manter. Muitas soluções no mercado tentam melhorar isso, porém acabam gerando uma curva de aprendizado maior do que o necessário, principalmente pelo fato de alterarem pontos que não deveriam ser alterados. Tudo isso fica pior quando todo dia surge alguma "solução inovadora", isso vira requisito para vagas de emprego, e o desenvolvedor é obrigado a aprender "mil formas" de escrever um simples CSS para conseguir acompanhar o mercado ansioso. Porém não é só culpa das empresas, muitos desenvolvedores não gostam do CSS e acabam procurando meios de contornar essa linguagem, por isso muitas soluções do mercado acabam fazendo sucesso não por serem boas, e sim por livrarem os desenvolvedores de ter que lidar diretamente com o CSS.
 
-Outro ponto, é fica muito difícil fazer com que os designers saibam e respeitem todos os limites das "soluções" utilizadas. Isso acaba se tornando um problema, pois as empresas acabam misturando duas, três ou mais "soluções" em um mesmo projeto. Isso se deve ao fato de que nenhuma "solução" sozinha consegue atingir todas as demandas de layout da empresa que são exclusivamente feitas para o tipo de negócio ou focado na identidade da marca.
+Também existem problemas que afetam diretamente as equipes de design. Um desses problemas é o fato de que quando utilizamos as ditas "soluções" consequentemente algumas delas necessitam o conhecimento pela parte do designer. Isso causa um grande problema, pois agora o designer precisa entender sobre a "solução" de desenvolvimento para conseguir criar um layout que não saia dos limites da mesma. Esse aprendizado na grande maioria das vezes não acontece e o layout criado fica muito diferente do que a "solução" pode oferecer. Em consequência disso o desenvolvedor acaba tendo que inserir códigos customizados ou até misturar com outras "soluções", no fim temos o famoso projeto Frankenstein.
+
+Soluções = Bootstrap, tailwind, css-in-js, styled-components, vuetify, quasar etc...
 
 ## Objetivo
-O objetivo deste guia é mostrar como utilizar o CSS de forma simples, rápida e escalável. A única exigência aqui é saber CSS e um pouco de SASS. Apesar da necessidade do SASS, ainda utilizamos o CSS nativo e isso torna o código muito mais flexível, fazendo com que os layouts feitos pelo time de design seja criados de forma muita mais fiel. 
+O objetivo deste guia é mostrar como utilizar o CSS de forma simples, rápida e escalável. A única exigência aqui é saber CSS e um pouco de SASS. Apesar da necessidade do SASS, ainda será utilizado o CSS nativo e isso torna o código muito mais flexível, fazendo com que os layouts feitos pelo time de design sejam criados de forma muita mais fiel. 
 
-O básico bem feito é capaz de criar qualquer tipo de layout. 
+"O básico bem feito é capaz de criar qualquer tipo de layout". 
 
 ## Principais benefícios
 - Fácil manutenção

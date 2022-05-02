@@ -14,12 +14,13 @@ Use `camelCase` para nomes com mais de uma palavra.
 .myBlogCard {		
 }
 ```
-- Isso serve para IDs também, mesmo não sendo utilizado dentro do CSS.
+- Isso serve para IDs também, mesmo não sendo utilizados dentro do CSS.
 
 ## Herança
-Elementos "filhos" sempre herdam o nome do elemento "pai". Utilize underline `_` para separar os nomes. Elementos pais são **páginas** e **componentes**.
-
-Os elementos filhos também seguem as mesmas regras de camelCase para nomes com mais de uma palavra.
+- Elementos "filhos" sempre herdam o nome de um elementos superior. 
+- Elementos superiores podem ser páginas, componentes ou blocos.
+- Utilize underline `_` para separar os nomes. 
+- Seguem as mesmas regras de camelCase para nomes com mais de uma palavra.
 
 ### Benefícios
 - Especificidade baixa
@@ -27,13 +28,13 @@ Os elementos filhos também seguem as mesmas regras de camelCase para nomes com 
 
 ### Exemplos
 ```html
-<li class="blogCard">
-	<div class="blogCard_header">
-		<h3 class="blogCard_title">
+<li class="blogCard"> <!-- componente -->
+	<div class="blogCard_header"> <!-- bloco de estruturação -->
+		<h3 class="blogCard_title"> <!-- unidade -->
 			Title
 		</h3>
 	</div>
-	<p class="blogCard_tagName"></p>
+	<p class="blogCard_tagName"></p> <!-- unidade -->
 </li>
 ```
 ```scss
@@ -97,10 +98,10 @@ Podemos utilizar encadeamento de herança para evitar elementos com nome de clas
 
 ### Exemplos
 ```html
-<li class="blogCard">
-	<h2 class="blogCard_title">Title</h2>
-	<div class="blogCard_header">
-		<h3 class="blogCard_header_title">
+<li class="blogCard"> <!-- componente -->
+	<h2 class="blogCard_title">Title</h2> <!-- unidade -->
+	<div class="blogCard_header"> <!-- bloco hereditário -->
+		<h3 class="blogCard_header_title"> <!-- unidade -->
 			Title
 		</h3>
 	</div>

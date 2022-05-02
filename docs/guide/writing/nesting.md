@@ -1,12 +1,12 @@
 # Aninhamento
-Utilizando o SASS é possível fazer aninhamento de classes. Essa funcionalidade é muito boa para deixar o CSS mais organizado e simples de entender. O aninhamento também existe no CSS, porém não fica visivelmente claro como no SASS.
+Ao utilizar o SASS é possível fazer aninhamento de classes. Essa funcionalidade é muito boa para deixar o CSS mais organizado e simples de entender. O aninhamento também existe no CSS, porém não fica visivelmente claro como no SASS.
 
 :::danger Atenção
 Apesar do aninhamento ser muito bom, cuidado para não tornar isso um grande problema, pois fazer aninhamentos muito longos ou sem necessidade, acaba deixando o CSS com uma especificidade muito alta e consequentemente difícil de manter.
 :::
 
 ## Quando utilizar?
-Normalmente o aninhamento é normal para pseudo-classes, pseudo-elementos, valores de atributos, [classes modificadoras](customization-classes.md) e [estilos específicos](specific-styles.md). Nos casos de seletores por tag, id e classes filhas tente evitar ao máximo. O objetivo é que o aninhamento seja utilizado para casos realmente necessários e seja evitado sempre que possível.
+Normalmente o aninhamento funciona bem para pseudo-classes, pseudo-elementos, valores de atributos, [classes modificadoras](customization-classes.md) e [estilos específicos](specific-styles.md). Nos casos de seletores por tag, id e classes filhas, tente evitar ao máximo. O objetivo é que o aninhamento seja utilizado para casos realmente necessários e seja evitado sempre que possível.
 
 ## Exemplos
 Como podemos utilizar o aninhamento de forma correta.
@@ -137,7 +137,7 @@ Não aninhe classes de elementos filhos. O css não precisa seguir a mesma estru
 	}
 }
 ```
-* Exemplo correto
+* Forma correta
 	```scss
 	.blogCard {
 	}
