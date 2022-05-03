@@ -26,8 +26,6 @@ Exemplo:
 // extensions.json
 {
 	"recommendations": [
-		"johnsoncodehk.volar",
-		"editorconfig.editorconfig",
 		"stylelint.vscode-stylelint",
 	]
 }
@@ -53,7 +51,6 @@ Exemplo:
 	"stylelint.validate": [
 		"css",
 		"scss",
-		"vue"
 	],
 }
 ```

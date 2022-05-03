@@ -1,7 +1,5 @@
 # Tokens
-Os tokens são variáveis que vem do design system e servem para padronizar informações referente ao design do projeto. Essas informações normalmente são cores, espaçamentos, tamanhos, fontes e bordas. Um conjunto de tokens pode ser utilizado para crianção de componentes e páginas inteiras.
-
-Dentro do CSS os tokens são vistos como variáveis e ajudam muito na organização e padronização do projeto. Também tornam a sincronização entre equipes de design e desenvolvedores muito mais simples.
+Os tokens de design fazem parte do design system e servem para padronizar informações referente ao design do projeto. Essas informações normalmente são cores, espaçamentos, tamanhos, fontes e bordas. Um conjunto de tokens pode ser utilizado para crianção de componentes e páginas inteiras. Esses tokens são criados pelos designers, porém isso deve ser feito em conjunto com o time de desenvolvedores pelo fato de que esses mesmos tokens são utilizados na forma de variáveis dentro do CSS e ajudam na organização e padronização do projeto. Também tornam a sincronização entre equipes de design e desenvolvedores muito mais simples.
 
 #### Podemos classificar os tokens em três categorias:
 * **Core**: Tokens que armazenam os valores brutos e normalmente não são utilizados diretamente no layout do projeto.
