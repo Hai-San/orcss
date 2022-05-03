@@ -10,9 +10,9 @@ Soluções = Bootstrap, tailwind, css-in-js, vuetify, quasar etc...
 
 :::tip Nem sempre é ruim
 Algumas soluções que trazem um design pronto podem ser muito boas em casos específicos como:
-* A empresa não possui designers para criar um layout qualificado
-* O projeto é simples e pequeno
-* O projeto precisa ser desenvolvido muito rápido
+* A empresa não possui designers para criar um layout qualificado.
+* O projeto é simples e pequeno.
+* O projeto precisa ser desenvolvido muito rápido.
   * Isso só funciona se a equipe inteira já ter conhecimento sobre a solução selecionada.
 
 Isso não engloba coisas como css-in-js
