@@ -13,6 +13,7 @@ Algumas soluções que trazem um design pronto podem ser muito boas em casos esp
 * A empresa não possui designers para criar um layout qualificado
 * O projeto é simples e pequeno
 * O projeto precisa ser desenvolvido muito rápido
+  * Isso só funciona se a equipe inteira já ter conhecimento sobre a solução selecionada.
 
 Isso não engloba coisas como css-in-js
 :::
