@@ -6,7 +6,16 @@ O maior problema quando se trata de CSS é a dificuldade que os desenvolvedores 
 
 Também existem problemas que afetam diretamente as equipes de design. Um desses problemas é o fato de que quando utilizamos as ditas "soluções" consequentemente algumas delas necessitam o conhecimento pela parte do designer. Isso causa um grande problema, pois agora o designer precisa entender sobre a "solução" de desenvolvimento para conseguir criar um layout que não saia dos limites da mesma. Esse aprendizado na grande maioria das vezes não acontece e o layout criado fica muito diferente do que a "solução" pode oferecer. Em consequência disso o desenvolvedor acaba tendo que inserir códigos customizados ou até misturar com outras "soluções", no fim temos o famoso projeto Frankenstein.
 
-Soluções = Bootstrap, tailwind, css-in-js, styled-components, vuetify, quasar etc...
+Soluções = Bootstrap, tailwind, css-in-js, vuetify, quasar etc...
+
+:::tip Nem sempre é ruim
+Algumas soluções que trazem um design pronto podem ser muito boas em casos específicos como:
+* A empresa não possui designers para criar um layout qualificado
+* O projeto é simples e pequeno
+* O projeto precisa ser desenvolvido muito rápido
+
+Isso não engloba coisas como css-in-js
+:::
 
 ## Objetivo
 O objetivo deste guia é mostrar como utilizar o CSS de forma simples, rápida e escalável. A única exigência aqui é saber CSS e um pouco de SASS. Apesar da necessidade do SASS, ainda será utilizado o CSS nativo e isso torna o código muito mais flexível, fazendo com que os layouts feitos pelo time de design sejam criados de forma muita mais fiel. 
