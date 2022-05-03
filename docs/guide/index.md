@@ -14,6 +14,7 @@ Algumas soluções que trazem um design pronto podem ser muito boas em casos esp
 * O projeto é simples e pequeno.
 * O projeto precisa ser desenvolvido muito rápido.
   * Isso só funciona se a equipe inteira já ter conhecimento sobre a solução selecionada.
+  * Nesses casos pode funcionar bem no começo do negócio, mas no longo prazo pode ficar bem complicado.
 
 Isso não engloba coisas como css-in-js
 :::
