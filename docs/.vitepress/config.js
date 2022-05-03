@@ -80,6 +80,10 @@ function getGuideSidebar() {
                 { text: 'Stylelint', link: '/guide/settings/stylelint' },
                 { text: 'Stylelint Vue.js', link: '/guide/settings/stylelint-vue' }
             ]
+        },
+        {
+            text: 'Ajuda',
+            link: '/guide/help/'
         }
     ];
 }
