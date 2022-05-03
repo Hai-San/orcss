@@ -15,9 +15,11 @@ O objetivo deste guia é mostrar como utilizar o CSS de forma simples, rápida e
 
 ## Principais benefícios
 - Fácil manutenção
-- Bem organizado
+- Organizado
 - Simples
 - Escalável
 - Fácil de aprender
 
+:::tip Pode ir com calma
 No começo pode parecer muita informação, mas é MUITA informação SIMPLES. Aplique as regras aos poucos e logo você vai ver os resultados no projeto.
+:::
