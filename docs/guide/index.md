@@ -8,6 +8,8 @@ Também existem problemas que afetam diretamente as equipes de design. Um desses
 
 Soluções = Bootstrap, tailwind, css-in-js, vuetify, quasar etc...
 
+Qualquer uma dessas soluções possui o risco de ser abandonada e não ter mais suporte, já no CSS nativo essa possibilidade não existe.
+
 :::tip Nem sempre é ruim
 Algumas soluções que trazem um design pronto podem ser muito boas em casos específicos como:
 * A empresa não possui designers para criar um layout qualificado.
