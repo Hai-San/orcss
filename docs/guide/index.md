@@ -38,7 +38,8 @@ O objetivo deste guia é mostrar como utilizar o CSS de forma simples, rápida e
 - Liberdade para o time de design
 
 #### Desvantagens
-- Mais demorado
+- Mais demorado no começo, pois toda a estrutura precisa ser criada do zero. 
+  - Porém no longo prazo se torna muito ágil.
 
 :::tip Pode ir com calma
 No começo pode parecer muita informação, mas é MUITA informação SIMPLES. Aplique as regras aos poucos e logo você vai ver os resultados no projeto.
