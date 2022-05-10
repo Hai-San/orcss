@@ -67,6 +67,7 @@ function getGuideSidebar() {
                 { text: 'Pastas', link: '/guide/structuring/folders' },
                 { text: 'Tokens', link: '/guide/structuring/tokens' },
                 { text: 'Tools', link: '/guide/structuring/tools' },
+                { text: 'Snippets', link: '/guide/structuring/snippets' },
                 { text: 'Utils', link: '/guide/structuring/utils' },
                 { text: 'Components', link: '/guide/structuring/components' },
                 { text: 'Pages', link: '/guide/structuring/pages' }
