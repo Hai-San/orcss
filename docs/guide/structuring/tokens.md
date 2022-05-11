@@ -60,6 +60,12 @@ Os temas trabalham apenas com tokens de cores e elas são divididas entre os seg
 - Esses tokens são baseados nos tokens core e não possuem valores atribuídos diretamente para eles. 
 - Em alguns casos esses tokens de componente podem ser separados por marca, pois o novo valor do token principal pode não ser o ideal para o componente, e neste caso o token do componente vai passar a utilizar outro token principal como seu valor.
 
+#### 📂 Snippets {#snippets}
+- Tokens exclusivos para snippets. 
+- Esses tokens são baseados nos tokens core e não possuem valores atribuídos diretamente para eles. 
+- Em alguns casos esses tokens de snippets podem ser separados por marca, pois o novo valor do token principal pode não ser o ideal para o snippet, e neste caso o token do snippet vai passar a utilizar outro token principal como seu valor.
+- Percebeu que funciona da mesma forma que os componentes? [Explicação](snippets.md) 
+
 #### 📂 Global {#global}
 * Esta pasta vai existir apenas se a pasta de marcas existir
 * Tokens utilizados globalmente independente da marca
