@@ -6,7 +6,7 @@ actionLink: /guide/
 
 features:
   - title: 💡 Simples
-    details: Nada de códigos super inchados e cheios de customização desnecessária.
+    details: Tem apenas o que é necessário
   - title: ⚡️ Flexível 
     details: Pode ser adaptado como for melhor para o projeto.
   - title: 🛠️ Escalável
