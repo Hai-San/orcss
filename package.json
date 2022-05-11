@@ -11,7 +11,7 @@
 		"type": "git",
 		"url": "git+https://github.com/Hai-San/orcss.git"
 	},
-	"author": "",
+	"author": "Samuel Martinenghi",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/Hai-San/orcss/issues"
