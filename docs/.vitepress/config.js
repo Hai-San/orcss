@@ -14,7 +14,26 @@ module.exports = {
         [ 'link', { rel: 'manifest', href: '/assets/favicons/site.webmanifest' } ],
         [ 'link', { rel: 'shortcut icon', href: '/assets/favicons/favicon.ico' } ],
         [ 'meta', { name: 'msapplication-TileColor', content: '#f8f8f2' } ],
-        [ 'meta', { name: 'theme-color', content: '#282936' } ]		
+        [ 'meta', { name: 'theme-color', content: '#282936' } ],	
+        [ 'script', {
+            src: 'https://www.googletagmanager.com/gtag/js?id=G-K9D7XGNGJL',
+            crossorigin: 'anonymous',
+            async: true
+        } ],	
+        [ 'script', {}, `
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+		
+			gtag('config', 'G-K9D7XGNGJL');
+		` ],
+        [ 'script', {}, `
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-WX78PXS');
+		` ]
     ],
     themeConfig: {
         repo: 'Hai-San/orcss',
