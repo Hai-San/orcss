@@ -2,16 +2,19 @@ module.exports = {
     base: '/',
     lang: 'pt-BR',
     title: 'ORCSS',
-    description: 'Um guia CSS focado na simplicidade e escalabilidade',	
+    description: 'ORCSS é um guia de CSS que ensina boas práticas para ter um CSS simples, organizado, escalável e preparado para o design system.',	
     lastUpdated: true,
     head: [
+        [ 'meta', { name: 'keywords', content: 'CSS, guia de CSS, design system' } ],
+        [ 'meta', { name: 'author', content: 'Samuel Martinenghi' } ],
+        [ 'meta', { name: 'google-site-verification', content: 'ad1BJACkwbIZrTfLAF9lUw4rZ8quyp1ddioCEbE_3Xg' } ],
         [ 'link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/favicons/apple-touch-icon.png' } ],
         [ 'link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/favicons/favicon-32x32.png' } ],
         [ 'link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/favicons/favicon-16x16.png' } ],
         [ 'link', { rel: 'manifest', href: '/assets/favicons/site.webmanifest' } ],
         [ 'link', { rel: 'shortcut icon', href: '/assets/favicons/favicon.ico' } ],
         [ 'meta', { name: 'msapplication-TileColor', content: '#f8f8f2' } ],
-        [ 'meta', { name: 'theme-color', content: '#282936' } ]
+        [ 'meta', { name: 'theme-color', content: '#282936' } ]		
     ],
     themeConfig: {
         repo: 'Hai-San/orcss',
@@ -21,10 +24,14 @@ module.exports = {
         editLinkText: 'Edite essa página no GitHub',
         lastUpdated: 'Última atualização',
         nav: [
-            { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' }
+            { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' },
+            { text: 'Configurações', link: '/settings/', activeMatch: '^/settings/' },
+            { text: 'Ajuda', link: '/help/', activeMatch: '^/help/' }
         ],
         sidebar: {
-            '/guide/': getGuideSidebar()
+            '/guide/': getGuideSidebar(),
+            '/settings/': getSettingsSidebar(),
+            '/help/': getHelpSidebar()
         }
     }
 };
@@ -72,19 +79,28 @@ function getGuideSidebar() {
                 { text: 'Components', link: '/guide/structuring/components' },
                 { text: 'Pages', link: '/guide/structuring/pages' }
             ]
-        },
+        }
+    ];
+}
+
+function getSettingsSidebar() {
+    return [
         {
             text: 'Configurações',
-            link: '/guide/settings/',
+            link: '/settings/',
             children: [
-                { text: 'VSCode', link: '/guide/settings/vscode' },
-                { text: 'Stylelint', link: '/guide/settings/stylelint' },
-                { text: 'Stylelint Vue.js', link: '/guide/settings/stylelint-vue' }
+                { text: 'VSCode', link: '/settings/vscode' },
+                { text: 'Stylelint', link: '/settings/stylelint' },
+                { text: 'Stylelint Vue.js', link: '/settings/stylelint-vue' }
             ]
-        },
+        }
+    ];
+}
+function getHelpSidebar() {
+    return [
         {
             text: 'Ajuda',
-            link: '/guide/help/'
+            link: '/help/'
         }
     ];
 }

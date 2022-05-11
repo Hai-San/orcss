@@ -1,5 +1,6 @@
 ---
 home: true
+tagline: Um guia CSS focado na simplicidade e escalabilidade
 actionText: Guia
 actionLink: /guide/
 
