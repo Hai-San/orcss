@@ -2,7 +2,7 @@ module.exports = {
     base: '/',
     lang: 'pt-BR',
     title: 'ORCSS',
-    description: 'ORCSS é um guia de CSS que ensina boas práticas para ter um CSS simples, organizado, escalável e preparado para o design system.',	
+    description: 'ORCSS é um guia de CSS que mostra boas práticas para ter um CSS simples, organizado e escalável. Também mostra como preparar o CSS para funcionar com um Design System.',	
     lastUpdated: true,
     head: [
         [ 'meta', { name: 'keywords', content: 'CSS, guia de CSS, design system' } ],
