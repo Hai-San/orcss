@@ -1,11 +1,19 @@
 module.exports = {
-    base: '/',
-    lang: 'pt-BR',
-    title: 'ORCSS',
-    description: 'ORCSS é um guia de CSS que ensina boas práticas para ter um CSS simples, organizado, escalável e preparado para o design system.',	
     lastUpdated: true,
+    locales: {
+        '/': {
+            lang: 'pt-BR',
+            title: 'ORCSS',
+            description: 'ORCSS é um guia de CSS que mostra boas práticas para ter um CSS simples, organizado e escalável. Também mostra como preparar o CSS para funcionar com um Design System.'
+        },
+        '/en/': {
+            lang: 'en-US',
+            title: 'ORCSS',	
+            description: 'ORCSS is a CSS guide that shows best practices for having simple, organized and scalable CSS. It also shows how to prepare CSS to work with a Design System.'
+        }
+    },
     head: [
-        [ 'meta', { name: 'keywords', content: 'CSS, guia de CSS, design system' } ],
+        [ 'meta', { name: 'keywords', content: 'CSS, design system' } ],
         [ 'meta', { name: 'author', content: 'Samuel Martinenghi' } ],
         [ 'meta', { name: 'google-site-verification', content: 'ad1BJACkwbIZrTfLAF9lUw4rZ8quyp1ddioCEbE_3Xg' } ],
         [ 'link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/favicons/apple-touch-icon.png' } ],
@@ -40,17 +48,38 @@ module.exports = {
         docsDir: 'docs',
         docsBranch: 'main',
         editLinks: true,
-        editLinkText: 'Edite essa página no GitHub',
-        lastUpdated: 'Última atualização',
-        nav: [
-            { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' },
-            { text: 'Configurações', link: '/settings/', activeMatch: '^/settings/' },
-            { text: 'Ajuda', link: '/help/', activeMatch: '^/help/' }
-        ],
-        sidebar: {
-            '/guide/': getGuideSidebar(),
-            '/settings/': getSettingsSidebar(),
-            '/help/': getHelpSidebar()
+        locales: {
+            '/': {
+                label: 'Português',
+                editLinkText: 'Edite essa página no GitHub',
+                lastUpdated: 'Última atualização',
+                selectText: 'Idiomas',
+                nav: [
+                    { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' },
+                    { text: 'Configurações', link: '/settings/', activeMatch: '^/settings/' },
+                    { text: 'Ajuda', link: '/help/', activeMatch: '^/help/' }
+                ],
+                sidebar: {
+                    '/guide/': getGuideSidebar(),
+                    '/settings/': getSettingsSidebar(),
+                    '/help/': getHelpSidebar()
+                }
+            },
+            '/en/': {
+                label: 'English',
+                editLinkText: 'Edit this page on GitHub',
+                lastUpdated: 'Last Updated',
+                nav: [
+                    { text: 'Guide', link: '/guide/', activeMatch: '^/guide/' },
+                    { text: 'Config', link: '/settings/', activeMatch: '^/settings/' },
+                    { text: 'Help', link: '/help/', activeMatch: '^/help/' }
+                ],
+                sidebar: {
+                    '/guide/': getGuideSidebar(),
+                    '/settings/': getSettingsSidebar(),
+                    '/help/': getHelpSidebar()
+                }
+            }
         }
     }
 };
