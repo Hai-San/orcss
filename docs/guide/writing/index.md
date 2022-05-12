@@ -1,2 +1,2 @@
 # Escrita
-Agora que já vimos como [categorizar](../categorization/index.md) uma estrutura HTML, é importante saber como as classes devem ser nomeadas e organizadas dentro do CSS.
+O CSS vai muito além de um amontoado de propriedades para deixar um layout bonitinho. Para ter um código de qualidade é importante saber como nomear, categorizar e organizar as classes dentro do CSS. Em reflexo disso o projeto será mais simples de manter e terá uma escalabilidade muito mais consistente.

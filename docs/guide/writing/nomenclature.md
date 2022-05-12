@@ -1,8 +1,9 @@
 # Nomenclatura
 Regras que devemos utilizar para criar os nomes das classes CSS.
 
-## CamelCase
-Use `camelCase` para nomes com mais de uma palavra.
+## Nome
+ - Use `camelCase` para nomes com mais de uma palavra.
+ - Isso serve para IDs também, mesmo não sendo utilizados dentro do CSS.
 
 ```scss
 .card {
@@ -14,7 +15,6 @@ Use `camelCase` para nomes com mais de uma palavra.
 .myBlogCard {		
 }
 ```
-- Isso serve para IDs também, mesmo não sendo utilizados dentro do CSS.
 
 ## Herança
 - Elementos "filhos" sempre herdam o nome de um elementos superior. 
