@@ -43,16 +43,16 @@ module.exports = {
                 ...globalHead,
                 [ 'meta', { name: 'keywords', content: 'CSS, guia de CSS, design system' } ]
             ]
-        },
-        '/en/': {
-            lang: 'en-US',
-            title: 'ORCSS',	
-            description: 'ORCSS is a CSS guide that shows best practices for having simple, organized and scalable CSS. It also shows how to prepare CSS to work with a Design System.',
-            head: [
-                ...globalHead,
-                [ 'meta', { name: 'keywords', content: 'CSS, CSS guide, design system' } ]
-            ]
         }
+        // '/en/': {
+        //     lang: 'en-US',
+        //     title: 'ORCSS',	
+        //     description: 'ORCSS is a CSS guide that shows best practices for having simple, organized and scalable CSS. It also shows how to prepare CSS to work with a Design System.',
+        //     head: [
+        //         ...globalHead,
+        //         [ 'meta', { name: 'keywords', content: 'CSS, CSS guide, design system' } ]
+        //     ]
+        // }
     },
     themeConfig: {
         repo: 'Hai-San/orcss',
@@ -75,22 +75,22 @@ module.exports = {
                     '/settings/': getSettingsSidebar(),
                     '/help/': getHelpSidebar()
                 }
-            },
-            '/en/': {
-                label: 'English',
-                editLinkText: 'Edit this page on GitHub',
-                lastUpdated: 'Last Updated',
-                nav: [
-                    { text: 'Guide', link: '/guide/', activeMatch: '^/guide/' },
-                    { text: 'Config', link: '/settings/', activeMatch: '^/settings/' },
-                    { text: 'Help', link: '/help/', activeMatch: '^/help/' }
-                ],
-                sidebar: {
-                    '/guide/': getGuideSidebar(),
-                    '/settings/': getSettingsSidebar(),
-                    '/help/': getHelpSidebar()
-                }
             }
+            // '/en/': {
+            //     label: 'English',
+            //     editLinkText: 'Edit this page on GitHub',
+            //     lastUpdated: 'Last Updated',
+            //     nav: [
+            //         { text: 'Guide', link: '/guide/', activeMatch: '^/guide/' },
+            //         { text: 'Config', link: '/settings/', activeMatch: '^/settings/' },
+            //         { text: 'Help', link: '/help/', activeMatch: '^/help/' }
+            //     ],
+            //     sidebar: {
+            //         '/guide/': getGuideSidebar(),
+            //         '/settings/': getSettingsSidebar(),
+            //         '/help/': getHelpSidebar()
+            //     }
+            // }
         }
     }
 };
