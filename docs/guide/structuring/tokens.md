@@ -52,8 +52,8 @@ Arquivos:
 Os temas trabalham apenas com tokens de cores e elas são divididas entre os seguintes arquivos.
 
 - 📄 `main.scss` : Tokens de cores que não são alteradas independente do tema estar em modo light ou dark.
-- 📄 `colors_dark.scss` : Tokens de cores com os valores do modo dark
-- 📄 `colors_light.scss` : Tokens de cores com os valores do modo light
+- 📄 `dark.scss` : Tokens de cores com os valores do modo dark
+- 📄 `light.scss` : Tokens de cores com os valores do modo light
 
 #### 📂 Components {#components}
 - Tokens exclusivos para componentes. 

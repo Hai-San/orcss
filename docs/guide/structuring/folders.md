@@ -15,8 +15,8 @@
 ┃ ┃ ┃ ┣ 📂[themes](tokens#themes)\
 ┃ ┃ ┃ ┃ ┣ 📂default\
 ┃ ┃ ┃ ┃ ┃ ┣ 📜main.scss\
-┃ ┃ ┃ ┃ ┃ ┣ 📜colors_dark.scss\
-┃ ┃ ┃ ┃ ┃ ┗ 📜colors_light.scss\
+┃ ┃ ┃ ┃ ┃ ┣ 📜dark.scss\
+┃ ┃ ┃ ┃ ┃ ┗ 📜light.scss\
 ┃ ┣ 📂[components](tokens#components)\
 ┃ ┣ 📂[global](tokens#global)\
 ┣ 📂[tools](tools.md)\
@@ -41,8 +41,8 @@ Caso tenha apenas os temas dark e light
 ┃ ┃ ┃ ┣ 📁components\
 ┃ ┃ ┃ ┗ 📂[colors](tokens#themes)\
 ┃ ┃ ┃ ┃ ┣ 📜main.scss\
-┃ ┃ ┃ ┃ ┣ 📜colors_dark.scss\
-┃ ┃ ┃ ┃ ┗ 📜colors_light.scss\
+┃ ┃ ┃ ┃ ┣ 📜dark.scss\
+┃ ┃ ┃ ┃ ┗ 📜light.scss\
 ┃ ┣ 📂[components](tokens#components)\
 ┃ ┣ 📂[global](tokens#global)\
 ┣ 📂[tools](tools.md)\
@@ -65,8 +65,8 @@ Caso os tokens não sejam utilizados por mais de uma marca
 ┃ ┣ 📂[themes](tokens#themes)\
 ┃ ┃ ┣ 📂default\
 ┃ ┃ ┃ ┣ 📜main.scss\
-┃ ┃ ┃ ┣ 📜colors_dark.scss\
-┃ ┃ ┃ ┗ 📜colors_light.scss\
+┃ ┃ ┃ ┣ 📜dark.scss\
+┃ ┃ ┃ ┗ 📜light.scss\
 ┃ ┣ 📂[components](tokens#components)\
 ┣ 📂[tools](tools.md)\
 ┣ 📂[snippets](snippets.md)\
@@ -87,8 +87,8 @@ Caso os tokens não sejam utilizados por mais de uma marca e tenham apenas os te
 ┃ ┣ 📜others.scss\
 ┃ ┣ 📂[colors](tokens#themes)\
 ┃ ┃ ┣ 📜main.scss\
-┃ ┃ ┣ 📜colors_dark.scss\
-┃ ┃ ┗ 📜colors_light.scss\
+┃ ┃ ┣ 📜dark.scss\
+┃ ┃ ┗ 📜light.scss\
 ┃ ┣ 📂[components](tokens#components)\
 ┣ 📂[tools](tools.md)\
 ┣ 📂[snippets](snippets.md)\
@@ -99,6 +99,7 @@ Caso os tokens não sejam utilizados por mais de uma marca e tenham apenas os te
 
 ## Frameworks
 Estrutura mais comum em frameworks modernos
+
 📂styles\
 ┣ 📂[tokens](tokens.md)\
 ┃ ┣ 📜borders.scss\
@@ -108,8 +109,8 @@ Estrutura mais comum em frameworks modernos
 ┃ ┣ 📜others.scss\
 ┃ ┣ 📂[colors](tokens#themes)\
 ┃ ┃ ┣ 📜main.scss\
-┃ ┃ ┣ 📜colors_dark.scss\
-┃ ┃ ┗ 📜colors_light.scss\
+┃ ┃ ┣ 📜dark.scss\
+┃ ┃ ┗ 📜light.scss\
 ┃ ┣ 📂[components](tokens#components)\
 ┣ 📂[tools](tools.md)\
 ┣ 📂[snippets](snippets.md)\
