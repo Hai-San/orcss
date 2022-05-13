@@ -6,10 +6,10 @@ Essa pasta não vai existir dentro de um estrutura de frameworks modernos. Nesse
 :::
 
 ## Especificações
-- Cada componente deve ter seu próprio arquivo
-- Componentes são formados por uma estrutura HTML que é diretamente ligada a um CSS exclusivo, ou seja, o CSS deve ser utilizado unicamente para um componente.
-- As classes de componentes não devem ser estendidas por outras classes dentro do CSS. As únicas classes com permissão para extensão são as classes da pasta [Snippets](snippets.md)
-- Podemos criar pastas para agrupar diferentes estilos de um mesmo componente\
+* Cada componente deve ter seu próprio arquivo
+* Componentes são formados por uma estrutura HTML que é diretamente ligada a um CSS exclusivo, ou seja, o CSS deve ser utilizado unicamente para um componente.
+* As classes de componentes não devem ser estendidas por outras classes dentro do CSS. As únicas classes com permissão para extensão são as classes da pasta [Snippets](snippets.md)
+* Podemos criar pastas para agrupar diferentes estilos de um mesmo componente\
 	📂styles\
 	┣ 📂components\
 	┃ ┣ 📂button\

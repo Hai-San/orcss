@@ -29,17 +29,17 @@ Para concluir, o maior problema é que todo dia surge alguma "solução inovador
 O objetivo deste guia é mostrar como utilizar o CSS de forma simples, rápida e escalável. A única exigência é saber CSS e o básico do SASS.  
 
 #### Principais vantagens
-- Flexível
-- Organizado
-- Escalável
-- Simples
-- Fácil de dar manutenção
-- Fácil de aprender
-- Liberdade para o time de design
+* Flexível
+* Organizado
+* Escalável
+* Simples
+* Fácil de dar manutenção
+* Fácil de aprender
+* Liberdade para o time de design
 
 #### Desvantagens
-- O processo de desenvolvimento é mais lento no começo, pois toda a estrutura precisa ser criada do zero. 
-  - No longo prazo isso é recompensado com uma estrutura muito consistente e ágil.
+* O processo de desenvolvimento é mais lento no começo, pois toda a estrutura precisa ser criada do zero. 
+  * No longo prazo isso é recompensado com uma estrutura muito consistente e ágil.
 
 :::tip Pode ir com calma
 No começo pode parecer muita informação, mas é MUITA informação SIMPLES. Aplique as regras aos poucos e logo resultados vão aparecer.

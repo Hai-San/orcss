@@ -35,7 +35,7 @@ HTML para utilizar como base nos exemplos.
 </li>
 ```
 ### Elementos filhos
-- Completo aproveitamento sobre sistema de herança de nomes
+* Completo aproveitamento sobre sistema de herança de nomes
 ```scss
 .blogCard {
 }
