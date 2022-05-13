@@ -2,9 +2,9 @@
 Regras que devemos utilizar para criar os nomes das classes CSS.
 
 ## Nome
-- Nomes podem ser formados por mais de uma palavra.
-- Use `camelCase` para destacar múltiplas palavras em um mesmo nome.
-- Isso serve para IDs também, mesmo não sendo utilizados dentro do CSS.
+* Nomes podem ser formados por mais de uma palavra.
+* Use `camelCase` para destacar múltiplas palavras em um mesmo nome.
+* Isso serve para IDs também, mesmo não sendo utilizados dentro do CSS.
 
 ```scss
 .card {
@@ -18,13 +18,13 @@ Regras que devemos utilizar para criar os nomes das classes CSS.
 ```
 
 ## Nome por herança
-- São classes de elementos que herdam o nome da classe de um elemento superior. 
-- Elementos superiores podem ser [páginas](../categorization/pages.md), [componentes](../categorization/components.md) ou [blocos](../categorization/blocks.md).
-- Utilize underline `_` para indicar que a classe está herdando um nome.
+* São classes de elementos que herdam o nome da classe de um elemento superior. 
+* Elementos superiores podem ser [páginas](../categorization/pages.md), [componentes](../categorization/components.md) ou [blocos](../categorization/blocks.md).
+* Utilize underline `_` para indicar que a classe está herdando um nome.
 
 ### Benefícios
-- Especificidade baixa
-- Pouca repetição de código para responsividade
+* Especificidade baixa
+* Pouca repetição de código para responsividade
 
 ### Exemplos
 ```html
@@ -54,9 +54,9 @@ Regras que devemos utilizar para criar os nomes das classes CSS.
 ```
 
 ### Não faça isso!
-- Especificidade muito alta
-- Mais difícil de manter
-- Repete a estrutura toda vez que é necessário ajustar a responsividade.
+* Especificidade muito alta
+* Mais difícil de manter
+* Repete a estrutura toda vez que é necessário ajustar a responsividade.
 
 ```html
 <li class="blogCard">
@@ -92,9 +92,9 @@ Regras que devemos utilizar para criar os nomes das classes CSS.
 Utilize encadeamento de herança para evitar elementos com nome de classe duplicado.
 
 ### Benefícios
-- Baixa especificidade
-- Fácil de manter
-- Probabilidade de conflitos é muito menor
+* Baixa especificidade
+* Fácil de manter
+* Probabilidade de conflitos é muito menor
 
 ### Exemplos
 ```html
@@ -115,9 +115,9 @@ Utilize encadeamento de herança para evitar elementos com nome de classe duplic
 }
 ```
 ### Não faça isso!
-- Especificidade desnecessária
-- Mais difícil de manter
-- Probabilidade de conflitos é muito maior
+* Especificidade desnecessária
+* Mais difícil de manter
+* Probabilidade de conflitos é muito maior
 ```html
 <li class="blogCard">
 	<h2 class="blogCard_title">Title</h2>

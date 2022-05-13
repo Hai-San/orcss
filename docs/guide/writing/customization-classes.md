@@ -58,17 +58,17 @@ São pequenas classes aninhadas dentro da classe principal do componente e inser
 São formadas pelo nome do componente junto com o nome das classes modificadoras.
 
 ### Características
-- É formado por um nome de classe único
-- Funciona melhor com SASS, pois o uso de `@mixins` diminui a repetição de código
+* É formado por um nome de classe único
+* Funciona melhor com SASS, pois o uso de `@mixins` diminui a repetição de código
   
 ### Benefícios
-- Evita aninhamento
-- Evita sobreposição de código
-- Possui código exclusivo
+* Evita aninhamento
+* Evita sobreposição de código
+* Possui código exclusivo
   
 ### Desvantagens
-- É mais trabalhoso
-- Gera mais CSS
+* É mais trabalhoso
+* Gera mais CSS
   
 ### Exemplo
 ```html

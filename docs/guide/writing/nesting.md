@@ -12,9 +12,9 @@ Normalmente o aninhamento funciona bem para pseudo-classes, pseudo-elementos, va
 Como podemos utilizar o aninhamento de forma correta.
 
 Principais benefícios:
-- Baixa especificidade
-- Mais clareza para leitura
-- Evita repetição de código
+* Baixa especificidade
+* Mais clareza para leitura
+* Evita repetição de código
 
 HTML para utilizar como base nos exemplos.
 ```html
@@ -51,8 +51,8 @@ HTML para utilizar como base nos exemplos.
 ```
 
 ### Tags
-- Tags sempre devem ser aninhadas
-- Sempre dê preferência para classes que evitem o aninhamento
+* Tags sempre devem ser aninhadas
+* Sempre dê preferência para classes que evitem o aninhamento
 ```scss
 .blogCard_description {
 	p {
@@ -62,7 +62,7 @@ HTML para utilizar como base nos exemplos.
 ```
 
 ### Pseudo-classes
-- Sempre devem ser aninhados em uma classe
+* Sempre devem ser aninhados em uma classe
 ```scss
 .blogCard {
 	&:focus,
@@ -73,7 +73,7 @@ HTML para utilizar como base nos exemplos.
 ```
 
 ### Pseudo-elementos
-- Sempre devem ser aninhados em uma classe
+* Sempre devem ser aninhados em uma classe
 ```scss
 .blogCard_header_title {
 	&::after {
@@ -89,15 +89,15 @@ HTML para utilizar como base nos exemplos.
 ## Não faça isso!
 
 Os exemplos abaixo podem causar os seguintes problemas:
-- Gerar mais CSS.
-- Maior especificidade de forma desnecessária.
-- Mais dificuldade para manter o código.
-- Grandes aninhamentos que ficam difíceis de ler.
-- Classes modificadoras, classes filhas e seletores ficam todos misturados.
+* Gerar mais CSS.
+* Maior especificidade de forma desnecessária.
+* Mais dificuldade para manter o código.
+* Grandes aninhamentos que ficam difíceis de ler.
+* Classes modificadoras, classes filhas e seletores ficam todos misturados.
   
 ### Reaproveitamento de nomes
-- Péssimo para leitura
-- Torna inútil a herança de nomes no HTML que é feita para evitar aninhamento e facilitar a leitura
+* Péssimo para leitura
+* Torna inútil a herança de nomes no HTML que é feita para evitar aninhamento e facilitar a leitura
   
 ```scss
 .blogCard {
