@@ -119,7 +119,7 @@ function getGuideSidebar() {
                 { text: 'Nomenclatura', link: '/guide/writing/nomenclature' },
                 { text: 'Aninhamento', link: '/guide/writing/nesting' },
                 { text: 'Classes de customização', link: '/guide/writing/customization-classes' },
-                { text: 'Condições', link: '/guide/writing/status' },
+                { text: 'Classes de estado', link: '/guide/writing/status-classes' },
                 { text: 'Estilos específicos', link: '/guide/writing/specific-styles' },
                 { text: 'Classes javascript', link: '/guide/writing/javascript-classes' },
                 { text: 'Tokens', link: '/guide/writing/tokens' },
