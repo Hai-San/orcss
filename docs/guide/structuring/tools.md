@@ -1,11 +1,11 @@
 # Tools
 Nesta pasta ficam as funções que são utilizadas globalmente
 
-## Regras
-- Aqui não tem CSS
-- Essas funções normalmente são utilizadas para gerar algum valor que seja utilizado para alguma propriedade do CSS
-- Funções podem ser criadas em outros arquivos, porém devem ser exclusivamente utilizadas apenas no arquivo em que foram criadas. Caso exista a necessidade de ser utilizada em mais de um arquivo, elas devem ser inseridas nesta pasta.
+## Especificações
+- São funções utilizadas para gerar valores que sejam utilizados pelas propriedades do CSS.
+- Podem existir funções em outros arquivos, porém devem ser exclusivamente utilizadas nos mesmos. Caso a função seja utilizada em mais de um arquivo, ela deve ser inserida nesta pasta.
 - Essa pasta também pode ser nomeada de `functions`
+- Aqui não tem CSS (seletores, propriedades)
 
 ## Exemplos
 Função utilizada para converter um valor em `px` para `vh`

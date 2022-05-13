@@ -1,7 +1,7 @@
 # Utils
 Utils são @mixins utilizados globalmente para reaproveitar código CSS.
 
-## Regras
+## Especificações
 - São semelhantes aos snippets porém:
   - Podem receber parâmetros e retornar valores customizados
   - São código menores utilizados apenas para pontos mais específicos
