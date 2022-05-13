@@ -5,7 +5,7 @@ ORCSS = Organization Rules for CSS (Regras de organização para CSS)
 
 ## Documentação
 
-Acesse [orcss.vercel.app](https://orcss.vercel.app) para conferir a documentação
+Acesse [orcss.dev.br](https://orcss.dev.br) para conferir a documentação
 
 ## Tecnologias utilizadas
 * [vitepress](https://vitepress.vuejs.org/)
