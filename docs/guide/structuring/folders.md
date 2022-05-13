@@ -102,17 +102,23 @@ Estrutura mais comum em frameworks modernos
 
 📂styles\
 ┣ 📂[tokens](tokens.md)\
-┃ ┣ 📜borders.scss\
-┃ ┣ 📜fonts.scss\
-┃ ┣ 📜spacings.scss\
-┃ ┣ 📜layouts.scss\
-┃ ┣ 📜others.scss\
-┃ ┣ 📂[colors](tokens#themes)\
-┃ ┃ ┣ 📜main.scss\
-┃ ┃ ┣ 📜dark.scss\
-┃ ┃ ┗ 📜light.scss\
-┃ ┣ 📂[components](tokens#components)\
 ┣ 📂[tools](tools.md)\
 ┣ 📂[snippets](snippets.md)\
 ┣ 📂[utils](utils.md)\
 ┣ 📂[global](global.md)
+
+## Mais pastas
+Estrutura que tem arquivos mais específicos agrupados por pastas.
+
+📂styles\
+┣ 📂[tokens](tokens.md)\
+┣ ┣ 📂borders\
+┃ ┣ ┣ 📜widths.scss\
+┃ ┣ ┣ 📜colors.scss\
+┃ ┣ ┣ 📜radius.scss\
+┃ ┣ ┣ 📜styles.scss\
+┣ ┣ 📂fonts\
+┃ ┣ ┣ 📜size.scss\
+┃ ┣ ┣ 📜family.scss\
+┃ ┣ ┣ 📜weight.scss\
+┃ ┣ ┣ 📜lines.scss
