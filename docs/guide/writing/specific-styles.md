@@ -3,9 +3,10 @@ Estilos específicos acontecem quando um componente precisa de estilos que são 
 
 ## Características
 - Cria um nome de classe customizado formado pelo nome do elemento principal mais o nome do componente filho.
-  - Páginas: `pageHome` + `featuredPosts` = `pageHome_featuredPosts`.
-  - Componentes: `featuredPosts` + `blogCard` = `featuredPosts_blogCard`.
-- É obrigatório o aninhamento das classes do componente dentro da classe customizada para ter um grau de especificidade maior. Assim não teremos conflitos com os estilos originais.
+  - Página + Componente: `pageHome` + `featuredPosts` = `pageHome_featuredPosts`.
+  - Componente + Componente: `featuredPosts` + `blogCard` = `featuredPosts_blogCard`.
+- É obrigatório o aninhamento das classes do componente dentro da classe customizada para ter um grau de especificidade maior. 
+  - Isso evita conflitos com os estilos originais.
 
 ## Tipos de estilo
 Existem duas formas de aplicar estilos específicos, uma delas é por [container](#container) e a outra é [direta](#direct). Vamos ver como cada uma delas funciona.
@@ -79,7 +80,7 @@ Componente dentro de outro componente
 }	
 ```
 ### Diretos {#direct}
-Para estilos específicos diretos não é necessário criar o elemento container para casos onde é possível mexer na estrutura do componente. Nesses casos você pode inserir a classe customizada direto no elemento principal do componente. As regras permanecem as mesmas.
+Para estilos específicos diretos não é necessário criar o elemento container. Nesses casos você pode inserir a classe customizada direto no elemento principal do componente. As regras permanecem as mesmas.
 
 ```html
 <section class="featuredPosts"> <!-- Component -->
