@@ -1,7 +1,6 @@
 
 const globalHead = [
     [ 'meta', { name: 'author', content: 'Samuel Martinenghi' } ],
-    [ 'meta', { name: 'google-site-verification', content: 'ad1BJACkwbIZrTfLAF9lUw4rZ8quyp1ddioCEbE_3Xg' } ],
     [ 'link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/favicons/apple-touch-icon.png' } ],
     [ 'link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/favicons/favicon-32x32.png' } ],
     [ 'link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/favicons/favicon-16x16.png' } ],
@@ -10,7 +9,7 @@ const globalHead = [
     [ 'meta', { name: 'msapplication-TileColor', content: '#f8f8f2' } ],
     [ 'meta', { name: 'theme-color', content: '#282936' } ],
     [ 'script', {
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-K9D7XGNGJL',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-HJJJME2HLG',
         crossorigin: 'anonymous',
         async: true
     } ],
@@ -19,14 +18,14 @@ const globalHead = [
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 	
-		gtag('config', 'G-K9D7XGNGJL');
+		gtag('config', 'G-HJJJME2HLG');
 	` ],
     [ 'script', {}, `
 		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-WX78PXS');
+		})(window,document,'script','dataLayer','GTM-NSSDFJC');
 	` ]
 ];
 
