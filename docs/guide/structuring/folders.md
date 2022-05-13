@@ -115,4 +115,4 @@ Estrutura mais comum em frameworks modernos
 ┣ 📂[tools](tools.md)\
 ┣ 📂[snippets](snippets.md)\
 ┣ 📂[utils](utils.md)\
-┣ 📂[global](global.md)\
+┣ 📂[global](global.md)
