@@ -232,11 +232,11 @@ $color-primary-default: green;
 
 * NÃO crie muitas variações de tokens de cores, tamanhos, fontes e etc... Como no caso anterior, isso também dificulta a manutenção e prejudica a consistência do projeto. Isso também dificulta ao criar um novo tema ou utilizar os tokens em outra marca, pois se foram criados 100 tokens no core, será necessário alterar o valor desses 100 tokens para cada novo tema e/ou marca que for criada.
 
-## Exemplo
+## Exemplos
 Vou deixar aqui um exemplo completo com vários tokens que podem existir em um projeto
 
 ### Cores
-Os valores são apenas exemplos.
+Os valores são apenas ilustrar os exemplos.
 ```scss
 $color-primary-base: #4b1eb6; 
 $color-primary-dark: #36138a;
