@@ -1,12 +1,12 @@
 # Utils
 Utils são @mixins utilizados globalmente para reaproveitar código CSS.
 
-## Regras
-- São semelhantes aos snippets porém:
-  - Podem receber parâmetros e retornar valores customizados
-  - São código menores utilizados apenas para pontos mais específicos
-- Aqui ficam apenas @mixins utilizados em mais de um arquivo.
-  - Se um @mixin é utilizado apenas em um arquivo, então ele deve ficar no arquivo em que é utilizado e não nesta pasta. 
+## Especificações
+* São semelhantes aos snippets porém:
+  * Podem receber parâmetros e retornar valores customizados
+  * São código menores utilizados apenas para pontos mais específicos
+* Aqui ficam apenas @mixins utilizados em mais de um arquivo.
+  * Se um @mixin é utilizado apenas em um arquivo, então ele deve ficar no arquivo em que é utilizado e não nesta pasta. 
 
 ## Exemplos
 Utilizando em um snippet

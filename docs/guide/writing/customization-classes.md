@@ -3,17 +3,21 @@ As classes de customização são utilizadas para criar uma ou mais variações 
 
 Essas classes podem ser criadas de duas formas:
 
-## Modificadores
+## Classes Modificadores
 São pequenas classes aninhadas dentro da classe principal do componente e inseridas na estrutura HTML de acordo com as necessidades.
 
 ### Características
-- Possuem um hífen `-` como prefixo `-secondary` `-big`
-- **SEMPRE** ficam aninhadas dentro de uma classe principal
-- Contém sobreposição de código
-- Possuem um código compartilhado
-- É mais simples
-- Gera menos CSS
-- Funciona muito bem com CSS puro
+* Possuem um hífen `-` como prefixo `-secondary` `-big`
+* **SEMPRE** ficam aninhadas dentro de uma classe principal
+
+### Benefícios
+* É mais simples
+* Gera menos CSS
+* Funciona muito bem com CSS puro
+
+### Desvantagens
+* Contém sobreposição de código
+* Possuem um código compartilhado
 
 ### Exemplo
 ```html
@@ -50,17 +54,22 @@ São pequenas classes aninhadas dentro da classe principal do componente e inser
 }	
 ```
 
-## Clones
+## Classes de composição
 São formadas pelo nome do componente junto com o nome das classes modificadoras.
 
 ### Características
-- Evitam aninhamento
-- Evitam sobreposição de código
-- Possuem um código exclusivo
-- É mais trabalhoso
-- Gera mais CSS
-- Funciona melhor com SASS, pois o uso de `@mixins` diminui a repetição de código
-
+* É formado por um nome de classe único
+* Funciona melhor com SASS, pois o uso de `@mixins` diminui a repetição de código
+  
+### Benefícios
+* Evita aninhamento
+* Evita sobreposição de código
+* Possui código exclusivo
+  
+### Desvantagens
+* É mais trabalhoso
+* Gera mais CSS
+  
 ### Exemplo
 ```html
 <button class="button">

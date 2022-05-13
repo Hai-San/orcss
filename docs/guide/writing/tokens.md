@@ -10,14 +10,14 @@ Os tokens de design fazem parte do design system e servem para padronizar inform
 Cada uma das categorias tem suas particularidades e isso será explicado com o decorrer da documentação.
 
 ## Nomenclatura
-Para que os tokens mantenham um mesmo padrão nos nomes, é indicado que seja criado uma estrutura de nomenclatura para os tokens. Muitas pessoas se perdem aqui e criam nomes super longos pensando apenas na parte de design, mas esquecem que cada um desses tokens vai ser escrito centenas de vezes no código, então eles precisam ser simples.
+Para que os tokens tenham um mesmo padrão nos nomes é indicado que seja criada uma estrutura de nomenclatura para os tokens. Muitas pessoas se perdem aqui e criam nomes super longos pensando apenas na parte de design, mas esquecem que cada um desses tokens vai ser escrito centenas de vezes no código, então eles precisam ser simples.
 
 A forma que eu considero ideal é criar o nome pensando principalmente no tipo de propriedade que ele representa (cor, fonte, espaçamento, borda etc...), normalmente essa é a primeira coisa que vem ca cabeça quando alguém esta procurando um token especifico.
 
-Um ponto importante que temos que levar em conta é que os tokens não possuem as mesmas especificações. Então alguns tokens acabam ficando um pouco diferentes, menores ou maiores do que outros e isso é normal. O que se deve fazer nesses casos é tentar deixar eles "logicamente" semelhantes, e para isso devemos primeiro criar uma estrutura de nome que contemple todas as variações.
+Um ponto importante que temos que levar em conta é que os tokens não possuem as mesmas especificações. Então alguns tokens acabam ficando um pouco diferentes, menores ou maiores do que outros e isso é normal. O que se deve fazer nesses casos é tentar deixar eles "logicamente" semelhantes, e para isso devemos primeiro criar uma estrutura que contemple todas as variações de nomenclatura.
 
 ### Estrutura completa
-Essa estrutura representa todas as especificações que um token pode ter, porém quase nunca todas estarão presente em um mesmo token. Agora eu vou mostrar um estrutura que eu considero interessante.
+Essa estrutura representa todas as especificações que um token pode ter, porém quase nunca todas estarão presente em um mesmo token.
 
 `component -> type -> property -> category -> variation -> scale -> unit -> condition`
 
@@ -34,7 +34,7 @@ Essa estrutura representa todas as especificações que um token pode ter, poré
     * `border` -  `width`, `color` e `radius` das bordas
     * `screen` - Utilizado para determinar todos os tamanhos de tela que o projeto deve atender 
     * `container` - Utilizado para determinar os tamanhos de container do layout 
-    * `speed` - Utilizado para determinar a velocidade das animações de interação (hover)
+    * `speed` - Utilizado para determinar a velocidade das animações de interação (hover, focus)
 * `property` - Representa a propriedade que o token vai estilizar. 
   * Mais comuns: `width` `size` `weight` `radius` `color` `background` `text`
 * `category` - Utilizado para criar diferentes categorias de um mesmo tipo de token. 
@@ -230,13 +230,13 @@ $color-primary-default: green;
 
 * NÃO crie tokens com nomes relacionados ao tema ou marca do projeto. Isso cria múltiplas variações de um mesmo token de forma desnecessária e torna mais difícil a manutenção do projeto, pois serão muito mais tokens para manter e organizar.
 
-* NÃO crie muitas variações de tokens de cores, tamanhos, fontes e etc... Como no caso anterior, isso também dificulta a manutenção e prejudica a consistência do projeto. Isso também prejudica muito na hora de criar um novo tema ou utilizar os tokens em outra marca, pois se foram criados 100 tokens no core, será necessário alterar o valor desses 100 tokens para cada novo tema e/ou marca que ser criado.
+* NÃO crie muitas variações de tokens de cores, tamanhos, fontes e etc... Como no caso anterior, isso também dificulta a manutenção e prejudica a consistência do projeto. Isso também dificulta ao criar um novo tema ou utilizar os tokens em outra marca, pois se foram criados 100 tokens no core, será necessário alterar o valor desses 100 tokens para cada novo tema e/ou marca que for criada.
 
-## Exemplo
+## Exemplos
 Vou deixar aqui um exemplo completo com vários tokens que podem existir em um projeto
 
 ### Cores
-Os valores são apenas exemplos.
+Os valores são apenas ilustrar os exemplos.
 ```scss
 $color-primary-base: #4b1eb6; 
 $color-primary-dark: #36138a;

@@ -1,8 +1,8 @@
-# Sobre ( DOCUMENTAÇÃO EM PROGRESSO )
-<abbr title="Regras de organização para CSS">ORCSS</abbr> (Regras de organização para CSS) é um guia de organização do CSS que agrupa algumas "regras" para um CSS de qualidade.
+# Sobre
+<abbr title="Regras de organização para CSS">ORCSS</abbr> (Regras de organização para CSS) é um guia que apresenta boas práticas de como melhorar a organização do CSS.
 
 ## Problema
-Quando se trata de CSS, muitos desenvolvedores tem dificuldade em organizar uma estrutura que seja escalável e simples de manter. Em consequência disso, muitos procuram soluções alternativas para "facilitar" o processo do desenvolvimento de layouts. As soluções mais comuns são:
+Quando se trata de CSS, muitos desenvolvedores tem dificuldade em organizar uma estrutura que seja simples e escalável. Em consequência disso procuram soluções alternativas para "facilitar" o processo do desenvolvimento de layouts. As soluções mais comuns são:
 * UI frameworks (bootstrap, Material Design, vuetify, Chakra UI etc... ) => Muito úteis para empresas que não possuem designers e precisam de um layout OK.
 * Bibliotecas utilitárias (tailwind) => Estilização baseada em classes atômicas.
 * Bibliotecas de CSS-IN-JS (styled-components, emotion) => Só serve pra complicar.
@@ -29,20 +29,20 @@ Para concluir, o maior problema é que todo dia surge alguma "solução inovador
 O objetivo deste guia é mostrar como utilizar o CSS de forma simples, rápida e escalável. A única exigência é saber CSS e o básico do SASS.  
 
 #### Principais vantagens
-- Flexível
-- Organizado
-- Escalável
-- Simples
-- Fácil de dar manutenção
-- Fácil de aprender
-- Liberdade para o time de design
+* Flexível
+* Organizado
+* Escalável
+* Simples
+* Fácil de dar manutenção
+* Fácil de aprender
+* Liberdade para o time de design
 
 #### Desvantagens
-- O processo de desenvolvimento é mais lento no começo, pois toda a estrutura precisa ser criada do zero. 
-  - No longo prazo isso é recompensado com uma estrutura muito consistente e ágil.
+* O processo de desenvolvimento é mais lento no começo, pois toda a estrutura precisa ser criada do zero. 
+  * No longo prazo isso é recompensado com uma estrutura muito consistente e ágil.
 
 :::tip Pode ir com calma
-No começo pode parecer muita informação, mas é MUITA informação SIMPLES. Aplique as regras aos poucos e logo você vai ver os resultados no projeto.
+No começo pode parecer muita informação, mas é MUITA informação SIMPLES. Aplique as regras aos poucos e logo resultados vão aparecer.
 :::
 
 "O básico bem feito é capaz de criar qualquer tipo de layout". 

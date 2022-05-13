@@ -4,8 +4,8 @@ Como as configurações do ORCSS são um padrão fixo para o projeto, o ideal é
 [Documentação oficial](https://code.visualstudio.com/docs/getstarted/settings)
 
 Para fazer isso é bem simples:
-- Crie a pasta `.vscode` dentro da raiz do projeto
-- Dentro da pasta `.vscode` crie crie os arquivos `extensions.json` e `settings.json`
+* Crie a pasta `.vscode` dentro da raiz do projeto
+* Dentro da pasta `.vscode` crie crie os arquivos `extensions.json` e `settings.json`
 
 Exemplo de estrutura:
 

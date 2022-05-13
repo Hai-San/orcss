@@ -15,8 +15,8 @@
 ┃ ┃ ┃ ┣ 📂[themes](tokens#themes)\
 ┃ ┃ ┃ ┃ ┣ 📂default\
 ┃ ┃ ┃ ┃ ┃ ┣ 📜main.scss\
-┃ ┃ ┃ ┃ ┃ ┣ 📜colors_dark.scss\
-┃ ┃ ┃ ┃ ┃ ┗ 📜colors_light.scss\
+┃ ┃ ┃ ┃ ┃ ┣ 📜dark.scss\
+┃ ┃ ┃ ┃ ┃ ┗ 📜light.scss\
 ┃ ┣ 📂[components](tokens#components)\
 ┃ ┣ 📂[global](tokens#global)\
 ┣ 📂[tools](tools.md)\
@@ -41,8 +41,8 @@ Caso tenha apenas os temas dark e light
 ┃ ┃ ┃ ┣ 📁components\
 ┃ ┃ ┃ ┗ 📂[colors](tokens#themes)\
 ┃ ┃ ┃ ┃ ┣ 📜main.scss\
-┃ ┃ ┃ ┃ ┣ 📜colors_dark.scss\
-┃ ┃ ┃ ┃ ┗ 📜colors_light.scss\
+┃ ┃ ┃ ┃ ┣ 📜dark.scss\
+┃ ┃ ┃ ┃ ┗ 📜light.scss\
 ┃ ┣ 📂[components](tokens#components)\
 ┃ ┣ 📂[global](tokens#global)\
 ┣ 📂[tools](tools.md)\
@@ -65,8 +65,8 @@ Caso os tokens não sejam utilizados por mais de uma marca
 ┃ ┣ 📂[themes](tokens#themes)\
 ┃ ┃ ┣ 📂default\
 ┃ ┃ ┃ ┣ 📜main.scss\
-┃ ┃ ┃ ┣ 📜colors_dark.scss\
-┃ ┃ ┃ ┗ 📜colors_light.scss\
+┃ ┃ ┃ ┣ 📜dark.scss\
+┃ ┃ ┃ ┗ 📜light.scss\
 ┃ ┣ 📂[components](tokens#components)\
 ┣ 📂[tools](tools.md)\
 ┣ 📂[snippets](snippets.md)\
@@ -87,8 +87,8 @@ Caso os tokens não sejam utilizados por mais de uma marca e tenham apenas os te
 ┃ ┣ 📜others.scss\
 ┃ ┣ 📂[colors](tokens#themes)\
 ┃ ┃ ┣ 📜main.scss\
-┃ ┃ ┣ 📜colors_dark.scss\
-┃ ┃ ┗ 📜colors_light.scss\
+┃ ┃ ┣ 📜dark.scss\
+┃ ┃ ┗ 📜light.scss\
 ┃ ┣ 📂[components](tokens#components)\
 ┣ 📂[tools](tools.md)\
 ┣ 📂[snippets](snippets.md)\
@@ -99,19 +99,26 @@ Caso os tokens não sejam utilizados por mais de uma marca e tenham apenas os te
 
 ## Frameworks
 Estrutura mais comum em frameworks modernos
+
 📂styles\
 ┣ 📂[tokens](tokens.md)\
-┃ ┣ 📜borders.scss\
-┃ ┣ 📜fonts.scss\
-┃ ┣ 📜spacings.scss\
-┃ ┣ 📜layouts.scss\
-┃ ┣ 📜others.scss\
-┃ ┣ 📂[colors](tokens#themes)\
-┃ ┃ ┣ 📜main.scss\
-┃ ┃ ┣ 📜colors_dark.scss\
-┃ ┃ ┗ 📜colors_light.scss\
-┃ ┣ 📂[components](tokens#components)\
 ┣ 📂[tools](tools.md)\
 ┣ 📂[snippets](snippets.md)\
 ┣ 📂[utils](utils.md)\
-┣ 📂[global](global.md)\
+┣ 📂[global](global.md)
+
+## Mais pastas
+Estrutura que tem arquivos mais específicos agrupados por pastas.
+
+📂styles\
+┣ 📂[tokens](tokens.md)\
+┣ ┣ 📂borders\
+┃ ┣ ┣ 📜widths.scss\
+┃ ┣ ┣ 📜colors.scss\
+┃ ┣ ┣ 📜radius.scss\
+┃ ┣ ┣ 📜styles.scss\
+┣ ┣ 📂fonts\
+┃ ┣ ┣ 📜size.scss\
+┃ ┣ ┣ 📜family.scss\
+┃ ┣ ┣ 📜weight.scss\
+┃ ┣ ┣ 📜lines.scss

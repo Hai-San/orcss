@@ -1,8 +1,10 @@
 # Nomenclatura
 Regras que devemos utilizar para criar os nomes das classes CSS.
 
-## CamelCase
-Use `camelCase` para nomes com mais de uma palavra.
+## Nome
+* Nomes podem ser formados por mais de uma palavra.
+* Use `camelCase` para destacar múltiplas palavras em um mesmo nome.
+* Isso serve para IDs também, mesmo não sendo utilizados dentro do CSS.
 
 ```scss
 .card {
@@ -14,17 +16,15 @@ Use `camelCase` para nomes com mais de uma palavra.
 .myBlogCard {		
 }
 ```
-- Isso serve para IDs também, mesmo não sendo utilizados dentro do CSS.
 
-## Herança
-- Elementos "filhos" sempre herdam o nome de um elementos superior. 
-- Elementos superiores podem ser páginas, componentes ou blocos.
-- Utilize underline `_` para separar os nomes. 
-- Seguem as mesmas regras de camelCase para nomes com mais de uma palavra.
+## Nome por herança
+* São classes de elementos que herdam o nome da classe de um elemento superior. 
+* Elementos superiores podem ser [páginas](../categorization/pages.md), [componentes](../categorization/components.md) ou [blocos](../categorization/blocks.md).
+* Utilize underline `_` para indicar que a classe está herdando um nome.
 
 ### Benefícios
-- Especificidade baixa
-- Pouca repetição de código para responsividade
+* Especificidade baixa
+* Pouca repetição de código para responsividade
 
 ### Exemplos
 ```html
@@ -54,9 +54,9 @@ Use `camelCase` para nomes com mais de uma palavra.
 ```
 
 ### Não faça isso!
-- Especificidade muito alta
-- Mais difícil de manter
-- Temos que repetir a estrutura toda vez que é necessário ajustar o estilo em um tamanho de tela diferente `@media`
+* Especificidade muito alta
+* Mais difícil de manter
+* Repete a estrutura toda vez que é necessário ajustar a responsividade.
 
 ```html
 <li class="blogCard">
@@ -88,13 +88,13 @@ Use `camelCase` para nomes com mais de uma palavra.
 	}
 }
 ```
-## Ecadeamento
-Podemos utilizar encadeamento de herança para evitar elementos com nome de classe duplicado.
+## Encadeamento
+Utilize encadeamento de herança para evitar elementos com nome de classe duplicado.
 
 ### Benefícios
-- Baixa especificidade
-- Fácil de manter
-- Probabilidade de conflitos é muito menor
+* Baixa especificidade
+* Fácil de manter
+* Probabilidade de conflitos é muito menor
 
 ### Exemplos
 ```html
@@ -115,9 +115,9 @@ Podemos utilizar encadeamento de herança para evitar elementos com nome de clas
 }
 ```
 ### Não faça isso!
-- Especificidade desnecessária
-- Mais difícil de manter
-- Probabilidade de conflitos é muito maior
+* Especificidade desnecessária
+* Mais difícil de manter
+* Probabilidade de conflitos é muito maior
 ```html
 <li class="blogCard">
 	<h2 class="blogCard_title">Title</h2>
@@ -141,5 +141,5 @@ Podemos utilizar encadeamento de herança para evitar elementos com nome de clas
 ```
 
 :::tip
-O encadeamento de herança pode ser utilizado mesmo não existindo nomes duplicados dentro de um componente, porém dessa forma você estará criando nomes longos sem necessidade.
+O encadeamento de herança pode ser utilizado mesmo não tendo a possibilidade de existirem nomes de classe duplicados, porém dessa forma você estará criando nomes longos sem necessidade.
 :::

@@ -12,10 +12,11 @@ Normalmente o aninhamento funciona bem para pseudo-classes, pseudo-elementos, va
 Como podemos utilizar o aninhamento de forma correta.
 
 Principais benefícios:
-- Baixa especificidade
-- Mais clareza para leitura
-- Evita repetição de código
+* Baixa especificidade
+* Mais clareza para leitura
+* Evita repetição de código
 
+HTML para utilizar como base nos exemplos.
 ```html
 <li class="blogCard">
 	<h2 class="blogCard_title">Title</h2>
@@ -34,7 +35,7 @@ Principais benefícios:
 </li>
 ```
 ### Elementos filhos
-- Completo aproveitamento sobre sistema de herança de nomes
+* Completo aproveitamento sobre sistema de herança de nomes
 ```scss
 .blogCard {
 }
@@ -50,8 +51,8 @@ Principais benefícios:
 ```
 
 ### Tags
-- Tags sempre devem ser aninhadas
-- Sempre dê preferência para classes que evitem o aninhamento
+* Tags sempre devem ser aninhadas
+* Sempre dê preferência para classes que evitem o aninhamento
 ```scss
 .blogCard_description {
 	p {
@@ -61,7 +62,7 @@ Principais benefícios:
 ```
 
 ### Pseudo-classes
-- Sempre devem ser aninhados em uma classe
+* Sempre devem ser aninhados em uma classe
 ```scss
 .blogCard {
 	&:focus,
@@ -72,7 +73,7 @@ Principais benefícios:
 ```
 
 ### Pseudo-elementos
-- Sempre devem ser aninhados em uma classe
+* Sempre devem ser aninhados em uma classe
 ```scss
 .blogCard_header_title {
 	&::after {
@@ -81,22 +82,22 @@ Principais benefícios:
 }
 ```
 ### Outros exemplos
-* [Classes de condição](status.md)
+* [Classes de condição](status-classes.md)
 * [Classes modificadoras](customization-classes.md)
 * [Estilos específicos](specific-styles.md)
 
 ## Não faça isso!
 
 Os exemplos abaixo podem causar os seguintes problemas:
-- Gera mais CSS
-- Maior especificidade de forma desnecessária
-- Mais dificuldade para manter o código
-- Grandes aninhamentos que ficam difíceis de ler
-- Classes modificadoras, filhos e seletores ficam misturados
+* Gerar mais CSS.
+* Maior especificidade de forma desnecessária.
+* Mais dificuldade para manter o código.
+* Grandes aninhamentos que ficam difíceis de ler.
+* Classes modificadoras, classes filhas e seletores ficam todos misturados.
   
 ### Reaproveitamento de nomes
-- Péssimo para leitura
-- Torna inútil a herança de nomes que é feita para evitar aninhamento e facilitar a leitura
+* Péssimo para leitura
+* Torna inútil a herança de nomes no HTML que é feita para evitar aninhamento e facilitar a leitura
   
 ```scss
 .blogCard {
@@ -136,18 +137,17 @@ Não aninhe classes de elementos filhos. O css não precisa seguir a mesma estru
 		}
 	}
 }
-```
-* Forma correta
-	```scss
-	.blogCard {
-	}
 
-	.blogCard_description {
-		p {		
-		}
-		span {
-		}
+// Forma correta
+.blogCard {
+}
+
+.blogCard_description {
+	p {		
 	}
-	```
+	span {
+	}
+}
+```
 
 
