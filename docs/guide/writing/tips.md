@@ -1,4 +1,6 @@
-## Dicas
+# Dicas
+
+## Faça
 Lista de coisas legais
 * Sempre utilize as unidades de medida que tem relação com a propriedade
   * Para fontes utilize `rem`
