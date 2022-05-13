@@ -3,7 +3,7 @@
 * São formadas por um verbo e um estado separados por um underline `_`
 * O estado pode ser temporário ou fixo até que o usuário execute alguma ação.
 * O estado não pode ser utilizado para criar variações de um componente.
-  * Para isso são utilizadas as [classes de customização](customization*classes.md).
+  * Para isso são utilizadas as [classes de customização](customization-classes.md).
 * Normalmente os estados são manipulados pelo javascript
 * Sempre ficam aninhados em uma classe principal
 

@@ -82,7 +82,7 @@ HTML para utilizar como base nos exemplos.
 }
 ```
 ### Outros exemplos
-* [Classes de condição](status.md)
+* [Classes de condição](status-classes.md)
 * [Classes modificadoras](customization-classes.md)
 * [Estilos específicos](specific-styles.md)
 
