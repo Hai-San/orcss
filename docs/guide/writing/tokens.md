@@ -230,7 +230,7 @@ $color-primary-default: green;
 
 * NÃO crie tokens com nomes relacionados ao tema ou marca do projeto. Isso cria múltiplas variações de um mesmo token de forma desnecessária e torna mais difícil a manutenção do projeto, pois serão muito mais tokens para manter e organizar.
 
-* NÃO crie muitas variações de tokens de cores, tamanhos, fontes e etc... Como no caso anterior, isso também dificulta a manutenção e prejudica a consistência do projeto. Isso também prejudica muito na hora de criar um novo tema ou utilizar os tokens em outra marca, pois se foram criados 100 tokens no core, será necessário alterar o valor desses 100 tokens para cada novo tema e/ou marca que ser criado.
+* NÃO crie muitas variações de tokens de cores, tamanhos, fontes e etc... Como no caso anterior, isso também dificulta a manutenção e prejudica a consistência do projeto. Isso também dificulta ao criar um novo tema ou utilizar os tokens em outra marca, pois se foram criados 100 tokens no core, será necessário alterar o valor desses 100 tokens para cada novo tema e/ou marca que for criada.
 
 ## Exemplo
 Vou deixar aqui um exemplo completo com vários tokens que podem existir em um projeto
