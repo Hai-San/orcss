@@ -20,7 +20,10 @@
 			"source.fixAll.stylelint": true,
 			"source.fixAll.eslint": true
 		},
-		"editor.defaultFormatter": "johnsoncodehk.volar"
+		"editor.defaultFormatter": "Vue.volar"
+	},
+	"[markdown]": {
+		"editor.wordWrap": "wordWrapColumn",
 	},
 	"stylelint.validate": [
 		"css",
@@ -28,12 +31,16 @@
 		"vue"
 	],
 	"editor.formatOnSave": true,
-	"editor.formatOnType": true,
+	"editor.detectIndentation": false,
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordBasedSuggestions": false,
+	"editor.wordWrapColumn": 140,
 	"editor.snippetSuggestions": "top",
 	"editor.rulers": [
 		120,
 		140
 	],
+	"html.format.wrapLineLength": 140,
 	"eslint.alwaysShowStatus": true,
 	"eslint.format.enable": true,
 	"eslint.lintTask.enable": true,
