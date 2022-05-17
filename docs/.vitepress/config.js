@@ -8,6 +8,7 @@ const globalHead = [
     [ 'link', { rel: 'shortcut icon', href: '/assets/favicons/favicon.ico' } ],
     [ 'meta', { name: 'msapplication-TileColor', content: '#f8f8f2' } ],
     [ 'meta', { name: 'theme-color', content: '#282936' } ],
+    [ 'meta', { property: 'og:image', content: '/assets/og_image.jpg' } ],
     [ 'script', {
         src: 'https://www.googletagmanager.com/gtag/js?id=G-HJJJME2HLG',
         crossorigin: 'anonymous',
@@ -29,6 +30,7 @@ const globalHead = [
 	` ]
 ];
 
+const descriptionPt = 'ORCSS é um guia de CSS que mostra boas práticas para ter um CSS simples, organizado e escalável. Também mostra como preparar o CSS para funcionar com um Design System.';
 
 module.exports = {
     base: '/',
@@ -37,9 +39,10 @@ module.exports = {
         '/': {
             lang: 'pt-BR',
             title: 'ORCSS',
-            description: 'ORCSS é um guia de CSS que mostra boas práticas para ter um CSS simples, organizado e escalável. Também mostra como preparar o CSS para funcionar com um Design System.',
+            description: descriptionPt,
             head: [
                 ...globalHead,
+                [ 'meta', { property: 'og:description', content: descriptionPt } ],
                 [ 'meta', { name: 'keywords', content: 'CSS, guia de CSS, design system' } ]
             ]
         }
