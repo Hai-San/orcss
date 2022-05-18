@@ -312,15 +312,15 @@ $spacing-nano-vh: convertPxToVh($spacing-nano);
 Fontes menores que 12px não são acessíveis, mas 12 ainda é muito pequeno, tente começar em 14px.
 ```scss
 // No lado de design esses valores estarão em pixels 14px, 16px...
-$font-xxs: 14;
-$font-xs: 16;
-$font-sm: 18;
-$font-md: 24;
-$font-lg: 28;
-$font-xl: 36;
-$font-xxl: 44;
-$font-xxxl: 52;
-$font-ul: 64;
+$font-size-xxs: 14;
+$font-size-xs: 16;
+$font-size-sm: 18;
+$font-size-md: 24;
+$font-size-lg: 28;
+$font-size-xl: 36;
+$font-size-xxl: 44;
+$font-size-xxxl: 52;
+$font-size-ul: 64;
 
 // São tokens `core` que podem ser utilizados diretamente no layout, pois seus valores nunca vão mudar
 $font-weight-thin: 100;
@@ -341,7 +341,7 @@ $line-height-medium: 1.6;
 
 // Tokens de layout, utilizados apenas no desenvolvimento
 // Valores em rem 
-$font-xxs-rem: convertPxToRem($font-xxs);
+$font-size-xxs-rem: convertPxToRem($font-size-xxs);
 ```
 
 ### Bordas
@@ -442,7 +442,7 @@ $button-border-color-focus: $color-primary-base;
 $button-border-color-disabled: $color-high-dark;
 
 $button-padding: $spacing-xs-vh $spacing-md-vh;
-$button-font-size: $font-xs-rem;
+$button-font-size: $font-size-xs-rem;
 
 // Link
 $link-color: $color-primary-base;
@@ -470,5 +470,5 @@ $input-border-color-focus: $color-primary-base;
 $input-border-color-disabled: $color-high-dark;
 
 $input-padding: $spacing-xs-vh $spacing-md-vh;
-$input-font-size: $font-xs-rem;
+$input-font-size: $font-size-xs-rem;
 ```
