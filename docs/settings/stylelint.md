@@ -60,12 +60,16 @@ module.exports = {
             },
         ],
         'rule-empty-line-before': 'always',
-        'at-rule-empty-line-before': 'always',
-        "at-rule-no-unknown": null,
+        'at-rule-empty-line-before': [
+			'always',
+			{
+			  'except': ['first-nested', 'blockless-after-blockless']
+			}
+		],
+        'at-rule-no-unknown': null,
         'declaration-block-trailing-semicolon': 'always',
         'block-no-empty': null,
         'value-keyword-case': 'lower',
-        'function-name-case': 'lower',
         'number-leading-zero': 'never',
         'string-quotes': 'single',
         'comment-empty-line-before': [
