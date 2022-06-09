@@ -57,15 +57,17 @@ module.exports = {
         // }
     },
     themeConfig: {
-        repo: 'Hai-San/orcss',
-        docsDir: 'docs',
-        docsBranch: 'main',
-        editLinks: true,
         locales: {
             '/': {
                 label: 'Português',
-                editLinkText: 'Edite essa página no GitHub',
-                lastUpdated: 'Última atualização',
+                outlineTitle: 'Nesta Página',
+                editLink: {
+                    repo: 'Hai-San/orcss',
+                    dir: 'docs',
+                    branch: 'main',
+                    text: 'Edite essa página no GitHub'
+                },
+                lastUpdatedText: 'Última atualização',
                 selectText: 'Idiomas',
                 nav: [
                     { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' },
@@ -76,6 +78,13 @@ module.exports = {
                     '/guide/': getGuideSidebar(),
                     '/settings/': getSettingsSidebar(),
                     '/help/': getHelpSidebar()
+                },
+                socialLinks: [
+                    { icon: 'github', link: 'https://github.com/Hai-San/orcss' }
+                ],
+                footer: {
+                    message: 'Released under the MIT License.',
+                    copyright: 'Copyright © 2022-present Samuel Martinenghi'
                 }
             }
             // '/en/': {
@@ -101,12 +110,15 @@ function getGuideSidebar() {
     return [
         {
             text: 'Sobre',
-            link: '/guide/'
+            collapsible: false,
+            items: [
+			  { text: 'Introdução', link: '/guide/' }
+            ]
         },
         {
             text: 'Categorização',
-            link: '/guide/categorization/',
-            children: [
+            items: [
+                { text: 'Introdução', link: '/guide/categorization/' },
                 { text: 'Páginas', link: '/guide/categorization/pages' },
                 { text: 'Componentes', link: '/guide/categorization/components' },
                 { text: 'Blocos', link: '/guide/categorization/blocks' },
@@ -116,8 +128,8 @@ function getGuideSidebar() {
         },
         {
             text: 'Escrita',
-            link: '/guide/writing/',
-            children: [                
+            items: [                
+                { text: 'Introdução', link: '/guide/writing/' },
                 { text: 'Nomenclatura', link: '/guide/writing/nomenclature' },
                 { text: 'Aninhamento', link: '/guide/writing/nesting' },
                 { text: 'Classes de customização', link: '/guide/writing/customization-classes' },
@@ -130,8 +142,8 @@ function getGuideSidebar() {
         },
         {
             text: 'Estruturação',
-            link: '/guide/structuring/',
-            children: [
+            items: [
+                { text: 'Introdução', link: '/guide/structuring/' },
                 { text: 'Pastas', link: '/guide/structuring/folders' },
                 { text: 'Tokens', link: '/guide/structuring/tokens' },
                 { text: 'Tools', link: '/guide/structuring/tools' },
@@ -148,8 +160,8 @@ function getSettingsSidebar() {
     return [
         {
             text: 'Configurações',
-            link: '/settings/',
-            children: [
+            items: [
+                { text: 'Introdução', link: '/settings/' },
                 { text: 'VSCode', link: '/settings/vscode' },
                 { text: 'Stylelint', link: '/settings/stylelint' },
                 { text: 'Stylelint Vue.js', link: '/settings/stylelint-vue' }
@@ -161,7 +173,9 @@ function getHelpSidebar() {
     return [
         {
             text: 'Ajuda',
-            link: '/help/'
+            items: [
+                { text: 'Início', link: '/help/' }
+            ]
         }
     ];
 }

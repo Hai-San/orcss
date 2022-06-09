@@ -1,6 +1,6 @@
 {
 	"name": "orcss",
-	"version": "0.1.9",
+	"version": "1.0.0",
 	"description": "ORCSS Documentation",
 	"scripts": {
 		"docs:dev": "vitepress dev docs",
@@ -18,8 +18,8 @@
 	},
 	"homepage": "https://github.com/Hai-San/orcss#readme",
 	"devDependencies": {
-		"eslint": "^8.15.0",
-		"sass": "^1.51.0",
-		"vitepress": "^0.22.4"
+		"eslint": "^8.17.0",
+		"sass": "^1.52.3",
+		"vitepress": "^1.0.0-alpha.1"
 	}
 }
