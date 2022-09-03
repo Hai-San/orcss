@@ -1,27 +1,27 @@
 
 const globalHead = [
-    [ 'meta', { name: 'author', content: 'Samuel Martinenghi' } ],
-    [ 'link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/favicons/apple-touch-icon.png' } ],
-    [ 'link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/favicons/favicon-32x32.png' } ],
-    [ 'link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/favicons/favicon-16x16.png' } ],
-    [ 'link', { rel: 'manifest', href: '/assets/favicons/site.webmanifest' } ],
-    [ 'link', { rel: 'shortcut icon', href: '/assets/favicons/favicon.ico' } ],
-    [ 'meta', { name: 'msapplication-TileColor', content: '#f8f8f2' } ],
-    [ 'meta', { name: 'theme-color', content: '#282936' } ],
-    [ 'meta', { property: 'og:image', content: '/assets/og_image.jpg' } ],
-    [ 'script', {
+    ['meta', { name: 'author', content: 'Samuel Martinenghi' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/favicons/apple-touch-icon.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/favicons/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/favicons/favicon-16x16.png' }],
+    ['link', { rel: 'manifest', href: '/assets/favicons/site.webmanifest' }],
+    ['link', { rel: 'shortcut icon', href: '/assets/favicons/favicon.ico' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#f8f8f2' }],
+    ['meta', { name: 'theme-color', content: '#282936' }],
+    ['meta', { property: 'og:image', content: '/assets/og_image.jpg' }],
+    ['script', {
         src: 'https://www.googletagmanager.com/gtag/js?id=G-HJJJME2HLG',
         crossorigin: 'anonymous',
         async: true
-    } ],
-    [ 'script', {}, `
+    }],
+    ['script', {}, `
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 	
 		gtag('config', 'G-HJJJME2HLG');
 	` ],
-    [ 'script', {}, `
+    ['script', {}, `
 		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -42,8 +42,8 @@ module.exports = {
             description: descriptionPt,
             head: [
                 ...globalHead,
-                [ 'meta', { property: 'og:description', content: descriptionPt } ],
-                [ 'meta', { name: 'keywords', content: 'CSS, guia de CSS, design system' } ]
+                ['meta', { property: 'og:description', content: descriptionPt }],
+                ['meta', { name: 'keywords', content: 'CSS, guia de CSS, design system' }]
             ]
         }
         // '/en/': {
@@ -62,9 +62,7 @@ module.exports = {
                 label: 'Português',
                 outlineTitle: 'Nesta Página',
                 editLink: {
-                    repo: 'Hai-San/orcss',
-                    dir: 'docs',
-                    branch: 'main',
+                    pattern: 'https://github.com/Hai-San/orcss/edit/main/docs/:path',
                     text: 'Edite essa página no GitHub'
                 },
                 lastUpdatedText: 'Última atualização',
@@ -112,7 +110,7 @@ function getGuideSidebar() {
             text: 'Sobre',
             collapsible: false,
             items: [
-			  { text: 'Introdução', link: '/guide/' }
+                { text: 'Introdução', link: '/guide/' }
             ]
         },
         {
@@ -128,7 +126,7 @@ function getGuideSidebar() {
         },
         {
             text: 'Escrita',
-            items: [                
+            items: [
                 { text: 'Introdução', link: '/guide/writing/' },
                 { text: 'Nomenclatura', link: '/guide/writing/nomenclature' },
                 { text: 'Aninhamento', link: '/guide/writing/nesting' },
