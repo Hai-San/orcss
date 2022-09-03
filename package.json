@@ -18,8 +18,8 @@
 	},
 	"homepage": "https://github.com/Hai-San/orcss#readme",
 	"devDependencies": {
-		"eslint": "^8.17.0",
-		"sass": "^1.52.3",
-		"vitepress": "^1.0.0-alpha.1"
+		"eslint": "^8.23.0",
+		"sass": "^1.54.8",
+		"vitepress": "^1.0.0-alpha.13"
 	}
 }
