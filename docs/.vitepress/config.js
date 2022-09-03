@@ -1,27 +1,27 @@
 
 const globalHead = [
-    [ 'meta', { name: 'author', content: 'Samuel Martinenghi' } ],
-    [ 'link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/favicons/apple-touch-icon.png' } ],
-    [ 'link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/favicons/favicon-32x32.png' } ],
-    [ 'link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/favicons/favicon-16x16.png' } ],
-    [ 'link', { rel: 'manifest', href: '/assets/favicons/site.webmanifest' } ],
-    [ 'link', { rel: 'shortcut icon', href: '/assets/favicons/favicon.ico' } ],
-    [ 'meta', { name: 'msapplication-TileColor', content: '#f8f8f2' } ],
-    [ 'meta', { name: 'theme-color', content: '#282936' } ],
-    [ 'meta', { property: 'og:image', content: '/assets/og_image.jpg' } ],
-    [ 'script', {
+    ['meta', { name: 'author', content: 'Samuel Martinenghi' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/favicons/apple-touch-icon.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/favicons/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/favicons/favicon-16x16.png' }],
+    ['link', { rel: 'manifest', href: '/assets/favicons/site.webmanifest' }],
+    ['link', { rel: 'shortcut icon', href: '/assets/favicons/favicon.ico' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#f8f8f2' }],
+    ['meta', { name: 'theme-color', content: '#282936' }],
+    ['meta', { property: 'og:image', content: '/assets/og_image.jpg' }],
+    ['script', {
         src: 'https://www.googletagmanager.com/gtag/js?id=G-HJJJME2HLG',
         crossorigin: 'anonymous',
         async: true
-    } ],
-    [ 'script', {}, `
+    }],
+    ['script', {}, `
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 	
 		gtag('config', 'G-HJJJME2HLG');
 	` ],
-    [ 'script', {}, `
+    ['script', {}, `
 		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -42,8 +42,8 @@ module.exports = {
             description: descriptionPt,
             head: [
                 ...globalHead,
-                [ 'meta', { property: 'og:description', content: descriptionPt } ],
-                [ 'meta', { name: 'keywords', content: 'CSS, guia de CSS, design system' } ]
+                ['meta', { property: 'og:description', content: descriptionPt }],
+                ['meta', { name: 'keywords', content: 'CSS, guia de CSS, design system' }]
             ]
         }
         // '/en/': {
@@ -57,15 +57,15 @@ module.exports = {
         // }
     },
     themeConfig: {
-        repo: 'Hai-San/orcss',
-        docsDir: 'docs',
-        docsBranch: 'main',
-        editLinks: true,
         locales: {
             '/': {
                 label: 'Português',
-                editLinkText: 'Edite essa página no GitHub',
-                lastUpdated: 'Última atualização',
+                outlineTitle: 'Nesta Página',
+                editLink: {
+                    pattern: 'https://github.com/Hai-San/orcss/edit/main/docs/:path',
+                    text: 'Edite essa página no GitHub'
+                },
+                lastUpdatedText: 'Última atualização',
                 selectText: 'Idiomas',
                 nav: [
                     { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' },
@@ -76,6 +76,13 @@ module.exports = {
                     '/guide/': getGuideSidebar(),
                     '/settings/': getSettingsSidebar(),
                     '/help/': getHelpSidebar()
+                },
+                socialLinks: [
+                    { icon: 'github', link: 'https://github.com/Hai-San/orcss' }
+                ],
+                footer: {
+                    message: 'Released under the MIT License.',
+                    copyright: 'Copyright © 2022-present Samuel Martinenghi'
                 }
             }
             // '/en/': {
@@ -101,12 +108,15 @@ function getGuideSidebar() {
     return [
         {
             text: 'Sobre',
-            link: '/guide/'
+            collapsible: false,
+            items: [
+                { text: 'Introdução', link: '/guide/' }
+            ]
         },
         {
             text: 'Categorização',
-            link: '/guide/categorization/',
-            children: [
+            items: [
+                { text: 'Introdução', link: '/guide/categorization/' },
                 { text: 'Páginas', link: '/guide/categorization/pages' },
                 { text: 'Componentes', link: '/guide/categorization/components' },
                 { text: 'Blocos', link: '/guide/categorization/blocks' },
@@ -116,8 +126,8 @@ function getGuideSidebar() {
         },
         {
             text: 'Escrita',
-            link: '/guide/writing/',
-            children: [                
+            items: [
+                { text: 'Introdução', link: '/guide/writing/' },
                 { text: 'Nomenclatura', link: '/guide/writing/nomenclature' },
                 { text: 'Aninhamento', link: '/guide/writing/nesting' },
                 { text: 'Classes de customização', link: '/guide/writing/customization-classes' },
@@ -130,8 +140,8 @@ function getGuideSidebar() {
         },
         {
             text: 'Estruturação',
-            link: '/guide/structuring/',
-            children: [
+            items: [
+                { text: 'Introdução', link: '/guide/structuring/' },
                 { text: 'Pastas', link: '/guide/structuring/folders' },
                 { text: 'Tokens', link: '/guide/structuring/tokens' },
                 { text: 'Tools', link: '/guide/structuring/tools' },
@@ -148,8 +158,8 @@ function getSettingsSidebar() {
     return [
         {
             text: 'Configurações',
-            link: '/settings/',
-            children: [
+            items: [
+                { text: 'Introdução', link: '/settings/' },
                 { text: 'VSCode', link: '/settings/vscode' },
                 { text: 'Stylelint', link: '/settings/stylelint' },
                 { text: 'Stylelint Vue.js', link: '/settings/stylelint-vue' }
@@ -161,7 +171,9 @@ function getHelpSidebar() {
     return [
         {
             text: 'Ajuda',
-            link: '/help/'
+            items: [
+                { text: 'Início', link: '/help/' }
+            ]
         }
     ];
 }
