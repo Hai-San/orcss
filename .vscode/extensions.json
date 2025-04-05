@@ -1,8 +1,9 @@
 {
 	"recommendations": [
 		"dbaeumer.vscode-eslint",
-		"yzhang.markdown-all-in-one",
 		"editorconfig.editorconfig",
-		"Vue.volar"
+		"stylelint.vscode-stylelint",
+		"vue.volar",
+		"syler.sass-indented"
 	]
 }

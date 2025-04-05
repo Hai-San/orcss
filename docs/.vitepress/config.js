@@ -1,27 +1,28 @@
+import { defineConfig } from 'vitepress';
 
 const globalHead = [
-    ['meta', { name: 'author', content: 'Samuel Martinenghi' }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/favicons/apple-touch-icon.png' }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/favicons/favicon-32x32.png' }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/favicons/favicon-16x16.png' }],
-    ['link', { rel: 'manifest', href: '/assets/favicons/site.webmanifest' }],
-    ['link', { rel: 'shortcut icon', href: '/assets/favicons/favicon.ico' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#f8f8f2' }],
-    ['meta', { name: 'theme-color', content: '#282936' }],
-    ['meta', { property: 'og:image', content: '/assets/og_image.jpg' }],
-    ['script', {
+    [ 'meta', { name: 'author', content: 'Samuel Martinenghi' } ],
+    [ 'link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/favicons/apple-touch-icon.png' } ],
+    [ 'link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/favicons/favicon-32x32.png' } ],
+    [ 'link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/favicons/favicon-16x16.png' } ],
+    [ 'link', { rel: 'manifest', href: '/assets/favicons/site.webmanifest' } ],
+    [ 'link', { rel: 'shortcut icon', href: '/assets/favicons/favicon.ico' } ],
+    [ 'meta', { name: 'msapplication-TileColor', content: '#f8f8f2' } ],
+    [ 'meta', { name: 'theme-color', content: '#282936' } ],
+    [ 'meta', { property: 'og:image', content: '/assets/og_image.jpg' } ],
+    [ 'script', {
         src: 'https://www.googletagmanager.com/gtag/js?id=G-HJJJME2HLG',
         crossorigin: 'anonymous',
         async: true
-    }],
-    ['script', {}, `
+    } ],
+    [ 'script', {}, `
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 	
 		gtag('config', 'G-HJJJME2HLG');
 	` ],
-    ['script', {}, `
+    [ 'script', {}, `
 		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -32,77 +33,67 @@ const globalHead = [
 
 const descriptionPt = 'ORCSS é um guia de CSS que mostra boas práticas para ter um CSS simples, organizado e escalável. Também mostra como preparar o CSS para funcionar com um Design System.';
 
-module.exports = {
-    base: '/',
-    lastUpdated: true,
+// https://vitepress.dev/reference/site-config
+export default defineConfig({
+    title: 'ORCSS',
+    description: descriptionPt,
     locales: {
-        '/': {
-            lang: 'pt-BR',
-            title: 'ORCSS',
-            description: descriptionPt,
+        root: {
+            label: 'Português',
+            lang: 'pt-br',
             head: [
                 ...globalHead,
-                ['meta', { property: 'og:description', content: descriptionPt }],
-                ['meta', { name: 'keywords', content: 'CSS, guia de CSS, design system' }]
+                [ 'meta', { property: 'og:description', content: descriptionPt } ],
+                [ 'meta', { name: 'keywords', content: 'CSS, guia de CSS, design system' } ]
             ]
         }
-        // '/en/': {
-        //     lang: 'en-US',
-        //     title: 'ORCSS',	
-        //     description: 'ORCSS is a CSS guide that shows best practices for having simple, organized and scalable CSS. It also shows how to prepare CSS to work with a Design System.',
-        //     head: [
-        //         ...globalHead,
-        //         [ 'meta', { name: 'keywords', content: 'CSS, CSS guide, design system' } ]
-        //     ]
+        // en: {
+        //     label: 'English',
+        //     lang: 'en',
+        //     link: '/en/'
         // }
     },
     themeConfig: {
-        locales: {
-            '/': {
-                label: 'Português',
-                outlineTitle: 'Nesta Página',
-                editLink: {
-                    pattern: 'https://github.com/Hai-San/orcss/edit/main/docs/:path',
-                    text: 'Edite essa página no GitHub'
-                },
-                lastUpdatedText: 'Última atualização',
-                selectText: 'Idiomas',
-                nav: [
-                    { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' },
-                    { text: 'Configurações', link: '/settings/', activeMatch: '^/settings/' },
-                    { text: 'Ajuda', link: '/help/', activeMatch: '^/help/' }
-                ],
-                sidebar: {
-                    '/guide/': getGuideSidebar(),
-                    '/settings/': getSettingsSidebar(),
-                    '/help/': getHelpSidebar()
-                },
-                socialLinks: [
-                    { icon: 'github', link: 'https://github.com/Hai-San/orcss' }
-                ],
-                footer: {
-                    message: 'Released under the MIT License.',
-                    copyright: 'Copyright © 2022-present Samuel Martinenghi'
-                }
+    	// https://vitepress.dev/reference/default-theme-config
+        outline: {
+            level: [ 1, 2,3 ],
+            label: 'Nesta Página'
+        },
+        editLink: {
+            pattern: 'https://github.com/Hai-San/orcss/edit/main/docs/:path',
+            text: 'Edite essa página no GitHub'
+        },
+        lastUpdated: {
+            text: 'Última atualização',
+            formatOptions: {
+                dateStyle: 'medium',
+                timeStyle: 'short'
             }
-            // '/en/': {
-            //     label: 'English',
-            //     editLinkText: 'Edit this page on GitHub',
-            //     lastUpdated: 'Last Updated',
-            //     nav: [
-            //         { text: 'Guide', link: '/guide/', activeMatch: '^/guide/' },
-            //         { text: 'Config', link: '/settings/', activeMatch: '^/settings/' },
-            //         { text: 'Help', link: '/help/', activeMatch: '^/help/' }
-            //     ],
-            //     sidebar: {
-            //         '/guide/': getGuideSidebar(),
-            //         '/settings/': getSettingsSidebar(),
-            //         '/help/': getHelpSidebar()
-            //     }
-            // }
+        },
+        selectText: 'Idiomas',
+        nav: [
+            { text: 'Guia', link: '/guide/', activeMatch: '^/guide/' },
+            { text: 'Configurações', link: '/settings/', activeMatch: '^/settings/' },
+            { text: 'Ajuda', link: '/help/', activeMatch: '^/help/' }
+        ],
+        sidebar: {
+            '/guide/': getGuideSidebar(),
+            '/settings/': getSettingsSidebar(),
+            '/help/': getHelpSidebar()
+        },
+        socialLinks: [
+            { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+        ],
+        footer: {
+            message: 'Released under the MIT License.',
+            copyright: 'Copyright © 2021-present Samuel Martinenghi'
+        },
+        docFooter: {
+            prev: 'Página anterior',
+            next: 'Próxima página'
         }
     }
-};
+});
 
 function getGuideSidebar() {
     return [
