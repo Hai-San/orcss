@@ -19,7 +19,7 @@ const globalHead = [
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-	
+
 		gtag('config', 'G-HJJJME2HLG');
 	` ],
     [ 'script', {}, `
@@ -82,7 +82,7 @@ export default defineConfig({
             '/help/': getHelpSidebar()
         },
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+            { icon: 'github', link: 'https://github.com/Hai-San/orcss' }
         ],
         footer: {
             message: 'Released under the MIT License.',
