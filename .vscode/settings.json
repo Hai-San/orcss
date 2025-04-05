@@ -1,53 +1,43 @@
 {
-	"[css]": {
-		"editor.codeActionsOnSave": {
-			"source.fixAll.stylelint": true
-		}
-	},
 	"[scss]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint",
+		"editor.formatOnSave": false,
 		"editor.codeActionsOnSave": {
-			"source.fixAll.stylelint": true
+			"source.fixAll.stylelint": "explicit"
 		}
 	},
 	"[javascript]": {
+		"editor.formatOnSave": false,
 		"editor.codeActionsOnSave": {
-			"source.fixAll.eslint": true
+			"source.fixAll.eslint": "explicit"
 		}
 	},
 	"[vue]": {
 		"editor.formatOnSave": false,
+		"editor.defaultFormatter": "Vue.volar",
 		"editor.codeActionsOnSave": {
-			"source.fixAll.stylelint": true,
-			"source.fixAll.eslint": true
-		},
-		"editor.defaultFormatter": "Vue.volar"
+			"source.fixAll.eslint": "explicit",
+			"source.fixAll.stylelint": "explicit"
+		}
 	},
-	"[markdown]": {
-		"editor.wordWrap": "wordWrapColumn",
+	"[typescript]": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "never"
+		}
 	},
+	"css.validate": false,
+	"less.validate": false,
+	"scss.validate": false,
 	"stylelint.validate": [
 		"css",
-		"scss",
-		"vue"
+		"vue",
+		"scss"
 	],
 	"editor.formatOnSave": true,
-	"editor.detectIndentation": false,
-	"editor.wordWrap": "wordWrapColumn",
-	"editor.wordBasedSuggestions": false,
-	"editor.wordWrapColumn": 140,
 	"editor.snippetSuggestions": "top",
-	"editor.rulers": [
-		120,
-		140
-	],
-	"html.format.wrapLineLength": 140,
-	"eslint.alwaysShowStatus": true,
-	"eslint.format.enable": true,
-	"eslint.lintTask.enable": true,
-	"eslint.onIgnoredFiles": "warn",
-	"eslint.run": "onSave",
-	"eslint.validate": [
-		"vue"
-	],
-	"files.eol": "\r\n",
+	"diffEditor.codeLens": true,
+	"typescript.validate.enable": false,
+	"eslint.useFlatConfig": true,
+	"editor.minimap.maxColumn": 120,
+	"editor.wordWrapColumn": 120
 }
