@@ -34,11 +34,11 @@
 		"scss"
 	],
 	"editor.formatOnSave": true,
-	"editor.snippetSuggestions": "top",
-	"diffEditor.codeLens": true,
 	"typescript.validate.enable": false,
 	"eslint.useFlatConfig": true,
+	"editor.snippetSuggestions": "top",
+	"diffEditor.codeLens": true,
 	"editor.minimap.maxColumn": 120,
 	"editor.wordWrapColumn": 120,
-	"files.insertFinalNewline": true
+	"files.insertFinalNewline": true,
 }
