@@ -5,7 +5,8 @@
 	"scripts": {
 		"docs:dev": "vitepress dev docs",
 		"docs:build": "vitepress build docs",
-		"docs:serve": "vitepress serve docs"
+		"docs:serve": "vitepress serve docs",
+		"lint": "eslint"
 	},
 	"type": "module",
 	"repository": {
@@ -19,8 +20,16 @@
 	},
 	"homepage": "https://github.com/Hai-San/orcss#readme",
 	"devDependencies": {
-		"eslint": "^8.31.0",
-		"sass": "^1.57.1",
+		"@babel/eslint-parser": "^7.27.0",
+		"@eslint/js": "^9.25.0",
+		"eslint": "^9.25.0",
+		"eslint-config-prettier": "^10.1.2",
+		"eslint-import-resolver-alias": "^1.1.2",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-prettier": "^5.2.6",
+		"globals": "^16.0.0",
+		"prettier": "^3.5.3",
+		"sass": "^1.86.3",
 		"vitepress": "^1.6.3"
 	},
 	"packageManager": "pnpm@10.7.0+sha512.6b865ad4b62a1d9842b61d674a393903b871d9244954f652b8842c2b553c72176b278f64c463e52d40fff8aba385c235c8c9ecf5cc7de4fd78b8bb6d49633ab6"
