@@ -51,7 +51,7 @@ Este guia tem como objetivo mostrar como utilizar CSS de forma simples, rápida 
       <td>Permite total liberdade criativa para designers e desenvolvedores</td>
       <td>❌</td>
       <td>❌</td>
-      <td>❌</td>
+      <td>✔️</td>
       <td>✔️</td>
     </tr>
     <tr>
@@ -95,6 +95,34 @@ Este guia tem como objetivo mostrar como utilizar CSS de forma simples, rápida 
       <td>❌</td>
       <td>❌</td>
       <td>✔️</td>
+    </tr>
+    <tr>
+      <td>Bom para projetos com curto prazo</td>
+      <td>✔️</td>
+      <td>✔️</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>Ideal para projetos que não possuem designers</td>
+      <td>✔️</td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>Bom para ter controle do CSS usando javascript</td>
+      <td>➖</td>
+      <td>➖</td>
+      <td>✔️</td>
+      <td>➖</td>
+    </tr>
+    <tr>
+      <td>Ideal para GO HORSE</td>
+      <td>✔️</td>
+      <td>✔️</td>
+      <td>❌</td>
+      <td>❌</td>
     </tr>
   </tbody>
 </table>
