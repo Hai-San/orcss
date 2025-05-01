@@ -42,7 +42,7 @@ export const configLocalePtBr = {
     ],
     sidebar: {
       '/guide/': getGuideSidebar(),
-      '/settings/': getSettingsSidebar(),
+      '/settings/': getGuideSidebar(),
       '/help/': getHelpSidebar(),
     },
     docFooter: {
@@ -55,9 +55,12 @@ export const configLocalePtBr = {
 function getGuideSidebar() {
   return [
     {
-      text: 'Sobre',
+      text: 'Introdução',
       collapsible: false,
-      items: [{ text: 'Introdução', link: '/guide/' }],
+      items: [
+        { text: 'Sobre', link: '/guide/' },
+        { text: 'Configurações', link: '/settings/' },
+      ],
     },
     {
       text: 'Categorização',
@@ -95,20 +98,6 @@ function getGuideSidebar() {
         { text: 'Utils', link: '/guide/structuring/utils' },
         { text: 'Components', link: '/guide/structuring/components' },
         { text: 'Pages', link: '/guide/structuring/pages' },
-      ],
-    },
-  ];
-}
-
-function getSettingsSidebar() {
-  return [
-    {
-      text: 'Configurações',
-      items: [
-        { text: 'Introdução', link: '/settings/' },
-        { text: 'VSCode', link: '/settings/vscode' },
-        { text: 'Stylelint', link: '/settings/stylelint' },
-        { text: 'Stylelint Vue.js', link: '/settings/stylelint-vue' },
       ],
     },
   ];

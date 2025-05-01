@@ -51,7 +51,7 @@ The goal of this guide is to demonstrate how to use CSS in a simple, fast, and s
       <td>Allows total creative freedom for designers and developers</td>
       <td>❌</td>
       <td>❌</td>
-      <td>❌</td>
+      <td>✔️</td>
       <td>✔️</td>
     </tr>
     <tr>
@@ -95,6 +95,34 @@ The goal of this guide is to demonstrate how to use CSS in a simple, fast, and s
       <td>❌</td>
       <td>❌</td>
       <td>✔️</td>
+    </tr>
+    <tr>
+    <td>Good for short-deadline projects</td>
+      <td>✔️</td>
+      <td>✔️</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>Ideal for projects without designers</td>
+      <td>✔️</td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>Good for controlling CSS with JavaScript</td>
+      <td>➖</td>
+      <td>➖</td>
+      <td>✔️</td>
+      <td>➖</td>
+    </tr>
+    <tr>
+      <td>Ideal for GO HORSE</td>
+      <td>✔️</td>
+      <td>✔️</td>
+      <td>❌</td>
+      <td>❌</td>
     </tr>
   </tbody>
 </table>

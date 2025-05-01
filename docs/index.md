@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Guia
-      link: /guide/
+      link: /guide/getting-started
 features:
   - title: 💡Simples
     details: Tem apenas o que é necessário.
