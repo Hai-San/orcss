@@ -41,4 +41,5 @@
 	"editor.minimap.maxColumn": 120,
 	"editor.wordWrapColumn": 120,
 	"files.insertFinalNewline": true,
+	"editor.tabSize": 2,
 }

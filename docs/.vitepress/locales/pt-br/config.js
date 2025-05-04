@@ -27,6 +27,7 @@ export const configLocalePtBr = {
   ],
   themeConfig: {
     outline: {
+      level: 'deep',
       label: 'Nesta Página',
     },
     editLink: {
@@ -62,21 +63,20 @@ function getGuideSidebar() {
         { text: 'Configurações', link: '/settings/' },
       ],
     },
-    {
-      text: 'Categorização',
-      items: [
-        { text: 'Introdução', link: '/guide/categorization/' },
-        { text: 'Páginas', link: '/guide/categorization/pages' },
-        { text: 'Componentes', link: '/guide/categorization/components' },
-        { text: 'Blocos', link: '/guide/categorization/blocks' },
-        { text: 'Unidades', link: '/guide/categorization/units' },
-        { text: 'Exemplo completo', link: '/guide/categorization/example' },
-      ],
-    },
+    // {
+    //   text: 'Categorização',
+    //   items: [
+    //     { text: 'Introdução', link: '/guide/categorization/' },
+    //     { text: 'Páginas', link: '/guide/categorization/pages' },
+    //     { text: 'Componentes', link: '/guide/categorization/components' },
+    //     { text: 'Blocos', link: '/guide/categorization/blocks' },
+    //     { text: 'Unidades', link: '/guide/categorization/units' },
+    //     { text: 'Exemplo completo', link: '/guide/categorization/example' },
+    //   ],
+    // },
     {
       text: 'Escrita',
       items: [
-        { text: 'Introdução', link: '/guide/writing/' },
         { text: 'Nomenclatura', link: '/guide/writing/nomenclature' },
         { text: 'Aninhamento', link: '/guide/writing/nesting' },
         { text: 'Classes de customização', link: '/guide/writing/customization-classes' },

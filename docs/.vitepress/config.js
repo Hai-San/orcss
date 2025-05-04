@@ -21,9 +21,6 @@ export default defineConfig({
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    outline: {
-      level: [1, 2, 3],
-    },
     editLink: {
       pattern: 'https://github.com/Hai-San/orcss/edit/main/docs/:path',
     },

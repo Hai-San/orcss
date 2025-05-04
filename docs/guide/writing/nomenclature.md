@@ -1,145 +1,86 @@
 # Nomenclatura
-Regras que devemos utilizar para criar os nomes das classes CSS.
 
-## Nome
-* Nomes podem ser formados por mais de uma palavra.
+O CSS vai muito além de um amontoado de propriedades para deixar um layout bonitinho. Para ter um código de qualidade, é importante saber como nomear, categorizar e organizar as classes dentro do CSS. Como reflexo disso, o projeto será mais simples de manter e terá uma escalabilidade muito mais consistente.
+
+Vamos iniciar com as regras que devemos utilizar para criar os nomes das classes CSS.
+
+## Nomes de classe
+
+* Nomes de classe podem ser formados por uma ou mais palavras.
 * Use `camelCase` para destacar múltiplas palavras em um mesmo nome.
-* Isso serve para IDs também, mesmo não sendo utilizados dentro do CSS.
 
 ```scss
 .card {
 }
 
-.blogCard {
+.cardHeader {
 }
 
-.myBlogCard {		
-}
-```
-
-## Nome por herança
-* São classes de elementos que herdam o nome da classe de um elemento superior. 
-* Elementos superiores podem ser [páginas](../categorization/pages.md), [componentes](../categorization/components.md) ou [blocos](../categorization/blocks.md).
-* Utilize underline `_` para indicar que a classe está herdando um nome.
-
-### Benefícios
-* Especificidade baixa
-* Pouca repetição de código para responsividade
-
-### Exemplos
-```html
-<li class="blogCard"> <!-- componente -->
-	<div class="blogCard_header"> <!-- bloco de estruturação -->
-		<h3 class="blogCard_title"> <!-- unidade -->
-			Title
-		</h3>
-	</div>
-	<p class="blogCard_tagName"></p> <!-- unidade -->
-</li>
-```
-```scss
-.blogCard_header {
-}
-
-.blogCard_title {
-}
-
-.blogCard_tagName {
-}
-
-@media (max-width: 20rem) {
-	.blogCard_title {
-	}
+.cardHeaderTitle {
 }
 ```
 
-### Não faça isso!
-* Especificidade muito alta
-* Mais difícil de manter
-* Repete a estrutura toda vez que é necessário ajustar a responsividade.
+## Como nomear
 
-```html
-<li class="blogCard">
-	<div class="header">
-		<h3 class="title">
-			Title
-		</h3>
-	</div>
-	<p class="tagName"></p>
-</li>
+* Sempre tenha um elemento pai principal que sirva como base para o restante das classes do arquivo.  
+  * O nome do elemento pai principal deve, idealmente, ser igual ao nome do arquivo.
+* Evite duplicação de nomes de classes.  
+	* Se houver a necessidade de criar um nome de classe que já exista no mesmo arquivo, acrescente o nome do elemento pai para diferenciar, criando assim nomes compostos.
+		* Exemplo: Se a classe `.title` já existir no arquivo, crie a próxima classe de forma composta, como `.footerTitle`, `.listTitle`, etc., para garantir que os nomes sejam únicos e facilmente identificáveis.
+		* Nesses casos, no CSS, não há necessidade de aninhar as classes, pois o nome já indicará a relação com o elemento pai.
+	* **Importante**: Caso não haja conflito de nomes, não é necessário criar nomes compostos — um nome simples como `.header`, `.title`, etc., é suficiente.
+* Evite usar um mesmo nome de classe para reutilizar estilos em múltiplos elementos.  
+  * No início isso parece bom, mas em grande escala fica difícil de manter, pois se torna imprevisível.
+* Evite criar aninhamentos muito grandes.  
+  * Isso gerará muita especificidade e, depois, será difícil de manter.
+
+
+#### Exemplo
+::: code-group
+```html [BaseCard.vue]
+<!-- Nome de classe baseado no nome do arquivo -->
+<div class="baseCard"> 
+  <span class="tagName"></span>
+  <div class="header">
+    <h3 class="title">
+      Header Title
+    </h3>
+  </div>
+  <div class="content">
+    Content
+  </div>
+  <div class="footer">
+    <!-- Já temos a classe .title, então herdamos o nome do elemento pai -->
+    <h4 class="footerTitle"> 
+      Footer Title
+    </h4>
+    <!-- Já temos a classe .content, então herdamos o nome do elemento pai -->
+    <div class="footerContent"> 
+    </div>
+  </div>
+</div>
 ```
-```scss
-.blogCard {
-	> .header {		
-		> .title {			
-		}	
+```scss [CSS]
+.baseCard {
+	.tagName {
 	}
 
-	> .tagName {			
-	}
-}
-
-@media (max-width: 20rem) {
-	.blogCard {
-		> .header {		
-			> .title {			
-			}	
+	.header {
+		.title {
 		}
 	}
-}
-```
-## Encadeamento
-Utilize encadeamento de herança para evitar elementos com nome de classe duplicado.
 
-### Benefícios
-* Baixa especificidade
-* Fácil de manter
-* Probabilidade de conflitos é muito menor
-
-### Exemplos
-```html
-<li class="blogCard"> <!-- componente -->
-	<h2 class="blogCard_title">Title</h2> <!-- unidade -->
-	<div class="blogCard_header"> <!-- bloco hereditário -->
-		<h3 class="blogCard_header_title"> <!-- unidade -->
-			Title
-		</h3>
-	</div>
-</li>
-```
-```scss
-.blogCard_title {		
-}
-
-.blogCard_header_title {
-}
-```
-### Não faça isso!
-* Especificidade desnecessária
-* Mais difícil de manter
-* Probabilidade de conflitos é muito maior
-```html
-<li class="blogCard">
-	<h2 class="blogCard_title">Title</h2>
-	<div class="blogCard_header">
-		<h3 class="blogCard_title">
-			Title
-		</h3>
-	</div>
-</li>
-```
-```scss
-.blogCard {
-	> .blogCard_title {		
+	.content {
 	}
-}	
 
-.blogCard_header {
-	.blogCard_title {			
+	.footer {
+	}
+
+	.footerTitle {
+	}
+
+	.footerContent {
 	}
 }
 ```
-
-:::tip
-O encadeamento de herança pode ser utilizado mesmo não tendo a possibilidade de existirem nomes de classe duplicados, porém dessa forma você estará criando nomes longos sem necessidade.
 :::
