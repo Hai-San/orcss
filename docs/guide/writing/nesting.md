@@ -1,12 +1,12 @@
 # Aninhamento
-Ao utilizar o SASS é possível fazer aninhamento de classes. Essa funcionalidade é muito boa para deixar o CSS mais organizado e simples de entender. O aninhamento também existe no CSS, porém não fica visivelmente claro como no SASS.
+O Aninhamento é muito bom para deixar o CSS mais organizado e simples de entender.
 
 :::danger Atenção
 Apesar do aninhamento ser muito bom, cuidado para não tornar isso um grande problema, pois fazer aninhamentos muito longos ou sem necessidade, acaba deixando o CSS com uma especificidade muito alta e consequentemente difícil de manter.
 :::
 
 ## Quando utilizar?
-Normalmente o aninhamento funciona bem para pseudo-classes, pseudo-elementos, valores de atributos, [classes modificadoras](customization-classes.md) e [estilos específicos](specific-styles.md). Nos casos de seletores por tag, id e classes filhas, tente evitar ao máximo. O objetivo é que o aninhamento seja utilizado para casos realmente necessários e seja evitado sempre que possível.
+Normalmente o aninhamento funciona bem para pseudo-classes, pseudo-elementos e classes que não herdam o nome do elemento pai. O objetivo é que o aninhamento seja utilizado para casos realmente necessários e seja evitado sempre que possível.
 
 ## Exemplos
 Como podemos utilizar o aninhamento de forma correta.
@@ -16,24 +16,65 @@ Principais benefícios:
 * Mais clareza para leitura
 * Evita repetição de código
 
-HTML para utilizar como base nos exemplos.
-```html
-<li class="blogCard">
-	<h2 class="blogCard_title">Title</h2>
-	<div class="blogCard_header">
-		<h3 class="blogCard_header_title">
-			Title
-		</h3>
-	</div>
-	<div class="blogCard_description">
-		<p>...</p>
-		<p>
-			<b>...</b>
-			<span>...</span>
+::: code-group
+```html [BaseCard.vue]
+<!-- Nome de classe baseado no nome do arquivo -->
+<div class="baseCard"> 
+  <span class="tagName"></span>
+  <div class="header">
+    <h3 class="title">
+      Header Title
+    </h3>
+  </div>
+  <div class="content">
+		<p class="text">
+			Text
 		</p>
-	</div>
-</li>
+  </div>
+  <div class="footer">
+    <!-- Já temos a classe .title, então herdamos o nome do elemento pai -->
+    <h4 class="footerTitle"> 
+      Footer Title
+    </h4>
+    <!-- Já temos a classe .content, então herdamos o nome do elemento pai -->
+    <div class="footerContent"> 
+				<p class="footerText">
+					Text
+					<a class="footerTextLink">
+						Link
+						<i class="footerTextLinkIcon">Icon</i>
+					</a>
+				</p>
+    </div>
+		<a class="footerLink">Link</a>
+  </div>
+</div>
 ```
+```scss [CSS]
+.baseCard {
+	.tagName {
+	}
+
+	.header {
+		.title {
+		}
+	}
+
+	.content {
+	}
+
+	.footer {
+	}
+
+	.footerTitle {
+	}
+
+	.footerContent {
+	}
+}
+```
+:::
+
 ### Elementos filhos
 * Completo aproveitamento sobre sistema de herança de nomes
 ```scss
